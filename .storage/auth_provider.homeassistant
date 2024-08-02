@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "auth_provider.homeassistant",
+  "data": {
+    "users": [
+      {
+        "username": "lsimaster",
+        "password": "JDJiJDEyJC5VU3FqSldVTTl0ZXIySlBHbU5EOU9xRS9DbGM1ODhWZHI2VDRvNzFIdm01eDBNb3pMOUlP"
+      },
+      {
+        "username": "brokermqtt",
+        "password": "JDJiJDEyJGJJMXc4MUZRa2ttcTFVQmE2aEpoc2V0aTh6TG1tZ09IalpBYnJ0ZHg2Q0U2WU5ZZ1gyY2VT"
+      }
+    ]
+  }
+}

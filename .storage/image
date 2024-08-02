@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "image",
+  "data": {
+    "items": [
+      {
+        "id": "697f713eef22fb70ef081f16fe372788",
+        "filesize": 69592,
+        "content_type": "image/jpeg",
+        "name": "LOGO 3.jpg",
+        "uploaded_at": "2023-11-24T18:44:45.744715+00:00"
+      }
+    ]
+  }
+}

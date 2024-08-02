@@ -1,0 +1,52 @@
+{
+  "version": "6",
+  "minor_version": 1,
+  "key": "hacs.hacs",
+  "data": {
+    "archived_repositories": [
+      "patrickhilker/tedee_hass_integration",
+      "ThomasPrior/FlexpoolInfo",
+      "thebino/rki_covid",
+      "pfunkmallone/HACS-camect-custom_card",
+      "toringer/home-assistant-sbanken",
+      "ljmerza/ha-our-groceries",
+      "DeebotUniverse/Deebot-4-Home-Assistant",
+      "dgomes/ha_rrd_recorder",
+      "perara/systemair-save-connect",
+      "Mr-Groch/HA-Emulated-Color-Temp-Light",
+      "digitaljamie/google-theme",
+      "sakowicz/home-assistant-tenda-tracker",
+      "Tiemooowh/homeassistant-teletask",
+      "speleolontra/daikin_residential_altherma",
+      "disforw/inverse",
+      "pfunkmallone/HACS-camect-integration",
+      "Thomas55555/husqvarna_automower",
+      "ryanwinter/hass-rainforest-emu-2",
+      "alexarch21/history-explorer-card",
+      "gerardag/person-entity-card",
+      "tikismoke/home-assistant-nespressoble",
+      "chaptergy/noctis-grey",
+      "briis/hass-weatherflow",
+      "dangreco/threedy"
+    ],
+    "renamed_repositories": {
+      "loopj/hass-vantage": "loopj/home-assistant-vantage",
+      "Wibias/hass-variables": "enkama/hass-variables",
+      "jvitkauskas/homeassistant_salus": "epoplavskis/homeassistant_salus",
+      "alexander0042/pirate-weather-ha": "Pirate-Weather/pirate-weather-ha",
+      "custom-components/alexa_media_player": "alandtse/alexa_media_player",
+      "johanfrick/custom-sonos-card": "punxaphil/custom-sonos-card",
+      "arjenvrh/audi_connect_ha": "audiconnect/audi_connect_ha",
+      "htmltiger/config-editor": "junkfix/config-editor",
+      "htmltiger/config-editor-card": "junkfix/config-editor-card",
+      "htmltiger/numberbox-card": "junkfix/numberbox-card",
+      "orickcorreia/caule-themes-pack-1": "ricardoquecria/caule-themes-pack-1",
+      "jonasniesner/open_epaper_link_homeassistant": "OpenEPaperLink/Home_Assistant_Integration",
+      "Limych/ha-temperature-feels-like": "Limych/ha-apparent-temperature",
+      "wimb0/home-assistant-saj-modbus": "wimb0/home-assistant-saj-r5-modbus",
+      "t0mer/ims-custom-component": "GuyKh/ims-custom-component",
+      "jm-73/Indego": "sander1988/Indego"
+    },
+    "ignored_repositories": []
+  }
+}

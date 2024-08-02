@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "timer",
+  "data": {
+    "items": [
+      {
+        "id": "timer1",
+        "name": "timer1",
+        "duration": "0:00:30",
+        "restore": false
+      },
+      {
+        "id": "timer2",
+        "name": "timer2",
+        "duration": "0:00:30",
+        "restore": false
+      },
+      {
+        "id": "timer3",
+        "name": "timer3",
+        "duration": "0:01:00",
+        "restore": false
+      },
+      {
+        "id": "timer4",
+        "name": "timer4",
+        "duration": "0:00:30",
+        "restore": false
+      },
+      {
+        "id": "timer5",
+        "name": "timer5",
+        "duration": "0:00:30",
+        "restore": false
+      }
+    ]
+  }
+}

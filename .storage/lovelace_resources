@@ -1,0 +1,109 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace_resources",
+  "data": {
+    "items": [
+      {
+        "id": "da0a4ef2ae4a4b359c1a38c01261957a",
+        "url": "/hacsfiles/mini-graph-card/mini-graph-card-bundle.js?hacstag=1512800620110",
+        "type": "module"
+      },
+      {
+        "id": "c15923891c194a14a98e2ed1328db9d2",
+        "url": "/hacsfiles/surveillance-card/surveillance-card.js?hacstag=147764937007",
+        "type": "module"
+      },
+      {
+        "id": "ba15f296701a429896862dd59d760031",
+        "url": "/hacsfiles/threedy/threedy-card.js?hacstag=33288368520211125",
+        "type": "module"
+      },
+      {
+        "id": "dee12128aa934db58adb224e38054469",
+        "url": "/hacsfiles/swipe-card/swipe-card.js?hacstag=192732887500",
+        "type": "module"
+      },
+      {
+        "id": "cdaa45840af146b59364cd18efc40423",
+        "url": "/hacsfiles/button-card/button-card.js?hacstag=146194325412",
+        "type": "module"
+      },
+      {
+        "id": "a28d3610287c4f83ab82d78b9ef020ce",
+        "url": "/hacsfiles/mini-media-player/mini-media-player-bundle.js?hacstag=1485208381167",
+        "type": "module"
+      },
+      {
+        "id": "11bda2ab356f4fecab7ad5e8919de3ef",
+        "url": "/hacsfiles/lovelace-layout-card/layout-card.js?hacstag=156434866245",
+        "type": "module"
+      },
+      {
+        "id": "bd41850c8c1044c18e4fbb9cf834e7d9",
+        "url": "/hacsfiles/lovelace-card-mod/card-mod.js?hacstag=190927524330",
+        "type": "module"
+      },
+      {
+        "id": "87f6566d2bbc486285186cad0792d8b9",
+        "url": "/hacsfiles/banner-card/banner-card.js?hacstag=1867657040130",
+        "type": "module"
+      },
+      {
+        "id": "eed50c94f4154d5690e8f9724ae94265",
+        "url": "/hacsfiles/restriction-card/restriction-card.js?hacstag=215633404129",
+        "type": "module"
+      },
+      {
+        "id": "e694e39b28e645af821fc90de660518b",
+        "url": "/hacsfiles/apexcharts-card/apexcharts-card.js?hacstag=331701152204",
+        "type": "module"
+      },
+      {
+        "id": "bc59e8efbc6b48bdb6be8121ad02ffac",
+        "url": "/hacsfiles/ha-card-weather-conditions/ha-card-weather-conditions.js?hacstag=2609401361913",
+        "type": "module"
+      },
+      {
+        "id": "bdf7b6058eda4eaa920e7e0d90e146ed",
+        "url": "/hacsfiles/platinum-weather-card/platinum-weather-card.js?hacstag=488086721105",
+        "type": "module"
+      },
+      {
+        "id": "4c235b37b58044bf9249783c08b80ca8",
+        "url": "/hacsfiles/bar-card/bar-card.js?hacstag=163363577320",
+        "type": "module"
+      },
+      {
+        "id": "136531f528d447f2b5caef17e90c8c92",
+        "url": "/hacsfiles/lovelace-mushroom/mushroom.js?hacstag=444350375324",
+        "type": "module"
+      },
+      {
+        "id": "7c8d91abbbec4f3fa9aec66e3a11f91a",
+        "url": "https://cdn.jsdelivr.net/gh/bramkragten/weather-card/dist/weather-card.min.js",
+        "type": "module"
+      },
+      {
+        "id": "fea49c0c3a6245ce92bb99193e63d061",
+        "url": "/hacsfiles/hass-swipe-navigation/swipe-navigation.js?hacstag=5017254791133",
+        "type": "module"
+      },
+      {
+        "id": "3460ce350d4542cda9e868cc7a8af0a2",
+        "url": "/hacsfiles/lovelace-tab-redirect-card/tab-redirect-card.js?hacstag=269474857832",
+        "type": "module"
+      },
+      {
+        "id": "92816b01546a450a9daccf4d7854a8e6",
+        "url": "/hacsfiles/kiosk-mode/kiosk-mode.js?hacstag=497319128601",
+        "type": "module"
+      },
+      {
+        "id": "cec5d95115ef46fe9a06a869d48eafb0",
+        "url": "/browser_mod.js?automatically-added",
+        "type": "module"
+      }
+    ]
+  }
+}

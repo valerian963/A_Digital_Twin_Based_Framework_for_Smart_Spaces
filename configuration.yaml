@@ -1,0 +1,251 @@
+# Loads default set of integrations. Do not remove.
+default_config:
+
+# Load frontend themes from the themes folder
+frontend:
+  themes: !include_dir_merge_named themes
+  javascript_version: latest
+  extra_module_url:
+    - /root/config/www/community/lovelace-card-mod/card-mod.js
+
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+camera: !include cameras.yaml
+climate: !include climate.yaml
+
+browser_mod:
+  prefix: browser_mod_
+  devices:
+
+rest:
+  - scan_interval: 3600
+    resource: !secret api_dollar
+    sensor:
+      - name: "Dollar BRL"
+        value_template: "{{ value_json['USDBRL']['bid']}}"
+
+  - scan_interval: 3600
+    resource: !secret api_euro
+    sensor:
+      - name: "Euro BRL"
+        value_template: "{{ value_json['EURBRL']['bid']}}"
+
+  - scan_interval: 3600
+    resource: !secret api_clima_manaus
+    sensor:
+      - name: "Temperature Manaus"
+        value_template: "{{ value_json['results']['temp']}}"
+        unit_of_measurement: "°C"
+
+  - scan_interval: 3600
+    resource: !secret api_clima_manaus
+    sensor:
+      - name: "Description"
+        value_template: "{{ value_json['results']['description']}}"
+
+  - scan_interval: 3600
+    resource: !secret api_ibovespa
+    sensor:
+      - name: "IBOVESPA"
+        value_template: "{{ value_json['results']['stocks']['IBOVESPA']['points']}}"
+
+  - scan_interval: 3600
+    resource: !secret api_downjones
+    sensor:
+      - name: "DOW JONES"
+        value_template: "{{ value_json['results']['stocks']['DOWJONES']['points']}}"
+
+  - scan_interval: 3600
+    resource: !secret api_servidor1
+    sensor:
+      #gpu1
+      - name: "Quant GPUs1"
+        value_template: "{{ value_json['nvidia_smi_log']['attached_gpus']}}"
+      - name: "Cuda Version1"
+        value_template: "{{ value_json['nvidia_smi_log']['cuda_version']}}"
+      - name: "Driver Version1"
+        value_template: "{{ value_json['nvidia_smi_log']['driver_version']}}"
+      - name: "Total Memory11"
+        value_template: "{{ value_json['nvidia_smi_log']['gpu'][0]['fb_memory_usage']['total'][:-4]}}"
+      - name: "Free Memory11"
+        value_template: "{{ value_json['nvidia_smi_log']['gpu'][0]['fb_memory_usage']['free'][:-4]}}"
+      - name: "Used Memory11"
+        value_template: "{{ value_json['nvidia_smi_log']['gpu'][0]['fb_memory_usage']['used'][:-4]}}"
+      - name: "Modo11"
+        value_template: "{{ value_json['nvidia_smi_log']['gpu'][0]['accounting_mode']}}"
+      - name: "Target Temperature GPU11"
+        value_template: "{{ value_json['nvidia_smi_log']['gpu'][0]['temperature']['gpu_target_temperature'][0]+value_json['nvidia_smi_log']['gpu'][0]['temperature']['gpu_target_temperature'][1]}}"
+      - name: "Actual Temperature11"
+        value_template: "{{ value_json['nvidia_smi_log']['gpu'][0]['temperature']['gpu_temp'][0]+value_json['nvidia_smi_log']['gpu'][0]['temperature']['gpu_temp'][1]}}"
+        #gpu2
+      - name: "Total Memory21"
+        value_template: "{{ value_json['nvidia_smi_log']['gpu'][1]['fb_memory_usage']['total'][:-4]}}"
+      - name: "Free Memory21"
+        value_template: "{{ value_json['nvidia_smi_log']['gpu'][1]['fb_memory_usage']['free'][:-4]}}"
+      - name: "Used Memory21"
+        value_template: "{{ value_json['nvidia_smi_log']['gpu'][1]['fb_memory_usage']['used'][:-4]}}"
+      - name: "Modo21"
+        value_template: "{{ value_json['nvidia_smi_log']['gpu'][1]['accounting_mode']}}"
+      - name: "Target Temperature GPU21"
+        value_template: "{{ value_json['nvidia_smi_log']['gpu'][1]['temperature']['gpu_target_temperature'][0]+value_json['nvidia_smi_log']['gpu'][1]['temperature']['gpu_target_temperature'][1]}}"
+      - name: "Actual Temperature21"
+        value_template: "{{ value_json['nvidia_smi_log']['gpu'][1]['temperature']['gpu_temp'][0]+value_json['nvidia_smi_log']['gpu'][1]['temperature']['gpu_temp'][1]}}"
+
+  - scan_interval: 3600
+    resource: !secret api_servidor2
+    sensor:
+      #gpu1
+      - name: "Quant GPUs2"
+        value_template: "{{ value_json['nvidia_smi_log']['attached_gpus']}}"
+      - name: "Cuda Version2"
+        value_template: "{{ value_json['nvidia_smi_log']['cuda_version']}}"
+      - name: "Driver Version2"
+        value_template: "{{ value_json['nvidia_smi_log']['driver_version']}}"
+      - name: "Total Memory12"
+        value_template: "{{ value_json['nvidia_smi_log']['gpu'][0]['fb_memory_usage']['total'][:-4]}}"
+      - name: "Free Memory12"
+        value_template: "{{ value_json['nvidia_smi_log']['gpu'][0]['fb_memory_usage']['free'][:-4]}}"
+      - name: "Used Memory12"
+        value_template: "{{ value_json['nvidia_smi_log']['gpu'][0]['fb_memory_usage']['used'][:-4]}}"
+      - name: "Modo1.2"
+        value_template: "{{ value_json['nvidia_smi_log']['gpu'][0]['accounting_mode']}}"
+      - name: "Target Temperature GPU12"
+        value_template: "{{ value_json['nvidia_smi_log']['gpu'][0]['temperature']['gpu_target_temperature'][0]+value_json['nvidia_smi_log']['gpu'][0]['temperature']['gpu_target_temperature'][1]}}"
+      - name: "Actual Temperature12"
+        value_template: "{{ value_json['nvidia_smi_log']['gpu'][0]['temperature']['gpu_temp'][0]+value_json['nvidia_smi_log']['gpu'][0]['temperature']['gpu_temp'][1]}}"
+        #gpu2
+      - name: "Total Memory22"
+        value_template: "{{ value_json['nvidia_smi_log']['gpu'][1]['fb_memory_usage']['total'][:-4]}}"
+      - name: "Free Memory22"
+        value_template: "{{ value_json['nvidia_smi_log']['gpu'][1]['fb_memory_usage']['free'][:-4]}}"
+      - name: "Used Memory22"
+        value_template: "{{ value_json['nvidia_smi_log']['gpu'][1]['fb_memory_usage']['used'][:-4]}}"
+      - name: "Modo22"
+        value_template: "{{ value_json['nvidia_smi_log']['gpu'][1]['accounting_mode']}}"
+      - name: "Target Temperature GPU22"
+        value_template: "{{ value_json['nvidia_smi_log']['gpu'][1]['temperature']['gpu_target_temperature'][0]+value_json['nvidia_smi_log']['gpu'][1]['temperature']['gpu_target_temperature'][1]}}"
+      - name: "Actual Temperature22"
+        value_template: "{{ value_json['nvidia_smi_log']['gpu'][1]['temperature']['gpu_temp'][0]+value_json['nvidia_smi_log']['gpu'][1]['temperature']['gpu_temp'][1]}}"
+
+  - scan_interval: 3600
+    resource: !secret api_servidor3
+    sensor:
+      #gpu1
+      - name: "Quant GPUs3"
+        value_template: "{{ value_json['nvidia_smi_log']['attached_gpus']}}"
+      - name: Cuda Version3
+        value_template: "{{ value_json['nvidia_smi_log']['cuda_version']}}"
+      - name: Driver Version3
+        value_template: "{{ value_json['nvidia_smi_log']['driver_version']}}"
+      - name: "Total Memory13"
+        value_template: "{{ value_json['nvidia_smi_log']['gpu'][0]['fb_memory_usage']['total'][:-4]}}"
+      - name: "Free Memory13"
+        value_template: "{{ value_json['nvidia_smi_log']['gpu'][0]['fb_memory_usage']['free'][:-4]}}"
+      - name: "Used Memory13"
+        value_template: "{{ value_json['nvidia_smi_log']['gpu'][0]['fb_memory_usage']['used'][:-4]}}"
+      - name: "Modo13"
+        value_template: "{{ value_json['nvidia_smi_log']['gpu'][0]['accounting_mode']}}"
+      - name: "Target Temperature GPU13"
+        value_template: "{{ value_json['nvidia_smi_log']['gpu'][0]['temperature']['gpu_target_temperature'][0]+value_json['nvidia_smi_log']['gpu'][0]['temperature']['gpu_target_temperature'][1]}}"
+      - name: "Actual Temperature13"
+        value_template: "{{ value_json['nvidia_smi_log']['gpu'][0]['temperature']['gpu_temp'][0]+value_json['nvidia_smi_log']['gpu'][0]['temperature']['gpu_temp'][1]}}"
+        #gpu2
+      - name: "Total Memory23"
+        value_template: "{{ value_json['nvidia_smi_log']['gpu'][1]['fb_memory_usage']['total'][:-4]}}"
+      - name: "Free Memory23"
+        value_template: "{{ value_json['nvidia_smi_log']['gpu'][1]['fb_memory_usage']['free'][:-4]}}"
+      - name: "Used Memory23"
+        value_template: "{{ value_json['nvidia_smi_log']['gpu'][1]['fb_memory_usage']['used'][:-4]}}"
+      - name: "Modo23"
+        value_template: "{{ value_json['nvidia_smi_log']['gpu'][1]['accounting_mode']}}"
+      - name: "Target Temperature GPU23"
+        value_template: "{{ value_json['nvidia_smi_log']['gpu'][1]['temperature']['gpu_target_temperature'][0]+value_json['nvidia_smi_log']['gpu'][1]['temperature']['gpu_target_temperature'][1]}}"
+      - name: "Actual Temperature23"
+        value_template: "{{ value_json['nvidia_smi_log']['gpu'][1]['temperature']['gpu_temp'][0]+value_json['nvidia_smi_log']['gpu'][1]['temperature']['gpu_temp'][1]}}"
+
+  - scan_interval: 3600
+    resource: !secret api_servidor4
+    sensor:
+      #gpu1
+      - name: "Quant GPUs4"
+        value_template: "{{ value_json['nvidia_smi_log']['attached_gpus']}}"
+      - name: "Cuda Version4"
+        value_template: "{{ value_json['nvidia_smi_log']['cuda_version']}}"
+      - name: "Driver Version4"
+        value_template: "{{ value_json['nvidia_smi_log']['driver_version']}}"
+      - name: "Total Memory14"
+        value_template: "{{ value_json['nvidia_smi_log']['gpu'][0]['fb_memory_usage']['total'][:-4]}}"
+      - name: "Free Memory14"
+        value_template: "{{ value_json['nvidia_smi_log']['gpu'][0]['fb_memory_usage']['free'][:-4]}}"
+      - name: "Used Memory14"
+        value_template: "{{ value_json['nvidia_smi_log']['gpu'][0]['fb_memory_usage']['used'][:-4]}}"
+      - name: "Modo14"
+        value_template: "{{ value_json['nvidia_smi_log']['gpu'][0]['accounting_mode']}}"
+      - name: "Target Temperature GPU14"
+        value_template: "{{ value_json['nvidia_smi_log']['gpu'][0]['temperature']['gpu_target_temperature'][0]+value_json['nvidia_smi_log']['gpu'][0]['temperature']['gpu_target_temperature'][1]}}"
+      - name: "Actual Temperature14"
+        value_template: "{{ value_json['nvidia_smi_log']['gpu'][0]['temperature']['gpu_temp'][0]+value_json['nvidia_smi_log']['gpu'][0]['temperature']['gpu_temp'][1]}}"
+        #gpu2
+      - name: "Total Memory24"
+        value_template: "{{ value_json['nvidia_smi_log']['gpu'][1]['fb_memory_usage']['total'][:-4]}}"
+      - name: "Free Memory24"
+        value_template: "{{ value_json['nvidia_smi_log']['gpu'][1]['fb_memory_usage']['free'][:-4]}}"
+      - name: "Used Memory24"
+        value_template: "{{ value_json['nvidia_smi_log']['gpu'][1]['fb_memory_usage']['used'][:-4]}}"
+      - name: "Modo24"
+        value_template: "{{ value_json['nvidia_smi_log']['gpu'][1]['accounting_mode']}}"
+      - name: "Target Temperature GPU24"
+        value_template: "{{ value_json['nvidia_smi_log']['gpu'][1]['temperature']['gpu_target_temperature'][0]+value_json['nvidia_smi_log']['gpu'][1]['temperature']['gpu_target_temperature'][1]}}"
+      - name: "Actual Temperature24"
+        value_template: "{{ value_json['nvidia_smi_log']['gpu'][1]['temperature']['gpu_temp'][0]+value_json['nvidia_smi_log']['gpu'][1]['temperature']['gpu_temp'][1]}}"
+
+sensor:
+  - platform: systemmonitor
+    resources:
+      - type: disk_use_percent
+        arg: /config
+      - type: memory_free
+  - platform: openweathermap_all
+    api_key: !secret api_key_openweather
+    latitude: -3.10719
+    longitude: -60.0261
+
+octoprint:
+  host: 172.10.4.9
+  api_key: !secret key_octoprint
+  bed: true
+  number_of_tools: 1
+
+template:
+  - sensor:
+      - name: "Memoria gpu1 server2"
+        state: "{{(states('sensor.used_memory12')|float(0)/states('sensor.total_memory12')|float(0)* 100) | round(2) }}"
+        unit_of_measurement: "%"
+      - name: "Memoria gpu2 server2"
+        state: "{{(states('sensor.used_memory22')|float(0)/states('sensor.total_memory22')|float(0)* 100) | round(2)}}"
+        unit_of_measurement: "%"
+      - name: "Memoria gpu1 server1"
+        state: "{{(states('sensor.used_memory11')|float(0)/states('sensor.total_memory11')|float(0)* 100) | round(2)}}"
+        unit_of_measurement: "%"
+      - name: "Memoria gpu2 server1"
+        state: "{{(states('sensor.used_memory21')|float(0)/states('sensor.total_memory21')|float(0)* 100) | round(2)}}"
+        unit_of_measurement: "%"
+      - name: "Memoria gpu1 server3"
+        state: "{{((states('sensor.used_memory13')|float(0)/states('sensor.total_memory13')|float(0)) * 100) | round(2)}}"
+        unit_of_measurement: "%"
+      - name: "Memoria gpu2 server3"
+        state: "{{(states('sensor.used_memory23')|float(0)/states('sensor.total_memory23')|float(0)* 100) | round(2)}}"
+        unit_of_measurement: "%"
+      - name: "Memoria gpu1 server4"
+        state: "{{(states('sensor.used_memory14')|float(0)/states('sensor.total_memory14')|float(0)* 100) | round(2)}}"
+        unit_of_measurement: "%"
+      - name: "Memoria gpu2 server4"
+        state: "{{(states('sensor.used_memory24')|float(0)/states('sensor.total_memory24')|float(0)* 100) | round(2)}}"
+        unit_of_measurement: "%"
+# - name: Temperatura max mesa
+#         state: >
+#           { % if states('octoprint_target_bed_temp')|float(0) > 0 % }
+#           "{{states('sensor.octoprint_target_bed_temp')|float(0)}}"
+#           {% else %}
+#           100

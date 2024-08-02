@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "minor_version": 2,
+  "key": "repairs.issue_registry",
+  "data": {
+    "issues": [
+      {
+        "created": "2023-10-12T17:00:00.313272+00:00",
+        "dismissed_version": null,
+        "domain": "automation",
+        "is_persistent": true,
+        "issue_id": "automation.automacao_desligar_interruptor_1_service_not_found_switch.turn_off",
+        "breaks_in_ha_version": null,
+        "data": null,
+        "is_fixable": true,
+        "issue_domain": null,
+        "learn_more_url": null,
+        "severity": "error",
+        "translation_key": "service_not_found",
+        "translation_placeholders": {
+          "service": "switch.turn_off",
+          "entity_id": "automation.automacao_desligar_interruptor_1",
+          "name": "Automação Desligar Interruptor 1",
+          "edit": "/config/automation/edit/1695327411785"
+        }
+      },
+      {
+        "created": "2023-10-12T18:00:00.155713+00:00",
+        "dismissed_version": null,
+        "domain": "automation",
+        "is_persistent": true,
+        "issue_id": "automation.automacao2_ligar_interruptor_1_service_not_found_switch.turn_on",
+        "breaks_in_ha_version": null,
+        "data": null,
+        "is_fixable": true,
+        "issue_domain": null,
+        "learn_more_url": null,
+        "severity": "error",
+        "translation_key": "service_not_found",
+        "translation_placeholders": {
+          "service": "switch.turn_on",
+          "entity_id": "automation.automacao2_ligar_interruptor_1",
+          "name": "Automação2 Ligar Interruptor 1",
+          "edit": "/config/automation/edit/1696432283731"
+        }
+      },
+      {
+        "created": "2023-10-12T23:00:00.511774+00:00",
+        "dismissed_version": null,
+        "domain": "automation",
+        "is_persistent": true,
+        "issue_id": "automation.automacao_teste_interruptor_service_not_found_switch.turn_off",
+        "breaks_in_ha_version": null,
+        "data": null,
+        "is_fixable": true,
+        "issue_domain": null,
+        "learn_more_url": null,
+        "severity": "error",
+        "translation_key": "service_not_found",
+        "translation_placeholders": {
+          "service": "switch.turn_off",
+          "entity_id": "automation.automacao_teste_interruptor",
+          "name": "Automação Teste Interruptor",
+          "edit": "/config/automation/edit/1695327474250"
+        }
+      },
+      {
+        "created": "2023-11-29T23:47:41.620507+00:00",
+        "dismissed_version": null,
+        "domain": "homeassistant",
+        "is_persistent": false,
+        "issue_id": "platform_integration_no_support_camera_mjpeg"
+      },
+      {
+        "created": "2024-06-24T12:13:17.627196+00:00",
+        "dismissed_version": null,
+        "domain": "homeassistant",
+        "is_persistent": false,
+        "issue_id": "deprecated_yaml_systemmonitor"
+      },
+      {
+        "created": "2024-06-24T12:13:18.639859+00:00",
+        "dismissed_version": null,
+        "domain": "openweathermap",
+        "is_persistent": false,
+        "issue_id": "deprecated_v25_29099ae00d39d36da6c0e8fe6e85db96"
+      }
+    ]
+  }
+}

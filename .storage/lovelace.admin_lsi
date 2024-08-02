@@ -1,0 +1,2318 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace.admin_lsi",
+  "data": {
+    "config": {
+      "title": "LSI",
+      "views": [
+        {
+          "title": "GERAL",
+          "path": "geral",
+          "cards": [
+            {
+              "type": "horizontal-stack",
+              "cards": [
+                {
+                  "type": "vertical-stack",
+                  "cards": [
+                    {
+                      "type": "custom:banner-card",
+                      "background": "#00b4b8",
+                      "heading": [
+                        "mdi:weather-cloudy",
+                        "Manaus"
+                      ],
+                      "color": "white"
+                    },
+                    {
+                      "type": "custom:weather-card",
+                      "hourly_forecast": true,
+                      "forecast": true,
+                      "entity": "weather.lsi",
+                      "current": true,
+                      "details": true
+                    },
+                    {
+                      "show_current": false,
+                      "show_forecast": true,
+                      "type": "weather-forecast",
+                      "entity": "weather.forecast_lsii",
+                      "forecast_type": "daily",
+                      "secondary_info_attribute": "pressure"
+                    },
+                    {
+                      "type": "custom:mini-graph-card",
+                      "icon": "mdi:cloud",
+                      "animate": true,
+                      "name": "Temperatura Manaus",
+                      "entities": [
+                        "sensor.temperature_manaus"
+                      ],
+                      "line_color": "#00b4b8",
+                      "show": {
+                        "labels": true,
+                        "average": true,
+                        "extrema": true
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "vertical-stack",
+                  "cards": [
+                    {
+                      "type": "custom:layout-card",
+                      "cards": [
+                        {
+                          "type": "vertical-stack",
+                          "cards": [
+                            {
+                              "type": "custom:mini-graph-card",
+                              "icon": "mdi:currency-eur",
+                              "animate": true,
+                              "entities": [
+                                "sensor.euro_brl"
+                              ],
+                              "line_color": "#0077b6",
+                              "show": {
+                                "labels": true
+                              }
+                            },
+                            {
+                              "type": "custom:mini-graph-card",
+                              "icon": "mdi:alpha-d-circle",
+                              "animate": true,
+                              "entities": [
+                                "sensor.dollar_brl"
+                              ],
+                              "line_color": "#90e0ef",
+                              "show": {
+                                "labels": true
+                              }
+                            }
+                          ]
+                        }
+                      ],
+                      "layout": {
+                        "width": 300,
+                        "padding": "0px"
+                      },
+                      "layout_type": "custom:grid-layout"
+                    },
+                    {
+                      "type": "custom:layout-card",
+                      "cards": [
+                        {
+                          "type": "custom:mini-graph-card",
+                          "icon": "mdi:bank",
+                          "animate": true,
+                          "background": null,
+                          "entities": [
+                            "sensor.ibovespa"
+                          ],
+                          "line_color": "#0077b6",
+                          "show": {
+                            "labels": true
+                          }
+                        },
+                        {
+                          "type": "custom:mini-graph-card",
+                          "icon": "mdi:bank",
+                          "animate": true,
+                          "background": null,
+                          "entities": [
+                            "sensor.dow_jones"
+                          ],
+                          "line_color": "#90e0ef",
+                          "show": {
+                            "labels": true
+                          }
+                        }
+                      ],
+                      "layout": {
+                        "width": 300
+                      },
+                      "layout_type": "custom:grid-layout"
+                    }
+                  ]
+                },
+                {
+                  "type": "vertical-stack",
+                  "cards": [
+                    {
+                      "type": "picture",
+                      "image": "https://media.licdn.com/dms/image/C4E1BAQECOMK8cGsobw/company-background_10000/0/1607564782860/lsi_uea_cover?e=2147483647&v=beta&t=13qDCpcfhBfmZizIOy69kzWE3nkan10ifCMYUcDwvxY",
+                      "alt_text": "Laboratorio LSI"
+                    },
+                    {
+                      "type": "iframe",
+                      "url": "https://embed.waze.com/iframe?zoom=17&lat=-3.091376&lon=-60.017281&ct=livemap",
+                      "aspect_ratio": "60%",
+                      "title": "Trânsito EST"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "subview": false,
+          "type": "custom:grid-layout"
+        },
+        {
+          "path": "default_view",
+          "title": "Home",
+          "cards": [
+            {
+              "type": "horizontal-stack",
+              "cards": [
+                {
+                  "type": "vertical-stack",
+                  "cards": [
+                    {
+                      "type": "custom:mushroom-template-card",
+                      "primary": "Ambiente",
+                      "secondary": "",
+                      "icon": "mdi:home",
+                      "icon_color": "#00b4b8",
+                      "badge_icon": "",
+                      "badge_color": "",
+                      "fill_container": true,
+                      "layout": "vertical",
+                      "multiline_secondary": false
+                    },
+                    {
+                      "type": "horizontal-stack",
+                      "cards": [
+                        {
+                          "type": "vertical-stack",
+                          "cards": [
+                            {
+                              "type": "custom:mini-graph-card",
+                              "icon": "mdi:cloud",
+                              "animate": true,
+                              "name": "Temperatura",
+                              "entities": [
+                                "sensor.nodered_657057150cbb4963"
+                              ],
+                              "line_color": "#00b4b8",
+                              "show": {
+                                "labels": true,
+                                "average": true,
+                                "extrema": true
+                              }
+                            },
+                            {
+                              "type": "custom:mini-graph-card",
+                              "icon": "mdi:cloud",
+                              "animate": true,
+                              "name": "Gás Carbônico",
+                              "entities": [
+                                "sensor.gas_carbonico"
+                              ],
+                              "line_color": "#00b4b8",
+                              "show": {
+                                "labels": true,
+                                "average": true,
+                                "extrema": true
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "type": "vertical-stack",
+                          "cards": [
+                            {
+                              "type": "custom:mini-graph-card",
+                              "icon": "mdi:cloud",
+                              "animate": true,
+                              "name": "Umidade",
+                              "entities": [
+                                "sensor.umidade_lab"
+                              ],
+                              "line_color": "#00b4b8",
+                              "show": {
+                                "labels": true,
+                                "average": true,
+                                "extrema": true
+                              }
+                            },
+                            {
+                              "type": "custom:mini-graph-card",
+                              "icon": "mdi:cloud",
+                              "animate": true,
+                              "name": "Luminosidade",
+                              "entities": [
+                                "sensor.luminosidade_lab"
+                              ],
+                              "unity": "%",
+                              "line_color": "#00b4b8",
+                              "show": {
+                                "labels": true,
+                                "average": true,
+                                "extrema": true
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "vertical-stack",
+                  "cards": [
+                    {
+                      "type": "vertical-stack",
+                      "cards": [
+                        {
+                          "type": "custom:mushroom-template-card",
+                          "primary": "Interruptores",
+                          "secondary": "",
+                          "icon": "mdi:lightbulb-group-outline",
+                          "icon_color": "#00b4b8",
+                          "badge_icon": "",
+                          "badge_color": "",
+                          "fill_container": false,
+                          "layout": "vertical"
+                        },
+                        {
+                          "type": "horizontal-stack",
+                          "cards": [
+                            {
+                              "show_name": true,
+                              "show_icon": true,
+                              "type": "button",
+                              "tap_action": {
+                                "action": "toggle"
+                              },
+                              "name": "Interruptor 1",
+                              "show_state": true,
+                              "icon_height": "50px",
+                              "theme": "ios-dark-mode-blue-red-alternative",
+                              "entity": "switch.interruptor1",
+                              "icon": "mdi:lightbulb"
+                            },
+                            {
+                              "show_name": true,
+                              "show_icon": true,
+                              "type": "button",
+                              "tap_action": {
+                                "action": "toggle"
+                              },
+                              "name": "Interruptor 2",
+                              "icon_height": "50px",
+                              "show_state": true,
+                              "theme": "ios-dark-mode-blue-red-alternative",
+                              "entity": "switch.interruptor2",
+                              "icon": "mdi:lightbulb"
+                            },
+                            {
+                              "show_name": true,
+                              "show_icon": true,
+                              "type": "button",
+                              "tap_action": {
+                                "action": "toggle"
+                              },
+                              "entity": "switch.interruptor3",
+                              "icon_height": "50px",
+                              "name": "Interruptor 3",
+                              "show_state": true,
+                              "theme": "ios-dark-mode-blue-red-alternative",
+                              "icon": "mdi:lightbulb"
+                            },
+                            {
+                              "show_name": true,
+                              "show_icon": true,
+                              "type": "button",
+                              "tap_action": {
+                                "action": "toggle"
+                              },
+                              "name": "Interruptor 4",
+                              "show_state": true,
+                              "icon_height": "50px",
+                              "entity": "switch.interruptor_externo",
+                              "icon": "mdi:lightbulb",
+                              "theme": "ios-dark-mode-blue-red-alternative"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "vertical-stack",
+                      "cards": [
+                        {
+                          "type": "custom:mushroom-template-card",
+                          "primary": "Ar-condicionado",
+                          "secondary": "",
+                          "icon": "mdi:air-conditioner",
+                          "icon_color": "#00b4b8",
+                          "badge_icon": "",
+                          "badge_color": "#00b4b8",
+                          "fill_container": true,
+                          "layout": "vertical",
+                          "entity": "switch.ar"
+                        },
+                        {
+                          "show_name": true,
+                          "show_icon": true,
+                          "type": "button",
+                          "tap_action": {
+                            "action": "toggle"
+                          },
+                          "name": "Modo: Frio",
+                          "show_state": true,
+                          "icon_height": "50px",
+                          "theme": "ios-dark-mode-blue-red-alternative",
+                          "icon": "mdi:snowflake",
+                          "icon_color": "#00b4b8",
+                          "entity": "switch.interruptor2"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "vertical-stack",
+                      "cards": [
+                        {
+                          "type": "custom:banner-card",
+                          "background": "#00b4b8",
+                          "heading": [
+                            "mdi:account-group",
+                            "Ambiente seguro"
+                          ],
+                          "color": "white"
+                        },
+                        {
+                          "type": "horizontal-stack",
+                          "cards": [
+                            {
+                              "type": "custom:mini-graph-card",
+                              "icon": "mdi:cloud",
+                              "animate": true,
+                              "name": "Gases inflamáveis e fumaça",
+                              "entities": [
+                                "sensor.fumaca_lab"
+                              ],
+                              "unity": "%",
+                              "line_color": "#00b4b8",
+                              "show": {
+                                "labels": true,
+                                "average": true,
+                                "extrema": true
+                              }
+                            },
+                            {
+                              "show_name": true,
+                              "show_icon": true,
+                              "type": "button",
+                              "tap_action": {
+                                "action": "toggle"
+                              },
+                              "entity": "binary_sensor.qualidade_ar",
+                              "name": "Sensor Fumaça",
+                              "show_state": true,
+                              "icon_height": "50px",
+                              "theme": "ios-dark-mode-blue-red",
+                              "icon": "mdi:smoke-detector"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "type": "custom:grid-layout",
+          "layout": null,
+          "subview": false
+        },
+        {
+          "title": "Impressora 3D",
+          "path": "impressora-3d",
+          "icon": "",
+          "cards": [
+            {
+              "type": "horizontal-stack",
+              "cards": [
+                {
+                  "type": "horizontal-stack",
+                  "cards": [
+                    {
+                      "type": "vertical-stack",
+                      "cards": [
+                        {
+                          "type": "custom:banner-card",
+                          "background": "#233054",
+                          "heading": [
+                            "mdi:printer-3d",
+                            "Impressora Ender"
+                          ],
+                          "color": "white"
+                        },
+                        {
+                          "type": "tile",
+                          "entity": "sensor.octoprint_estimated_finish_time",
+                          "vertical": true,
+                          "tap_action": {
+                            "action": "none"
+                          },
+                          "icon_tap_action": {
+                            "action": "none"
+                          },
+                          "hide_state": false,
+                          "show_entity_picture": true,
+                          "color": "primary",
+                          "name": "Tempo de finalização "
+                        },
+                        {
+                          "type": "horizontal-stack",
+                          "cards": [
+                            {
+                              "type": "custom:mushroom-light-card",
+                              "entity": "button.octoprint_resume_job",
+                              "icon": "mdi:stop-circle",
+                              "fill_container": true,
+                              "layout": "vertical",
+                              "icon_color": "indigo",
+                              "name": "Iniciar",
+                              "secondary_info": "last-changed",
+                              "show_brightness_control": false
+                            },
+                            {
+                              "type": "custom:mushroom-light-card",
+                              "entity": "button.octoprint_pause_job",
+                              "fill_container": true,
+                              "layout": "vertical",
+                              "icon": "mdi:pause-box",
+                              "icon_color": "indigo",
+                              "name": "Pausar",
+                              "secondary_info": "last-changed",
+                              "show_brightness_control": false
+                            },
+                            {
+                              "type": "custom:mushroom-light-card",
+                              "entity": "button.octoprint_stop_job",
+                              "icon": "mdi:stop-circle",
+                              "fill_container": true,
+                              "layout": "vertical",
+                              "icon_color": "indigo",
+                              "name": "Parar",
+                              "secondary_info": "last-changed",
+                              "show_brightness_control": false
+                            }
+                          ]
+                        },
+                        {
+                          "type": "gauge",
+                          "entity": "sensor.octoprint_actual_bed_temp",
+                          "max": 100,
+                          "segments": [
+                            {
+                              "from": 0,
+                              "color": "blue"
+                            }
+                          ],
+                          "name": "Temperatura da mesa"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "vertical-stack",
+                  "cards": [
+                    {
+                      "type": "custom:threedy-card",
+                      "base_entity": "sensor.octoprint",
+                      "monitored": [
+                        "Status"
+                      ],
+                      "printer_type": "I3",
+                      "name": "Ender",
+                      "camera_entity": "camera.octoprint_camera"
+                    },
+                    {
+                      "show_name": true,
+                      "camera_view": "live",
+                      "type": "picture-entity",
+                      "entity": "camera.octoprint_camera"
+                    }
+                  ]
+                },
+                {
+                  "type": "vertical-stack",
+                  "cards": [
+                    {
+                      "type": "vertical-stack",
+                      "cards": [
+                        {
+                          "type": "custom:mini-graph-card",
+                          "name": "Temperatura da extrusora",
+                          "icon": "mdi:printer-3d",
+                          "animate": true,
+                          "entities": [
+                            "sensor.octoprint_actual_tool0_temp"
+                          ],
+                          "line_color": "blue",
+                          "show": {
+                            "labels": true
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "custom:mini-graph-card",
+                      "name": "Porcentagem de trabalho",
+                      "icon": "mdi:percent",
+                      "animate": true,
+                      "entities": [
+                        "sensor.octoprint_job_percentage"
+                      ],
+                      "line_color": "blue",
+                      "show": {
+                        "graph": "bar"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "type": "custom:grid-layout"
+        },
+        {
+          "title": "Câmeras",
+          "path": "cameras",
+          "cards": [
+            {
+              "type": "custom:layout-card",
+              "layout_type": "custom:grid-layout",
+              "cards": [
+                {
+                  "type": "vertical-stack",
+                  "cards": [
+                    {
+                      "show_state": false,
+                      "show_name": false,
+                      "camera_view": "live",
+                      "type": "picture-entity",
+                      "image": "https://demo.home-assistant.io/stub_config/bedroom.png",
+                      "entity": "camera.cam_1",
+                      "aspect_ratio": "30:20"
+                    },
+                    {
+                      "show_state": false,
+                      "show_name": false,
+                      "camera_view": "live",
+                      "type": "picture-entity",
+                      "image": "https://demo.home-assistant.io/stub_config/bedroom.png",
+                      "entity": "camera.cam_2",
+                      "aspect_ratio": "30:20"
+                    }
+                  ]
+                },
+                {
+                  "type": "vertical-stack",
+                  "cards": [
+                    {
+                      "show_state": false,
+                      "show_name": false,
+                      "camera_view": "live",
+                      "type": "picture-entity",
+                      "image": "https://demo.home-assistant.io/stub_config/bedroom.png",
+                      "entity": "camera.cam_3",
+                      "aspect_ratio": "30:20"
+                    },
+                    {
+                      "show_state": false,
+                      "show_name": false,
+                      "camera_view": "live",
+                      "type": "picture-entity",
+                      "image": "https://demo.home-assistant.io/stub_config/bedroom.png",
+                      "entity": "camera.cam_4",
+                      "aspect_ratio": "30:20"
+                    }
+                  ]
+                }
+              ],
+              "layout": {
+                "grid-template-columns": "35% 35%",
+                "justify-content": "center",
+                "align-items": "center"
+              }
+            }
+          ],
+          "type": "custom:grid-layout",
+          "layout": {}
+        },
+        {
+          "title": "SERVIDORES",
+          "path": "servidores",
+          "cards": [
+            {
+              "type": "horizontal-stack",
+              "cards": [
+                {
+                  "type": "vertical-stack",
+                  "cards": [
+                    {
+                      "type": "custom:layout-card",
+                      "layout_type": "masonry",
+                      "cards": [
+                        {
+                          "type": "custom:banner-card",
+                          "background": "#233054",
+                          "heading": [
+                            "mdi:server",
+                            "lsiserver1"
+                          ],
+                          "color": "white",
+                          "entities": [
+                            {
+                              "entity": "sensor.cuda_version1",
+                              "name": "Versão Cuda"
+                            },
+                            {
+                              "entity": "sensor.driver_version1",
+                              "name": "Versão Driver"
+                            },
+                            {
+                              "entity": "sensor.quant_gpus1",
+                              "name": "Quant GPUs"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "horizontal-stack",
+                          "cards": [
+                            {
+                              "type": "vertical-stack",
+                              "cards": [
+                                {
+                                  "type": "custom:banner-card",
+                                  "background": "#233054",
+                                  "heading": [
+                                    "GPU 1"
+                                  ],
+                                  "color": "white",
+                                  "card_mod": {
+                                    "style": "ha-card{\nheight: 80px !important;\nfont-size:11px;\noverflow-y: hidden;\n}\n"
+                                  }
+                                },
+                                {
+                                  "type": "custom:bar-card",
+                                  "entities": [
+                                    {
+                                      "entity": "sensor.actual_temperature11",
+                                      "name": "Temperatura",
+                                      "icon": "mdi:memory",
+                                      "color": "#1a94c4"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "gauge",
+                                  "entity": "sensor.memoria_gpu1_server1",
+                                  "name": "Memória usada",
+                                  "unit": "%",
+                                  "needle": false,
+                                  "max": 100,
+                                  "min": 0
+                                }
+                              ]
+                            },
+                            {
+                              "type": "vertical-stack",
+                              "cards": [
+                                {
+                                  "type": "custom:banner-card",
+                                  "background": "#233054",
+                                  "heading": [
+                                    "GPU 2"
+                                  ],
+                                  "color": "white",
+                                  "card_mod": {
+                                    "style": "ha-card{\nheight: 80px !important;\nfont-size:11px;\noverflow-y: hidden;\n}\n"
+                                  }
+                                },
+                                {
+                                  "type": "custom:bar-card",
+                                  "entities": [
+                                    {
+                                      "entity": "sensor.actual_temperature12",
+                                      "name": "Temperatura",
+                                      "icon": "mdi:memory",
+                                      "color": "#1a94c4"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "gauge",
+                                  "entity": "sensor.memoria_gpu2_server1",
+                                  "name": "Memória usada",
+                                  "unit": "%",
+                                  "needle": false
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "layout": {
+                        "padding": "0px",
+                        "max_width": 500
+                      }
+                    }
+                  ],
+                  "card_mod": {
+                    "style": "ha-card {\n  background: orange;\n  box-shadow: '#1a94c4';\n}\n"
+                  }
+                },
+                {
+                  "type": "vertical-stack",
+                  "cards": [
+                    {
+                      "type": "custom:layout-card",
+                      "layout_type": "masonry",
+                      "cards": [
+                        {
+                          "type": "custom:banner-card",
+                          "background": "#233054",
+                          "heading": [
+                            "mdi:server",
+                            "lsiserver2"
+                          ],
+                          "color": "white",
+                          "entities": [
+                            {
+                              "entity": "sensor.cuda_version2",
+                              "name": "Versão Cuda"
+                            },
+                            {
+                              "entity": "sensor.driver_version2",
+                              "name": "Versão Driver"
+                            },
+                            {
+                              "entity": "sensor.quant_gpus2",
+                              "name": "Quant GPUs"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "horizontal-stack",
+                          "cards": [
+                            {
+                              "type": "vertical-stack",
+                              "cards": [
+                                {
+                                  "type": "custom:banner-card",
+                                  "background": "#233054",
+                                  "heading": [
+                                    "GPU 1"
+                                  ],
+                                  "color": "white",
+                                  "card_mod": {
+                                    "style": "ha-card{\nheight: 80px !important;\nfont-size:11px;\noverflow-y: hidden;\n}\n"
+                                  }
+                                },
+                                {
+                                  "type": "custom:bar-card",
+                                  "entities": [
+                                    {
+                                      "entity": "sensor.actual_temperature21",
+                                      "name": "Temperatura",
+                                      "icon": "mdi:memory",
+                                      "color": "#1a94c4"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "gauge",
+                                  "entity": "sensor.memoria_gpu1_server2",
+                                  "name": "Memória usada",
+                                  "unit": "%",
+                                  "needle": false,
+                                  "max": 100,
+                                  "min": 0
+                                }
+                              ]
+                            },
+                            {
+                              "type": "vertical-stack",
+                              "cards": [
+                                {
+                                  "type": "custom:banner-card",
+                                  "background": "#233054",
+                                  "heading": [
+                                    "GPU 2"
+                                  ],
+                                  "color": "white",
+                                  "card_mod": {
+                                    "style": "ha-card{\nheight: 80px !important;\nfont-size:11px;\noverflow-y: hidden;\n}\n"
+                                  }
+                                },
+                                {
+                                  "type": "custom:bar-card",
+                                  "entities": [
+                                    {
+                                      "entity": "sensor.actual_temperature22",
+                                      "name": "Temperatura",
+                                      "icon": "mdi:memory",
+                                      "color": "#1a94c4"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "gauge",
+                                  "entity": "sensor.memoria_gpu2_server2",
+                                  "name": "Memória usada",
+                                  "unit": "%",
+                                  "needle": false
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "layout": {
+                        "padding": "0px",
+                        "max_width": 500
+                      }
+                    }
+                  ],
+                  "card_mod": {
+                    "style": "ha-card {\n  background: orange;\n  box-shadow: '#1a94c4';\n}\n"
+                  }
+                },
+                {
+                  "type": "vertical-stack",
+                  "cards": [
+                    {
+                      "type": "custom:layout-card",
+                      "layout_type": "masonry",
+                      "cards": [
+                        {
+                          "type": "custom:banner-card",
+                          "background": "#233054",
+                          "heading": [
+                            "mdi:server",
+                            "lsiserver3"
+                          ],
+                          "color": "white",
+                          "entities": [
+                            {
+                              "entity": "sensor.cuda_version3",
+                              "name": "Versão Cuda"
+                            },
+                            {
+                              "entity": "sensor.driver_version3",
+                              "name": "Versão Driver"
+                            },
+                            {
+                              "entity": "sensor.quant_gpus3",
+                              "name": "Quant GPUs"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "horizontal-stack",
+                          "cards": [
+                            {
+                              "type": "vertical-stack",
+                              "cards": [
+                                {
+                                  "type": "custom:banner-card",
+                                  "background": "#233054",
+                                  "heading": [
+                                    "GPU 1"
+                                  ],
+                                  "color": "white",
+                                  "card_mod": {
+                                    "style": "ha-card{\nheight: 80px !important;\nfont-size:11px;\noverflow-y: hidden;\n}\n"
+                                  }
+                                },
+                                {
+                                  "type": "custom:bar-card",
+                                  "entities": [
+                                    {
+                                      "entity": "sensor.actual_temperature13",
+                                      "name": "Temperatura",
+                                      "unit": "C",
+                                      "icon": "mdi:memory",
+                                      "color": "#1a94c4"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "gauge",
+                                  "entity": "sensor.memoria_gpu1_server3",
+                                  "name": "Memória usada",
+                                  "unit": "%",
+                                  "needle": false
+                                }
+                              ]
+                            },
+                            {
+                              "type": "vertical-stack",
+                              "cards": [
+                                {
+                                  "type": "custom:banner-card",
+                                  "background": "#233054",
+                                  "heading": [
+                                    "GPU 2"
+                                  ],
+                                  "color": "white",
+                                  "card_mod": {
+                                    "style": "ha-card{\nheight: 80px !important;\nfont-size:11px;\noverflow-y: hidden;\n}\n"
+                                  }
+                                },
+                                {
+                                  "type": "custom:bar-card",
+                                  "entities": [
+                                    {
+                                      "entity": "sensor.actual_temperature23",
+                                      "name": "Temperatura",
+                                      "icon": "mdi:memory",
+                                      "color": "#1a94c4"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "gauge",
+                                  "entity": "sensor.actual_temperature23",
+                                  "name": "Memória usada",
+                                  "unit": "%",
+                                  "needle": false
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "layout": {
+                        "padding": "0px"
+                      }
+                    }
+                  ],
+                  "card_mod": {
+                    "style": "ha-card {\n  background: orange;\n  box-shadow: '#1a94c4';\n}\n"
+                  }
+                },
+                {
+                  "type": "vertical-stack",
+                  "cards": [
+                    {
+                      "type": "custom:layout-card",
+                      "layout_type": "masonry",
+                      "cards": [
+                        {
+                          "type": "custom:banner-card",
+                          "background": "#233054",
+                          "heading": [
+                            "mdi:server",
+                            "lsiserver4"
+                          ],
+                          "color": "white",
+                          "entities": [
+                            {
+                              "entity": "sensor.cuda_version4",
+                              "name": "Versão Cuda"
+                            },
+                            {
+                              "entity": "sensor.driver_version4",
+                              "name": "Versão Driver"
+                            },
+                            {
+                              "entity": "sensor.quant_gpus4",
+                              "name": "Quant GPUs"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "horizontal-stack",
+                          "cards": [
+                            {
+                              "type": "vertical-stack",
+                              "cards": [
+                                {
+                                  "type": "custom:banner-card",
+                                  "background": "#233054",
+                                  "heading": [
+                                    "GPU 1"
+                                  ],
+                                  "color": "white",
+                                  "card_mod": {
+                                    "style": "ha-card{\nheight: 80px !important;\nfont-size:11px;\noverflow-y: hidden;\n}\n"
+                                  }
+                                },
+                                {
+                                  "type": "custom:bar-card",
+                                  "entities": [
+                                    {
+                                      "entity": "sensor.actual_temperature14",
+                                      "name": "Temperatura",
+                                      "icon": "mdi:memory",
+                                      "color": "#1a94c4"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "gauge",
+                                  "entity": "sensor.memoria_gpu1_server4",
+                                  "name": "Memória usada",
+                                  "unit": "%",
+                                  "needle": false,
+                                  "max": 100,
+                                  "min": 0
+                                }
+                              ]
+                            },
+                            {
+                              "type": "vertical-stack",
+                              "cards": [
+                                {
+                                  "type": "custom:banner-card",
+                                  "background": "#233054",
+                                  "heading": [
+                                    "GPU 2"
+                                  ],
+                                  "color": "white",
+                                  "card_mod": {
+                                    "style": "ha-card{\nheight: 80px !important;\nfont-size:11px;\noverflow-y: hidden;\n}\n"
+                                  }
+                                },
+                                {
+                                  "type": "custom:bar-card",
+                                  "entities": [
+                                    {
+                                      "entity": "sensor.actual_temperature24",
+                                      "name": "Temperatura",
+                                      "icon": "mdi:memory",
+                                      "color": "#1a94c4"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "gauge",
+                                  "entity": "sensor.memoria_gpu2_server4",
+                                  "name": "Memória usada",
+                                  "unit": "%",
+                                  "needle": false
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "layout": {
+                        "padding": "0px",
+                        "max_width": 500
+                      }
+                    }
+                  ],
+                  "card_mod": {
+                    "style": "ha-card {\n  background: orange;\n  box-shadow: '#1a94c4';\n}\n"
+                  }
+                }
+              ]
+            }
+          ],
+          "layout": {},
+          "type": "custom:grid-layout"
+        },
+        {
+          "title": "STAND BY",
+          "path": "outros",
+          "cards": [
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "custom:layout-card",
+                  "layout_type": "masonry",
+                  "cards": [
+                    {
+                      "type": "custom:banner-card",
+                      "background": "#233054",
+                      "heading": [
+                        "mdi:server",
+                        "lsiserver1"
+                      ],
+                      "color": "white",
+                      "entities": [
+                        {
+                          "entity": "sensor.cuda_version1",
+                          "name": "Versão Cuda"
+                        },
+                        {
+                          "entity": "sensor.driver_version1",
+                          "name": "Versão Driver"
+                        },
+                        {
+                          "entity": "sensor.quant_gpus1",
+                          "name": "Quant GPUs"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "horizontal-stack",
+                      "cards": [
+                        {
+                          "type": "vertical-stack",
+                          "cards": [
+                            {
+                              "type": "custom:banner-card",
+                              "background": "#233054",
+                              "heading": [
+                                "GPU 1"
+                              ],
+                              "color": "white",
+                              "card_mod": {
+                                "style": "ha-card{\nheight: 80px !important;\nfont-size:11px;\noverflow-y: hidden;\n}\n"
+                              }
+                            },
+                            {
+                              "type": "custom:bar-card",
+                              "entities": [
+                                {
+                                  "entity": "sensor.actual_temperature11",
+                                  "name": "Temperatura",
+                                  "icon": "mdi:memory",
+                                  "color": "#221486"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "gauge",
+                              "entity": "sensor.memoria_gpu1_server1",
+                              "name": "Memória usada",
+                              "unit": "%",
+                              "needle": false,
+                              "max": 100,
+                              "min": 0
+                            }
+                          ]
+                        },
+                        {
+                          "type": "vertical-stack",
+                          "cards": [
+                            {
+                              "type": "custom:banner-card",
+                              "background": "#233054",
+                              "heading": [
+                                "GPU 2"
+                              ],
+                              "color": "white",
+                              "card_mod": {
+                                "style": "ha-card{\nheight: 80px !important;\nfont-size:11px;\noverflow-y: hidden;\n}\n"
+                              }
+                            },
+                            {
+                              "type": "custom:bar-card",
+                              "entities": [
+                                {
+                                  "entity": "sensor.actual_temperature12",
+                                  "name": "Temperatura",
+                                  "icon": "mdi:memory",
+                                  "color": "#229496"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "gauge",
+                              "entity": "sensor.memoria_gpu2_server1",
+                              "name": "Memória usada",
+                              "unit": "%",
+                              "needle": false
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "layout": {
+                    "padding": "0px",
+                    "max_width": 500
+                  }
+                }
+              ],
+              "card_mod": {
+                "style": "ha-card {\n  background: orange;\n  box-shadow: blue;\n}\n"
+              }
+            },
+            {
+              "type": "entities",
+              "entities": [
+                "person.lsi"
+              ]
+            },
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "custom:mini-graph-card",
+                  "icon": "mdi:bank",
+                  "animate": true,
+                  "background": null,
+                  "entities": [
+                    "sensor.ibovespa"
+                  ],
+                  "line_color": "green",
+                  "show": {
+                    "labels": true
+                  }
+                },
+                {
+                  "type": "custom:mini-graph-card",
+                  "icon": "mdi:bank",
+                  "animate": true,
+                  "background": null,
+                  "entities": [
+                    "sensor.dow_jones"
+                  ],
+                  "line_color": "purple",
+                  "show": {
+                    "labels": true
+                  }
+                }
+              ]
+            },
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "custom:layout-card",
+                  "layout_type": "masonry",
+                  "cards": [
+                    {
+                      "type": "custom:banner-card",
+                      "background": "#233054",
+                      "heading": [
+                        "mdi:server",
+                        "lsiserver2"
+                      ],
+                      "color": "white",
+                      "entities": [
+                        {
+                          "entity": "sensor.cuda_version2",
+                          "name": "Versão Cuda"
+                        },
+                        {
+                          "entity": "sensor.driver_version2",
+                          "name": "Versão Driver"
+                        },
+                        {
+                          "entity": "sensor.quant_gpus2",
+                          "name": "Quant GPUs"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "horizontal-stack",
+                      "cards": [
+                        {
+                          "type": "vertical-stack",
+                          "cards": [
+                            {
+                              "type": "custom:banner-card",
+                              "background": "#233054",
+                              "heading": [
+                                "GPU 1"
+                              ],
+                              "color": "white",
+                              "card_mod": {
+                                "style": "ha-card{\nheight: 80px !important;\nfont-size:11px;\noverflow-y: hidden;\n}\n"
+                              }
+                            },
+                            {
+                              "type": "custom:bar-card",
+                              "entities": [
+                                {
+                                  "entity": "sensor.actual_temperature12",
+                                  "name": "Temperatura",
+                                  "icon": "mdi:memory",
+                                  "color": "#221486"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "gauge",
+                              "entity": "sensor.memoria_gpu1_server2",
+                              "name": "Memória usada",
+                              "unit": "%",
+                              "needle": false,
+                              "max": 100,
+                              "min": 0
+                            }
+                          ]
+                        },
+                        {
+                          "type": "vertical-stack",
+                          "cards": [
+                            {
+                              "type": "custom:banner-card",
+                              "background": "#233054",
+                              "heading": [
+                                "GPU 2"
+                              ],
+                              "color": "white",
+                              "card_mod": {
+                                "style": "ha-card{\nheight: 80px !important;\nfont-size:11px;\noverflow-y: hidden;\n}\n"
+                              }
+                            },
+                            {
+                              "type": "custom:bar-card",
+                              "entities": [
+                                {
+                                  "entity": "sensor.actual_temperature22",
+                                  "name": "Temperatura",
+                                  "icon": "mdi:memory",
+                                  "color": "#229496"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "gauge",
+                              "entity": "sensor.memoria_gpu2_server2",
+                              "name": "Memória usada",
+                              "unit": "%",
+                              "needle": false
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "layout": {
+                    "padding": "0px",
+                    "max_width": 500
+                  }
+                }
+              ],
+              "card_mod": {
+                "style": "ha-card {\n  background: orange;\n  box-shadow: blue;\n}\n"
+              }
+            },
+            {
+              "type": "custom:mushroom-entity-card",
+              "entity": "switch.interruptor_smart",
+              "tap_action": {
+                "action": "toggle"
+              },
+              "icon_color": "primary",
+              "fill_container": true,
+              "layout": "vertical",
+              "icon_type": "icon"
+            },
+            {
+              "type": "custom:swipe-card",
+              "parameters": {
+                "effect": "coverflow",
+                "loop": true,
+                "loopedSlides": 4,
+                "slidesPerView": "auto",
+                "centeredSlides": true,
+                "autoplay": {
+                  "delay": 5000
+                },
+                "spaceBetween": 8,
+                "pagination": {
+                  "type": "progressbar"
+                },
+                "navigation": null,
+                "hide": false,
+                "draggable": true,
+                "snapOnRelease": true,
+                "keyboard": {
+                  "enabled": true,
+                  "onlyInViewport": true
+                }
+              },
+              "cards": [
+                {
+                  "show_name": true,
+                  "show_icon": true,
+                  "type": "button",
+                  "tap_action": {
+                    "action": "toggle"
+                  },
+                  "entity": "switch.interruptor_smart",
+                  "name": "Interruptor 1",
+                  "show_state": true,
+                  "icon_height": "50px"
+                },
+                {
+                  "show_name": true,
+                  "show_icon": true,
+                  "type": "button",
+                  "tap_action": {
+                    "action": "toggle"
+                  },
+                  "entity": "light.interruptor_2",
+                  "name": "Interruptor 2",
+                  "icon_height": "50px",
+                  "show_state": true
+                },
+                {
+                  "show_name": true,
+                  "show_icon": true,
+                  "type": "button",
+                  "tap_action": {
+                    "action": "toggle"
+                  },
+                  "entity": "light.interruptor_3",
+                  "icon_height": "50px",
+                  "name": "Interruptor 3",
+                  "show_state": true
+                },
+                {
+                  "show_name": true,
+                  "show_icon": true,
+                  "type": "button",
+                  "tap_action": {
+                    "action": "toggle"
+                  },
+                  "name": "Interruptor Externo",
+                  "show_state": true,
+                  "icon_height": "50px",
+                  "entity": "switch.ews_400_soquete_1",
+                  "icon": "mdi:lightbulb"
+                }
+              ]
+            },
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "custom:layout-card",
+                  "layout_type": "masonry",
+                  "cards": [
+                    {
+                      "type": "custom:banner-card",
+                      "background": "#233054",
+                      "heading": [
+                        "mdi:server",
+                        "lsiserver3"
+                      ],
+                      "color": "white",
+                      "entities": [
+                        {
+                          "entity": "sensor.cuda_version3",
+                          "name": "Versão Cuda"
+                        },
+                        {
+                          "entity": "sensor.driver_version3",
+                          "name": "Versão Driver"
+                        },
+                        {
+                          "entity": "sensor.quant_gpus3",
+                          "name": "Quant GPUs"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "horizontal-stack",
+                      "cards": [
+                        {
+                          "type": "vertical-stack",
+                          "cards": [
+                            {
+                              "type": "custom:banner-card",
+                              "background": "#233054",
+                              "heading": [
+                                "GPU 1"
+                              ],
+                              "color": "white",
+                              "card_mod": {
+                                "style": "ha-card{\nheight: 80px !important;\nfont-size:11px;\noverflow-y: hidden;\n}\n"
+                              }
+                            },
+                            {
+                              "type": "custom:bar-card",
+                              "entities": [
+                                {
+                                  "entity": "sensor.actual_temperature13",
+                                  "name": "Temperatura",
+                                  "unit": "C",
+                                  "icon": "mdi:memory",
+                                  "color": "#221486"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "gauge",
+                              "entity": "sensor.memoria_gpu1_server3",
+                              "name": "Memória usada",
+                              "unit": "%",
+                              "needle": false
+                            }
+                          ]
+                        },
+                        {
+                          "type": "vertical-stack",
+                          "cards": [
+                            {
+                              "type": "custom:banner-card",
+                              "background": "#233054",
+                              "heading": [
+                                "GPU 2"
+                              ],
+                              "color": "white",
+                              "card_mod": {
+                                "style": "ha-card{\nheight: 80px !important;\nfont-size:11px;\noverflow-y: hidden;\n}\n"
+                              }
+                            },
+                            {
+                              "type": "custom:bar-card",
+                              "entities": [
+                                {
+                                  "entity": "sensor.actual_temperature23",
+                                  "name": "Temperatura",
+                                  "icon": "mdi:memory",
+                                  "color": "#229496"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "gauge",
+                              "entity": "sensor.actual_temperature23",
+                              "name": "Memória usada",
+                              "unit": "%",
+                              "needle": false
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "layout": {
+                    "padding": "0px"
+                  }
+                }
+              ],
+              "card_mod": {
+                "style": "ha-card {\n  background: orange;\n  box-shadow: blue;\n}\n"
+              }
+            },
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "picture",
+                  "image": "https://media.licdn.com/dms/image/C4E1BAQECOMK8cGsobw/company-background_10000/0/1607564782860/lsi_uea_cover?e=2147483647&v=beta&t=13qDCpcfhBfmZizIOy69kzWE3nkan10ifCMYUcDwvxY",
+                  "alt_text": "Laboratorio LSI"
+                },
+                {
+                  "type": "horizontal-stack",
+                  "cards": [
+                    {
+                      "type": "custom:mini-graph-card",
+                      "icon": "mdi:currency-eur",
+                      "animate": true,
+                      "entities": [
+                        "sensor.euro_brl"
+                      ],
+                      "color_thresholds": [
+                        {
+                          "value": 4,
+                          "color": "#f39c12"
+                        },
+                        {
+                          "value": 4.97,
+                          "color": "#d35400"
+                        },
+                        {
+                          "value": 5,
+                          "color": "#c0392b"
+                        }
+                      ],
+                      "show": {
+                        "labels": true
+                      }
+                    },
+                    {
+                      "type": "custom:mini-graph-card",
+                      "icon": "mdi:alpha-d-circle",
+                      "animate": true,
+                      "entities": [
+                        "sensor.dollar_brl"
+                      ],
+                      "line_color": "blue",
+                      "show": {
+                        "labels": "truE"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "horizontal-stack",
+                  "cards": [
+                    {
+                      "type": "custom:mini-graph-card",
+                      "icon": "mdi:bank",
+                      "animate": true,
+                      "background": null,
+                      "entities": [
+                        "sensor.ibovespa"
+                      ],
+                      "line_color": "green",
+                      "show": {
+                        "labels": true
+                      }
+                    },
+                    {
+                      "type": "custom:mini-graph-card",
+                      "icon": "mdi:bank",
+                      "animate": true,
+                      "background": null,
+                      "entities": [
+                        "sensor.dow_jones"
+                      ],
+                      "line_color": "purple",
+                      "show": {
+                        "labels": true
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "custom:layout-card",
+                  "layout_type": "masonry",
+                  "cards": [
+                    {
+                      "type": "custom:banner-card",
+                      "background": "#233054",
+                      "heading": [
+                        "mdi:server",
+                        "lsiserver4"
+                      ],
+                      "color": "white",
+                      "entities": [
+                        {
+                          "entity": "sensor.cuda_version4",
+                          "name": "Versão Cuda"
+                        },
+                        {
+                          "entity": "sensor.driver_version4",
+                          "name": "Versão Driver"
+                        },
+                        {
+                          "entity": "sensor.quant_gpus4",
+                          "name": "Quant GPUs"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "horizontal-stack",
+                      "cards": [
+                        {
+                          "type": "vertical-stack",
+                          "cards": [
+                            {
+                              "type": "custom:banner-card",
+                              "background": "#233054",
+                              "heading": [
+                                "GPU 1"
+                              ],
+                              "color": "white",
+                              "card_mod": {
+                                "style": "ha-card{\nheight: 80px !important;\nfont-size:11px;\noverflow-y: hidden;\n}\n"
+                              }
+                            },
+                            {
+                              "type": "custom:bar-card",
+                              "entities": [
+                                {
+                                  "entity": "sensor.actual_temperature14",
+                                  "name": "Temperatura",
+                                  "icon": "mdi:memory",
+                                  "color": "#221486"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "gauge",
+                              "entity": "sensor.memoria_gpu1_server4",
+                              "name": "Memória usada",
+                              "unit": "%",
+                              "needle": false,
+                              "max": 100,
+                              "min": 0
+                            }
+                          ]
+                        },
+                        {
+                          "type": "vertical-stack",
+                          "cards": [
+                            {
+                              "type": "custom:banner-card",
+                              "background": "#233054",
+                              "heading": [
+                                "GPU 2"
+                              ],
+                              "color": "white",
+                              "card_mod": {
+                                "style": "ha-card{\nheight: 80px !important;\nfont-size:11px;\noverflow-y: hidden;\n}\n"
+                              }
+                            },
+                            {
+                              "type": "custom:bar-card",
+                              "entities": [
+                                {
+                                  "entity": "sensor.actual_temperature24",
+                                  "name": "Temperatura",
+                                  "icon": "mdi:memory",
+                                  "color": "#229496"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "gauge",
+                              "entity": "sensor.memoria_gpu2_server4",
+                              "name": "Memória usada",
+                              "unit": "%",
+                              "needle": false
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "layout": {
+                    "padding": "0px",
+                    "max_width": 500
+                  }
+                }
+              ],
+              "card_mod": {
+                "style": "ha-card {\n  background: orange;\n  box-shadow: blue;\n}\n"
+              }
+            },
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "custom:mini-graph-card",
+                  "icon": "mdi:currency-eur",
+                  "animate": true,
+                  "entities": [
+                    "sensor.euro_brl"
+                  ],
+                  "color_thresholds": [
+                    {
+                      "value": 4,
+                      "color": "#f39c12"
+                    },
+                    {
+                      "value": 4.97,
+                      "color": "#d35400"
+                    },
+                    {
+                      "value": 5,
+                      "color": "#c0392b"
+                    }
+                  ],
+                  "show": {
+                    "labels": true
+                  }
+                },
+                {
+                  "type": "custom:mini-graph-card",
+                  "icon": "mdi:alpha-d-circle",
+                  "animate": true,
+                  "entities": [
+                    "sensor.dollar_brl"
+                  ],
+                  "line_color": "blue",
+                  "show": {
+                    "labels": "truE"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "custom:mushroom-template-card",
+                  "primary": "Interruptores",
+                  "secondary": "",
+                  "icon": "mdi:lightbulb-group-outline",
+                  "icon_color": "#00b4b8",
+                  "badge_icon": "",
+                  "badge_color": "",
+                  "fill_container": false,
+                  "layout": "vertical"
+                },
+                {
+                  "type": "horizontal-stack",
+                  "cards": [
+                    {
+                      "show_name": true,
+                      "show_icon": true,
+                      "type": "button",
+                      "tap_action": {
+                        "action": "toggle"
+                      },
+                      "name": "Interruptor 1",
+                      "show_state": true,
+                      "icon_height": "50px",
+                      "theme": "ios-dark-mode-blue-red-alternative",
+                      "entity": "switch.interruptor1",
+                      "icon": "mdi:lightbulb"
+                    },
+                    {
+                      "show_name": true,
+                      "show_icon": true,
+                      "type": "button",
+                      "tap_action": {
+                        "action": "toggle"
+                      },
+                      "name": "Interruptor 2",
+                      "icon_height": "50px",
+                      "show_state": true,
+                      "theme": "ios-dark-mode-blue-red-alternative",
+                      "entity": "switch.interruptor2",
+                      "icon": "mdi:lightbulb"
+                    },
+                    {
+                      "show_name": true,
+                      "show_icon": true,
+                      "type": "button",
+                      "tap_action": {
+                        "action": "toggle"
+                      },
+                      "entity": "switch.interruptor3",
+                      "icon_height": "50px",
+                      "name": "Interruptor 3",
+                      "show_state": true,
+                      "theme": "ios-dark-mode-blue-red-alternative",
+                      "icon": "mdi:lightbulb"
+                    },
+                    {
+                      "show_name": true,
+                      "show_icon": true,
+                      "type": "button",
+                      "tap_action": {
+                        "action": "toggle"
+                      },
+                      "name": "Interruptor 4",
+                      "show_state": true,
+                      "icon_height": "50px",
+                      "entity": "switch.interruptor_externo",
+                      "icon": "mdi:lightbulb",
+                      "theme": "ios-dark-mode-blue-red-alternative"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "custom:mushroom-template-card",
+                  "primary": "Ar-condicionado",
+                  "secondary": "",
+                  "icon": "mdi:air-conditioner",
+                  "icon_color": "#00b4b8",
+                  "badge_icon": "",
+                  "badge_color": "#00b4b8",
+                  "fill_container": true,
+                  "layout": "vertical",
+                  "entity": "switch.ar"
+                },
+                {
+                  "show_name": true,
+                  "show_icon": true,
+                  "type": "button",
+                  "tap_action": {
+                    "action": "toggle"
+                  },
+                  "name": "Modo: Frio",
+                  "show_state": true,
+                  "icon_height": "50px",
+                  "theme": "ios-dark-mode-blue-red-alternative",
+                  "icon": "mdi:snowflake",
+                  "icon_color": "#00b4b8",
+                  "entity": "switch.interruptor2"
+                }
+              ]
+            },
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "custom:banner-card",
+                  "background": "#fa812a",
+                  "heading": [
+                    "mdi:account-group",
+                    "Ambiente perigoso"
+                  ],
+                  "color": "white"
+                },
+                {
+                  "show_name": true,
+                  "show_icon": true,
+                  "type": "button",
+                  "tap_action": {
+                    "action": "toggle"
+                  },
+                  "entity": "switch.interruptor2",
+                  "name": "Sensor Fumaça",
+                  "show_state": true,
+                  "icon_height": "50px",
+                  "theme": "ios-dark-mode-blue-red",
+                  "icon": "mdi:smoke-detector"
+                }
+              ]
+            },
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "vertical-stack",
+                  "cards": [
+                    {
+                      "type": "custom:mushroom-template-card",
+                      "primary": "Interruptores",
+                      "secondary": "",
+                      "icon": "mdi:lightbulb-group-outline",
+                      "icon_color": "#00b4b8",
+                      "badge_icon": "",
+                      "badge_color": "",
+                      "fill_container": false,
+                      "layout": "vertical"
+                    },
+                    {
+                      "type": "horizontal-stack",
+                      "cards": [
+                        {
+                          "show_name": true,
+                          "show_icon": true,
+                          "type": "button",
+                          "tap_action": {
+                            "action": "toggle"
+                          },
+                          "name": "Interruptor 1",
+                          "show_state": true,
+                          "icon_height": "50px",
+                          "theme": "ios-dark-mode-blue-red-alternative",
+                          "entity": "switch.interruptor1",
+                          "icon": "mdi:lightbulb"
+                        },
+                        {
+                          "show_name": true,
+                          "show_icon": true,
+                          "type": "button",
+                          "tap_action": {
+                            "action": "toggle"
+                          },
+                          "name": "Interruptor 2",
+                          "icon_height": "50px",
+                          "show_state": true,
+                          "theme": "ios-dark-mode-blue-red-alternative",
+                          "entity": "switch.interruptor2",
+                          "icon": "mdi:lightbulb"
+                        },
+                        {
+                          "show_name": true,
+                          "show_icon": true,
+                          "type": "button",
+                          "tap_action": {
+                            "action": "toggle"
+                          },
+                          "entity": "switch.interruptor3",
+                          "icon_height": "50px",
+                          "name": "Interruptor 3",
+                          "show_state": true,
+                          "theme": "ios-dark-mode-blue-red-alternative",
+                          "icon": "mdi:lightbulb"
+                        },
+                        {
+                          "show_name": true,
+                          "show_icon": true,
+                          "type": "button",
+                          "tap_action": {
+                            "action": "toggle"
+                          },
+                          "name": "Interruptor 4",
+                          "show_state": true,
+                          "icon_height": "50px",
+                          "entity": "switch.interruptor_externo",
+                          "icon": "mdi:lightbulb",
+                          "theme": "ios-dark-mode-blue-red-alternative"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "vertical-stack",
+                  "cards": [
+                    {
+                      "type": "custom:mushroom-template-card",
+                      "primary": "Ar-condicionado",
+                      "secondary": "",
+                      "icon": "mdi:air-conditioner",
+                      "icon_color": "#00b4b8",
+                      "badge_icon": "",
+                      "badge_color": "#00b4b8",
+                      "fill_container": true,
+                      "layout": "vertical",
+                      "entity": "switch.ar"
+                    },
+                    {
+                      "show_name": true,
+                      "show_icon": true,
+                      "type": "button",
+                      "tap_action": {
+                        "action": "toggle"
+                      },
+                      "name": "Modo: Frio",
+                      "show_state": true,
+                      "icon_height": "50px",
+                      "theme": "ios-dark-mode-blue-red-alternative",
+                      "icon": "mdi:snowflake",
+                      "icon_color": "#00b4b8",
+                      "entity": "switch.interruptor2"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "custom:mushroom-template-card",
+                  "primary": "Ambiente",
+                  "secondary": "",
+                  "icon": "mdi:home",
+                  "icon_color": "#00b4b8",
+                  "badge_icon": "",
+                  "badge_color": "",
+                  "fill_container": false,
+                  "layout": "vertical"
+                },
+                {
+                  "type": "horizontal-stack",
+                  "cards": [
+                    {
+                      "type": "vertical-stack",
+                      "cards": [
+                        {
+                          "type": "custom:mini-graph-card",
+                          "icon": "mdi:cloud",
+                          "animate": true,
+                          "name": "Temperatura",
+                          "entities": [
+                            "sensor.temperature_manaus"
+                          ],
+                          "line_color": "#00b4b8",
+                          "show": {
+                            "labels": true,
+                            "average": true,
+                            "extrema": true
+                          }
+                        },
+                        {
+                          "type": "custom:mini-graph-card",
+                          "icon": "mdi:cloud",
+                          "animate": true,
+                          "name": "Luminosidade",
+                          "entities": [
+                            "sensor.luminosidade"
+                          ],
+                          "line_color": "#00b4b8",
+                          "show": {
+                            "labels": true,
+                            "average": true,
+                            "extrema": true
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "vertical-stack",
+                      "cards": [
+                        {
+                          "type": "custom:mini-graph-card",
+                          "icon": "mdi:cloud",
+                          "animate": true,
+                          "name": "Temperatura",
+                          "entities": [
+                            "sensor.temperature_manaus"
+                          ],
+                          "line_color": "#00b4b8",
+                          "show": {
+                            "labels": true,
+                            "average": true,
+                            "extrema": true
+                          }
+                        },
+                        {
+                          "type": "custom:mini-graph-card",
+                          "icon": "mdi:cloud",
+                          "animate": true,
+                          "name": "Luminosidade",
+                          "entities": [
+                            "sensor.luminosidade"
+                          ],
+                          "line_color": "#00b4b8",
+                          "show": {
+                            "labels": true,
+                            "average": true,
+                            "extrema": true
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "custom:banner-card",
+                  "background": "#00b4b8",
+                  "heading": [
+                    "mdi:weather-cloudy",
+                    "Manaus"
+                  ],
+                  "color": "white"
+                },
+                {
+                  "type": "custom:weather-card",
+                  "hourly_forecast": true,
+                  "forecast": true,
+                  "entity": "weather.lsi",
+                  "current": true,
+                  "details": true
+                },
+                {
+                  "show_current": false,
+                  "show_forecast": true,
+                  "type": "weather-forecast",
+                  "entity": "weather.forecast_lsii",
+                  "forecast_type": "daily",
+                  "secondary_info_attribute": "pressure"
+                },
+                {
+                  "type": "custom:mini-graph-card",
+                  "icon": "mdi:cloud",
+                  "animate": true,
+                  "name": "Temperatura Manaus",
+                  "entities": [
+                    "sensor.temperature_manaus"
+                  ],
+                  "line_color": "#00b4b8",
+                  "show": {
+                    "labels": true,
+                    "average": true,
+                    "extrema": true
+                  }
+                }
+              ]
+            },
+            {
+              "type": "iframe",
+              "url": "https://embed.waze.com/iframe?zoom=17&lat=-3.091376&lon=-60.017281&ct=livemap",
+              "aspect_ratio": "50%",
+              "title": "Trânsito EST"
+            },
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "custom:layout-card",
+                  "cards": [
+                    {
+                      "type": "vertical-stack",
+                      "cards": [
+                        {
+                          "type": "custom:mini-graph-card",
+                          "icon": "mdi:currency-eur",
+                          "animate": true,
+                          "entities": [
+                            "sensor.euro_brl"
+                          ],
+                          "line_color": "#0077b6",
+                          "show": {
+                            "labels": true
+                          }
+                        },
+                        {
+                          "type": "custom:mini-graph-card",
+                          "icon": "mdi:alpha-d-circle",
+                          "animate": true,
+                          "entities": [
+                            "sensor.dollar_brl"
+                          ],
+                          "line_color": "#90e0ef",
+                          "show": {
+                            "labels": true
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "layout": {
+                    "width": 300,
+                    "padding": "0px"
+                  },
+                  "layout_type": "custom:grid-layout"
+                },
+                {
+                  "type": "custom:layout-card",
+                  "layout_type": "custom:horizontal-layout",
+                  "cards": [
+                    {
+                      "type": "custom:mini-graph-card",
+                      "icon": "mdi:bank",
+                      "animate": true,
+                      "background": null,
+                      "entities": [
+                        "sensor.ibovespa"
+                      ],
+                      "line_color": "#0077b6",
+                      "show": {
+                        "labels": true
+                      }
+                    },
+                    {
+                      "type": "custom:mini-graph-card",
+                      "icon": "mdi:bank",
+                      "animate": true,
+                      "background": null,
+                      "entities": [
+                        "sensor.dow_jones"
+                      ],
+                      "line_color": "#90e0ef",
+                      "show": {
+                        "labels": true
+                      }
+                    }
+                  ],
+                  "layout": {
+                    "width": 300
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

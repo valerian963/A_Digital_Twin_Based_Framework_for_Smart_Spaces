@@ -1,0 +1,105 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "esphome.9dbb0a223dd6b0d794ab0a28bda8fdc1",
+  "data": {
+    "device_info": {
+      "uses_password": false,
+      "name": "nodelsi",
+      "friendly_name": "NodeLSI",
+      "mac_address": "CC:50:E3:09:D1:85",
+      "compilation_time": "Jun 24 2024, 12:28:46",
+      "model": "esp01_1m",
+      "manufacturer": "Espressif",
+      "has_deep_sleep": false,
+      "esphome_version": "2024.4.2",
+      "project_name": "",
+      "project_version": "",
+      "webserver_port": 0,
+      "legacy_voice_assistant_version": 0,
+      "voice_assistant_feature_flags": 0,
+      "legacy_bluetooth_proxy_version": 0,
+      "bluetooth_proxy_feature_flags": 0,
+      "suggested_area": ""
+    },
+    "services": [],
+    "api_version": {
+      "major": 1,
+      "minor": 10
+    },
+    "binary_sensor": [
+      {
+        "object_id": "fuma_a",
+        "key": 4002172104,
+        "name": "Fumaça",
+        "unique_id": "nodelsibinary_sensorfuma_a",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_class": "",
+        "is_status_binary_sensor": false
+      }
+    ],
+    "switch": [
+      {
+        "object_id": "led_interno",
+        "key": 3429553874,
+        "name": "led interno",
+        "unique_id": "nodelsiswitchled_interno",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "assumed_state": false,
+        "device_class": ""
+      }
+    ],
+    "sensor": [
+      {
+        "object_id": "ldr",
+        "key": 662814693,
+        "name": "LDR",
+        "unique_id": "cc50e309d185-adc",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_class": "voltage",
+        "unit_of_measurement": "V",
+        "accuracy_decimals": 2,
+        "force_update": false,
+        "state_class": 1,
+        "last_reset_type": 0
+      },
+      {
+        "object_id": "temperatura",
+        "key": 899752957,
+        "name": "Temperatura",
+        "unique_id": "nodelsisensortemperatura",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_class": "temperature",
+        "unit_of_measurement": "°C",
+        "accuracy_decimals": 1,
+        "force_update": false,
+        "state_class": 1,
+        "last_reset_type": 0
+      },
+      {
+        "object_id": "umidade",
+        "key": 620068908,
+        "name": "Umidade",
+        "unique_id": "nodelsisensorumidade",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_class": "humidity",
+        "unit_of_measurement": "%",
+        "accuracy_decimals": 0,
+        "force_update": false,
+        "state_class": 1,
+        "last_reset_type": 0
+      }
+    ],
+    "text_sensor": []
+  }
+}

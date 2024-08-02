@@ -1,0 +1,5159 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "trace.saved_traces",
+  "data": {
+    "automation.1720448680333": [
+      {
+        "extended_dict": {
+          "last_step": "action/1",
+          "run_id": "b328afeb4e824215ef7b164b05738e10",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2024-07-11T12:30:59.002215+00:00",
+            "finish": "2024-07-11T12:30:59.010129+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1720448680333",
+          "trigger": "state of timer.timer1",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2024-07-11T12:30:59.002331+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.aba_1",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1720448680333",
+                      "last_triggered": "2024-07-11T12:30:09.001645+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Aba 1"
+                    },
+                    "last_changed": "2024-07-10T20:18:08.684719+00:00",
+                    "last_reported": "2024-07-11T12:30:09.008664+00:00",
+                    "last_updated": "2024-07-11T12:30:09.008664+00:00",
+                    "context": {
+                      "id": "01J2GWBF39NXJW89HC4EF4G6XM",
+                      "parent_id": "01J2GWBF39JY81F012035RFMQV",
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "state",
+                    "entity_id": "timer.timer1",
+                    "from_state": {
+                      "entity_id": "timer.timer1",
+                      "state": "active",
+                      "attributes": {
+                        "duration": "0:00:10",
+                        "editable": true,
+                        "finishes_at": "2024-07-11T12:30:59+00:00",
+                        "remaining": "0:00:10",
+                        "friendly_name": "timer1"
+                      },
+                      "last_changed": "2024-07-11T12:30:49.009147+00:00",
+                      "last_reported": "2024-07-11T12:30:49.009147+00:00",
+                      "last_updated": "2024-07-11T12:30:49.009147+00:00",
+                      "context": {
+                        "id": "01J2GWCP5AXYCJ17V5D3GXP5EN",
+                        "parent_id": "01J2GWCP59PNDAWMNS5H3BRJBV",
+                        "user_id": null
+                      }
+                    },
+                    "to_state": {
+                      "entity_id": "timer.timer1",
+                      "state": "idle",
+                      "attributes": {
+                        "duration": "0:00:10",
+                        "editable": true,
+                        "friendly_name": "timer1"
+                      },
+                      "last_changed": "2024-07-11T12:30:59.001952+00:00",
+                      "last_reported": "2024-07-11T12:30:59.001952+00:00",
+                      "last_updated": "2024-07-11T12:30:59.001952+00:00",
+                      "context": {
+                        "id": "01J2GWCZXS8AX0QM5WAF9B1WHK",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "for": null,
+                    "attribute": null,
+                    "description": "state of timer.timer1"
+                  }
+                }
+              }
+            ],
+            "action/0": [
+              {
+                "path": "action/0",
+                "timestamp": "2024-07-11T12:30:59.003046+00:00",
+                "changed_variables": {
+                  "context": {
+                    "id": "01J2GWCZXTDADYHNMYH5SBRE2S",
+                    "parent_id": "01J2GWCZXS8AX0QM5WAF9B1WHK",
+                    "user_id": null
+                  }
+                },
+                "result": {
+                  "params": {
+                    "domain": "browser_mod",
+                    "service": "navigate",
+                    "service_data": {
+                      "path": "/admin-lsi/geral",
+                      "entity_id": [
+                        "binary_sensor.4d74cd6f_b5b2ba62",
+                        "binary_sensor.5c36c726_bccbda00"
+                      ]
+                    },
+                    "target": {
+                      "entity_id": [
+                        "binary_sensor.4d74cd6f_b5b2ba62",
+                        "binary_sensor.5c36c726_bccbda00"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ],
+            "action/1": [
+              {
+                "path": "action/1",
+                "timestamp": "2024-07-11T12:30:59.008176+00:00",
+                "result": {
+                  "params": {
+                    "domain": "timer",
+                    "service": "start",
+                    "service_data": {},
+                    "target": {
+                      "entity_id": [
+                        "timer.timer2"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "1720448680333",
+            "alias": "Aba 1",
+            "description": "",
+            "trigger": [
+              {
+                "platform": "state",
+                "entity_id": [
+                  "timer.timer1"
+                ],
+                "from": "active",
+                "to": "idle"
+              }
+            ],
+            "condition": [],
+            "action": [
+              {
+                "service": "browser_mod.navigate",
+                "data": {
+                  "path": "/admin-lsi/geral"
+                },
+                "target": {
+                  "entity_id": [
+                    "binary_sensor.4d74cd6f_b5b2ba62",
+                    "binary_sensor.5c36c726_bccbda00"
+                  ]
+                }
+              },
+              {
+                "service": "timer.start",
+                "metadata": {},
+                "data": {},
+                "target": {
+                  "entity_id": "timer.timer2"
+                }
+              }
+            ],
+            "mode": "single"
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01J2GWCZXTDADYHNMYH5SBRE2S",
+            "parent_id": "01J2GWCZXS8AX0QM5WAF9B1WHK",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "action/1",
+          "run_id": "b328afeb4e824215ef7b164b05738e10",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2024-07-11T12:30:59.002215+00:00",
+            "finish": "2024-07-11T12:30:59.010129+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1720448680333",
+          "trigger": "state of timer.timer1"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "action/1",
+          "run_id": "f5a8a7ec0882e72e5676dfddefb9e832",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2024-07-11T12:31:49.001158+00:00",
+            "finish": "2024-07-11T12:31:49.009293+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1720448680333",
+          "trigger": "state of timer.timer1",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2024-07-11T12:31:49.001268+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.aba_1",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1720448680333",
+                      "last_triggered": "2024-07-11T12:30:59.002463+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Aba 1"
+                    },
+                    "last_changed": "2024-07-10T20:18:08.684719+00:00",
+                    "last_reported": "2024-07-11T12:30:59.009655+00:00",
+                    "last_updated": "2024-07-11T12:30:59.009655+00:00",
+                    "context": {
+                      "id": "01J2GWCZXTDADYHNMYH5SBRE2S",
+                      "parent_id": "01J2GWCZXS8AX0QM5WAF9B1WHK",
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "state",
+                    "entity_id": "timer.timer1",
+                    "from_state": {
+                      "entity_id": "timer.timer1",
+                      "state": "active",
+                      "attributes": {
+                        "duration": "0:00:10",
+                        "editable": true,
+                        "finishes_at": "2024-07-11T12:31:49+00:00",
+                        "remaining": "0:00:10",
+                        "friendly_name": "timer1"
+                      },
+                      "last_changed": "2024-07-11T12:31:39.004981+00:00",
+                      "last_reported": "2024-07-11T12:31:39.004981+00:00",
+                      "last_updated": "2024-07-11T12:31:39.004981+00:00",
+                      "context": {
+                        "id": "01J2GWE6ZSEKYRGG8NKJP779DR",
+                        "parent_id": "01J2GWE6ZS3QA8B53SQD9WDSBD",
+                        "user_id": null
+                      }
+                    },
+                    "to_state": {
+                      "entity_id": "timer.timer1",
+                      "state": "idle",
+                      "attributes": {
+                        "duration": "0:00:10",
+                        "editable": true,
+                        "friendly_name": "timer1"
+                      },
+                      "last_changed": "2024-07-11T12:31:49.000895+00:00",
+                      "last_reported": "2024-07-11T12:31:49.000895+00:00",
+                      "last_updated": "2024-07-11T12:31:49.000895+00:00",
+                      "context": {
+                        "id": "01J2GWEGR8TXY9A7XMZ557KW4P",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "for": null,
+                    "attribute": null,
+                    "description": "state of timer.timer1"
+                  }
+                }
+              }
+            ],
+            "action/0": [
+              {
+                "path": "action/0",
+                "timestamp": "2024-07-11T12:31:49.001965+00:00",
+                "changed_variables": {
+                  "context": {
+                    "id": "01J2GWEGR9EAKYPJSZV5MVBQ24",
+                    "parent_id": "01J2GWEGR8TXY9A7XMZ557KW4P",
+                    "user_id": null
+                  }
+                },
+                "result": {
+                  "params": {
+                    "domain": "browser_mod",
+                    "service": "navigate",
+                    "service_data": {
+                      "path": "/admin-lsi/geral",
+                      "entity_id": [
+                        "binary_sensor.4d74cd6f_b5b2ba62",
+                        "binary_sensor.5c36c726_bccbda00"
+                      ]
+                    },
+                    "target": {
+                      "entity_id": [
+                        "binary_sensor.4d74cd6f_b5b2ba62",
+                        "binary_sensor.5c36c726_bccbda00"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ],
+            "action/1": [
+              {
+                "path": "action/1",
+                "timestamp": "2024-07-11T12:31:49.007281+00:00",
+                "result": {
+                  "params": {
+                    "domain": "timer",
+                    "service": "start",
+                    "service_data": {},
+                    "target": {
+                      "entity_id": [
+                        "timer.timer2"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "1720448680333",
+            "alias": "Aba 1",
+            "description": "",
+            "trigger": [
+              {
+                "platform": "state",
+                "entity_id": [
+                  "timer.timer1"
+                ],
+                "from": "active",
+                "to": "idle"
+              }
+            ],
+            "condition": [],
+            "action": [
+              {
+                "service": "browser_mod.navigate",
+                "data": {
+                  "path": "/admin-lsi/geral"
+                },
+                "target": {
+                  "entity_id": [
+                    "binary_sensor.4d74cd6f_b5b2ba62",
+                    "binary_sensor.5c36c726_bccbda00"
+                  ]
+                }
+              },
+              {
+                "service": "timer.start",
+                "metadata": {},
+                "data": {},
+                "target": {
+                  "entity_id": "timer.timer2"
+                }
+              }
+            ],
+            "mode": "single"
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01J2GWEGR9EAKYPJSZV5MVBQ24",
+            "parent_id": "01J2GWEGR8TXY9A7XMZ557KW4P",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "action/1",
+          "run_id": "f5a8a7ec0882e72e5676dfddefb9e832",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2024-07-11T12:31:49.001158+00:00",
+            "finish": "2024-07-11T12:31:49.009293+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1720448680333",
+          "trigger": "state of timer.timer1"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "action/1",
+          "run_id": "23115169c056c813de6a27c9a8385ee4",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2024-07-11T12:32:39.001654+00:00",
+            "finish": "2024-07-11T12:32:39.010909+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1720448680333",
+          "trigger": "state of timer.timer1",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2024-07-11T12:32:39.001746+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.aba_1",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1720448680333",
+                      "last_triggered": "2024-07-11T12:31:49.001402+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Aba 1"
+                    },
+                    "last_changed": "2024-07-10T20:18:08.684719+00:00",
+                    "last_reported": "2024-07-11T12:31:49.008801+00:00",
+                    "last_updated": "2024-07-11T12:31:49.008801+00:00",
+                    "context": {
+                      "id": "01J2GWEGR9EAKYPJSZV5MVBQ24",
+                      "parent_id": "01J2GWEGR8TXY9A7XMZ557KW4P",
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "state",
+                    "entity_id": "timer.timer1",
+                    "from_state": {
+                      "entity_id": "timer.timer1",
+                      "state": "active",
+                      "attributes": {
+                        "duration": "0:00:10",
+                        "editable": true,
+                        "finishes_at": "2024-07-11T12:32:39+00:00",
+                        "remaining": "0:00:10",
+                        "friendly_name": "timer1"
+                      },
+                      "last_changed": "2024-07-11T12:32:29.008015+00:00",
+                      "last_reported": "2024-07-11T12:32:29.008015+00:00",
+                      "last_updated": "2024-07-11T12:32:29.008015+00:00",
+                      "context": {
+                        "id": "01J2GWFQTAHWK88FFSBA8W1YEC",
+                        "parent_id": "01J2GWFQT905SZ6YQHAGEWY1A1",
+                        "user_id": null
+                      }
+                    },
+                    "to_state": {
+                      "entity_id": "timer.timer1",
+                      "state": "idle",
+                      "attributes": {
+                        "duration": "0:00:10",
+                        "editable": true,
+                        "friendly_name": "timer1"
+                      },
+                      "last_changed": "2024-07-11T12:32:39.001359+00:00",
+                      "last_reported": "2024-07-11T12:32:39.001359+00:00",
+                      "last_updated": "2024-07-11T12:32:39.001359+00:00",
+                      "context": {
+                        "id": "01J2GWG1JSMVBH2KXJH307KN7A",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "for": null,
+                    "attribute": null,
+                    "description": "state of timer.timer1"
+                  }
+                }
+              }
+            ],
+            "action/0": [
+              {
+                "path": "action/0",
+                "timestamp": "2024-07-11T12:32:39.002413+00:00",
+                "changed_variables": {
+                  "context": {
+                    "id": "01J2GWG1JSA59TGPHHPXWS3MRJ",
+                    "parent_id": "01J2GWG1JSMVBH2KXJH307KN7A",
+                    "user_id": null
+                  }
+                },
+                "result": {
+                  "params": {
+                    "domain": "browser_mod",
+                    "service": "navigate",
+                    "service_data": {
+                      "path": "/admin-lsi/geral",
+                      "entity_id": [
+                        "binary_sensor.4d74cd6f_b5b2ba62",
+                        "binary_sensor.5c36c726_bccbda00"
+                      ]
+                    },
+                    "target": {
+                      "entity_id": [
+                        "binary_sensor.4d74cd6f_b5b2ba62",
+                        "binary_sensor.5c36c726_bccbda00"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ],
+            "action/1": [
+              {
+                "path": "action/1",
+                "timestamp": "2024-07-11T12:32:39.007456+00:00",
+                "result": {
+                  "params": {
+                    "domain": "timer",
+                    "service": "start",
+                    "service_data": {},
+                    "target": {
+                      "entity_id": [
+                        "timer.timer2"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "1720448680333",
+            "alias": "Aba 1",
+            "description": "",
+            "trigger": [
+              {
+                "platform": "state",
+                "entity_id": [
+                  "timer.timer1"
+                ],
+                "from": "active",
+                "to": "idle"
+              }
+            ],
+            "condition": [],
+            "action": [
+              {
+                "service": "browser_mod.navigate",
+                "data": {
+                  "path": "/admin-lsi/geral"
+                },
+                "target": {
+                  "entity_id": [
+                    "binary_sensor.4d74cd6f_b5b2ba62",
+                    "binary_sensor.5c36c726_bccbda00"
+                  ]
+                }
+              },
+              {
+                "service": "timer.start",
+                "metadata": {},
+                "data": {},
+                "target": {
+                  "entity_id": "timer.timer2"
+                }
+              }
+            ],
+            "mode": "single"
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01J2GWG1JSA59TGPHHPXWS3MRJ",
+            "parent_id": "01J2GWG1JSMVBH2KXJH307KN7A",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "action/1",
+          "run_id": "23115169c056c813de6a27c9a8385ee4",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2024-07-11T12:32:39.001654+00:00",
+            "finish": "2024-07-11T12:32:39.010909+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1720448680333",
+          "trigger": "state of timer.timer1"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "action/1",
+          "run_id": "074988d6d4a4fbef0f106e825b16726c",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2024-07-11T12:33:29.002003+00:00",
+            "finish": "2024-07-11T12:33:29.010045+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1720448680333",
+          "trigger": "state of timer.timer1",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2024-07-11T12:33:29.002114+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.aba_1",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1720448680333",
+                      "last_triggered": "2024-07-11T12:32:39.001880+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Aba 1"
+                    },
+                    "last_changed": "2024-07-10T20:18:08.684719+00:00",
+                    "last_reported": "2024-07-11T12:32:39.010408+00:00",
+                    "last_updated": "2024-07-11T12:32:39.010408+00:00",
+                    "context": {
+                      "id": "01J2GWG1JSA59TGPHHPXWS3MRJ",
+                      "parent_id": "01J2GWG1JSMVBH2KXJH307KN7A",
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "state",
+                    "entity_id": "timer.timer1",
+                    "from_state": {
+                      "entity_id": "timer.timer1",
+                      "state": "active",
+                      "attributes": {
+                        "duration": "0:00:10",
+                        "editable": true,
+                        "finishes_at": "2024-07-11T12:33:29+00:00",
+                        "remaining": "0:00:10",
+                        "friendly_name": "timer1"
+                      },
+                      "last_changed": "2024-07-11T12:33:19.009740+00:00",
+                      "last_reported": "2024-07-11T12:33:19.009740+00:00",
+                      "last_updated": "2024-07-11T12:33:19.009740+00:00",
+                      "context": {
+                        "id": "01J2GWH8MTPCSCQ68ESVPQE3TF",
+                        "parent_id": "01J2GWH8MTN6TFG1KDA3P8AH0T",
+                        "user_id": null
+                      }
+                    },
+                    "to_state": {
+                      "entity_id": "timer.timer1",
+                      "state": "idle",
+                      "attributes": {
+                        "duration": "0:00:10",
+                        "editable": true,
+                        "friendly_name": "timer1"
+                      },
+                      "last_changed": "2024-07-11T12:33:29.001733+00:00",
+                      "last_reported": "2024-07-11T12:33:29.001733+00:00",
+                      "last_updated": "2024-07-11T12:33:29.001733+00:00",
+                      "context": {
+                        "id": "01J2GWHJD9GG8JNG3B52KR5ENW",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "for": null,
+                    "attribute": null,
+                    "description": "state of timer.timer1"
+                  }
+                }
+              }
+            ],
+            "action/0": [
+              {
+                "path": "action/0",
+                "timestamp": "2024-07-11T12:33:29.002817+00:00",
+                "changed_variables": {
+                  "context": {
+                    "id": "01J2GWHJD94Y7J0VPXYW7ABTPY",
+                    "parent_id": "01J2GWHJD9GG8JNG3B52KR5ENW",
+                    "user_id": null
+                  }
+                },
+                "result": {
+                  "params": {
+                    "domain": "browser_mod",
+                    "service": "navigate",
+                    "service_data": {
+                      "path": "/admin-lsi/geral",
+                      "entity_id": [
+                        "binary_sensor.4d74cd6f_b5b2ba62",
+                        "binary_sensor.5c36c726_bccbda00"
+                      ]
+                    },
+                    "target": {
+                      "entity_id": [
+                        "binary_sensor.4d74cd6f_b5b2ba62",
+                        "binary_sensor.5c36c726_bccbda00"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ],
+            "action/1": [
+              {
+                "path": "action/1",
+                "timestamp": "2024-07-11T12:33:29.008155+00:00",
+                "result": {
+                  "params": {
+                    "domain": "timer",
+                    "service": "start",
+                    "service_data": {},
+                    "target": {
+                      "entity_id": [
+                        "timer.timer2"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "1720448680333",
+            "alias": "Aba 1",
+            "description": "",
+            "trigger": [
+              {
+                "platform": "state",
+                "entity_id": [
+                  "timer.timer1"
+                ],
+                "from": "active",
+                "to": "idle"
+              }
+            ],
+            "condition": [],
+            "action": [
+              {
+                "service": "browser_mod.navigate",
+                "data": {
+                  "path": "/admin-lsi/geral"
+                },
+                "target": {
+                  "entity_id": [
+                    "binary_sensor.4d74cd6f_b5b2ba62",
+                    "binary_sensor.5c36c726_bccbda00"
+                  ]
+                }
+              },
+              {
+                "service": "timer.start",
+                "metadata": {},
+                "data": {},
+                "target": {
+                  "entity_id": "timer.timer2"
+                }
+              }
+            ],
+            "mode": "single"
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01J2GWHJD94Y7J0VPXYW7ABTPY",
+            "parent_id": "01J2GWHJD9GG8JNG3B52KR5ENW",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "action/1",
+          "run_id": "074988d6d4a4fbef0f106e825b16726c",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2024-07-11T12:33:29.002003+00:00",
+            "finish": "2024-07-11T12:33:29.010045+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1720448680333",
+          "trigger": "state of timer.timer1"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "action/1",
+          "run_id": "d350b673755ad1f856edee7bdcc01644",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2024-07-11T12:34:19.002140+00:00",
+            "finish": "2024-07-11T12:34:19.013432+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1720448680333",
+          "trigger": "state of timer.timer1",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2024-07-11T12:34:19.002266+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.aba_1",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1720448680333",
+                      "last_triggered": "2024-07-11T12:33:29.002247+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Aba 1"
+                    },
+                    "last_changed": "2024-07-10T20:18:08.684719+00:00",
+                    "last_reported": "2024-07-11T12:33:29.009582+00:00",
+                    "last_updated": "2024-07-11T12:33:29.009582+00:00",
+                    "context": {
+                      "id": "01J2GWHJD94Y7J0VPXYW7ABTPY",
+                      "parent_id": "01J2GWHJD9GG8JNG3B52KR5ENW",
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "state",
+                    "entity_id": "timer.timer1",
+                    "from_state": {
+                      "entity_id": "timer.timer1",
+                      "state": "active",
+                      "attributes": {
+                        "duration": "0:00:10",
+                        "editable": true,
+                        "finishes_at": "2024-07-11T12:34:19+00:00",
+                        "remaining": "0:00:10",
+                        "friendly_name": "timer1"
+                      },
+                      "last_changed": "2024-07-11T12:34:09.012730+00:00",
+                      "last_reported": "2024-07-11T12:34:09.012730+00:00",
+                      "last_updated": "2024-07-11T12:34:09.012730+00:00",
+                      "context": {
+                        "id": "01J2GWJSF921KJGHHFHG0999DP",
+                        "parent_id": "01J2GWJSF921EPE281854YNN35",
+                        "user_id": null
+                      }
+                    },
+                    "to_state": {
+                      "entity_id": "timer.timer1",
+                      "state": "idle",
+                      "attributes": {
+                        "duration": "0:00:10",
+                        "editable": true,
+                        "friendly_name": "timer1"
+                      },
+                      "last_changed": "2024-07-11T12:34:19.001853+00:00",
+                      "last_reported": "2024-07-11T12:34:19.001853+00:00",
+                      "last_updated": "2024-07-11T12:34:19.001853+00:00",
+                      "context": {
+                        "id": "01J2GWK37SDD14CB3E5FDZTQRT",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "for": null,
+                    "attribute": null,
+                    "description": "state of timer.timer1"
+                  }
+                }
+              }
+            ],
+            "action/0": [
+              {
+                "path": "action/0",
+                "timestamp": "2024-07-11T12:34:19.003114+00:00",
+                "changed_variables": {
+                  "context": {
+                    "id": "01J2GWK37TTPMAC2X66EXA87PN",
+                    "parent_id": "01J2GWK37SDD14CB3E5FDZTQRT",
+                    "user_id": null
+                  }
+                },
+                "result": {
+                  "params": {
+                    "domain": "browser_mod",
+                    "service": "navigate",
+                    "service_data": {
+                      "path": "/admin-lsi/geral",
+                      "entity_id": [
+                        "binary_sensor.4d74cd6f_b5b2ba62",
+                        "binary_sensor.5c36c726_bccbda00"
+                      ]
+                    },
+                    "target": {
+                      "entity_id": [
+                        "binary_sensor.4d74cd6f_b5b2ba62",
+                        "binary_sensor.5c36c726_bccbda00"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ],
+            "action/1": [
+              {
+                "path": "action/1",
+                "timestamp": "2024-07-11T12:34:19.010981+00:00",
+                "result": {
+                  "params": {
+                    "domain": "timer",
+                    "service": "start",
+                    "service_data": {},
+                    "target": {
+                      "entity_id": [
+                        "timer.timer2"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "1720448680333",
+            "alias": "Aba 1",
+            "description": "",
+            "trigger": [
+              {
+                "platform": "state",
+                "entity_id": [
+                  "timer.timer1"
+                ],
+                "from": "active",
+                "to": "idle"
+              }
+            ],
+            "condition": [],
+            "action": [
+              {
+                "service": "browser_mod.navigate",
+                "data": {
+                  "path": "/admin-lsi/geral"
+                },
+                "target": {
+                  "entity_id": [
+                    "binary_sensor.4d74cd6f_b5b2ba62",
+                    "binary_sensor.5c36c726_bccbda00"
+                  ]
+                }
+              },
+              {
+                "service": "timer.start",
+                "metadata": {},
+                "data": {},
+                "target": {
+                  "entity_id": "timer.timer2"
+                }
+              }
+            ],
+            "mode": "single"
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01J2GWK37TTPMAC2X66EXA87PN",
+            "parent_id": "01J2GWK37SDD14CB3E5FDZTQRT",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "action/1",
+          "run_id": "d350b673755ad1f856edee7bdcc01644",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2024-07-11T12:34:19.002140+00:00",
+            "finish": "2024-07-11T12:34:19.013432+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1720448680333",
+          "trigger": "state of timer.timer1"
+        }
+      }
+    ],
+    "automation.1720537162235": [
+      {
+        "extended_dict": {
+          "last_step": "action/1",
+          "run_id": "4fa151513f690d5b895f25c6a90f0f83",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2024-07-11T12:30:19.001028+00:00",
+            "finish": "2024-07-11T12:30:19.009796+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1720537162235",
+          "trigger": "state of timer.timer2",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2024-07-11T12:30:19.001140+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.aba2",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1720537162235",
+                      "last_triggered": "2024-07-11T12:29:29.002337+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Aba 2"
+                    },
+                    "last_changed": "2024-07-10T20:18:20.105150+00:00",
+                    "last_reported": "2024-07-11T12:29:29.009685+00:00",
+                    "last_updated": "2024-07-11T12:29:29.009685+00:00",
+                    "context": {
+                      "id": "01J2GWA81ABC6Y520AQD0MN5WD",
+                      "parent_id": "01J2GWA8199ZWT5AB2W5GKHFS7",
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "state",
+                    "entity_id": "timer.timer2",
+                    "from_state": {
+                      "entity_id": "timer.timer2",
+                      "state": "active",
+                      "attributes": {
+                        "duration": "0:00:10",
+                        "editable": true,
+                        "finishes_at": "2024-07-11T12:30:19+00:00",
+                        "remaining": "0:00:10",
+                        "friendly_name": "timer2"
+                      },
+                      "last_changed": "2024-07-11T12:30:09.008032+00:00",
+                      "last_reported": "2024-07-11T12:30:09.008032+00:00",
+                      "last_updated": "2024-07-11T12:30:09.008032+00:00",
+                      "context": {
+                        "id": "01J2GWBF39NXJW89HC4EF4G6XM",
+                        "parent_id": "01J2GWBF39JY81F012035RFMQV",
+                        "user_id": null
+                      }
+                    },
+                    "to_state": {
+                      "entity_id": "timer.timer2",
+                      "state": "idle",
+                      "attributes": {
+                        "duration": "0:00:10",
+                        "editable": true,
+                        "friendly_name": "timer2"
+                      },
+                      "last_changed": "2024-07-11T12:30:19.000765+00:00",
+                      "last_reported": "2024-07-11T12:30:19.000765+00:00",
+                      "last_updated": "2024-07-11T12:30:19.000765+00:00",
+                      "context": {
+                        "id": "01J2GWBRVRJ8A1NK24CS6K3VKB",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "for": null,
+                    "attribute": null,
+                    "description": "state of timer.timer2"
+                  }
+                }
+              }
+            ],
+            "action/0": [
+              {
+                "path": "action/0",
+                "timestamp": "2024-07-11T12:30:19.001834+00:00",
+                "changed_variables": {
+                  "context": {
+                    "id": "01J2GWBRVR1JYN9YTD2YH5A7N5",
+                    "parent_id": "01J2GWBRVRJ8A1NK24CS6K3VKB",
+                    "user_id": null
+                  }
+                },
+                "result": {
+                  "params": {
+                    "domain": "browser_mod",
+                    "service": "navigate",
+                    "service_data": {
+                      "path": "/admin-lsi/default_view",
+                      "entity_id": [
+                        "binary_sensor.4d74cd6f_b5b2ba62",
+                        "binary_sensor.5c36c726_bccbda00"
+                      ]
+                    },
+                    "target": {
+                      "entity_id": [
+                        "binary_sensor.4d74cd6f_b5b2ba62",
+                        "binary_sensor.5c36c726_bccbda00"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ],
+            "action/1": [
+              {
+                "path": "action/1",
+                "timestamp": "2024-07-11T12:30:19.006842+00:00",
+                "result": {
+                  "params": {
+                    "domain": "timer",
+                    "service": "start",
+                    "service_data": {},
+                    "target": {
+                      "entity_id": [
+                        "timer.timer3"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "1720537162235",
+            "alias": "Aba2",
+            "description": "",
+            "trigger": [
+              {
+                "platform": "state",
+                "entity_id": [
+                  "timer.timer2"
+                ],
+                "from": "active",
+                "to": "idle"
+              }
+            ],
+            "condition": [],
+            "action": [
+              {
+                "service": "browser_mod.navigate",
+                "data": {
+                  "path": "/admin-lsi/default_view"
+                },
+                "target": {
+                  "entity_id": [
+                    "binary_sensor.4d74cd6f_b5b2ba62",
+                    "binary_sensor.5c36c726_bccbda00"
+                  ]
+                }
+              },
+              {
+                "service": "timer.start",
+                "metadata": {},
+                "data": {},
+                "target": {
+                  "entity_id": "timer.timer3"
+                }
+              }
+            ],
+            "mode": "single"
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01J2GWBRVR1JYN9YTD2YH5A7N5",
+            "parent_id": "01J2GWBRVRJ8A1NK24CS6K3VKB",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "action/1",
+          "run_id": "4fa151513f690d5b895f25c6a90f0f83",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2024-07-11T12:30:19.001028+00:00",
+            "finish": "2024-07-11T12:30:19.009796+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1720537162235",
+          "trigger": "state of timer.timer2"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "action/1",
+          "run_id": "6b6887fe604c26db4230a889bbf9e10f",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2024-07-11T12:31:09.001895+00:00",
+            "finish": "2024-07-11T12:31:09.011566+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1720537162235",
+          "trigger": "state of timer.timer2",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2024-07-11T12:31:09.002011+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.aba2",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1720537162235",
+                      "last_triggered": "2024-07-11T12:30:19.001269+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Aba 2"
+                    },
+                    "last_changed": "2024-07-10T20:18:20.105150+00:00",
+                    "last_reported": "2024-07-11T12:30:19.008987+00:00",
+                    "last_updated": "2024-07-11T12:30:19.008987+00:00",
+                    "context": {
+                      "id": "01J2GWBRVR1JYN9YTD2YH5A7N5",
+                      "parent_id": "01J2GWBRVRJ8A1NK24CS6K3VKB",
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "state",
+                    "entity_id": "timer.timer2",
+                    "from_state": {
+                      "entity_id": "timer.timer2",
+                      "state": "active",
+                      "attributes": {
+                        "duration": "0:00:10",
+                        "editable": true,
+                        "finishes_at": "2024-07-11T12:31:09+00:00",
+                        "remaining": "0:00:10",
+                        "friendly_name": "timer2"
+                      },
+                      "last_changed": "2024-07-11T12:30:59.009001+00:00",
+                      "last_reported": "2024-07-11T12:30:59.009001+00:00",
+                      "last_updated": "2024-07-11T12:30:59.009001+00:00",
+                      "context": {
+                        "id": "01J2GWCZXTDADYHNMYH5SBRE2S",
+                        "parent_id": "01J2GWCZXS8AX0QM5WAF9B1WHK",
+                        "user_id": null
+                      }
+                    },
+                    "to_state": {
+                      "entity_id": "timer.timer2",
+                      "state": "idle",
+                      "attributes": {
+                        "duration": "0:00:10",
+                        "editable": true,
+                        "friendly_name": "timer2"
+                      },
+                      "last_changed": "2024-07-11T12:31:09.001477+00:00",
+                      "last_reported": "2024-07-11T12:31:09.001477+00:00",
+                      "last_updated": "2024-07-11T12:31:09.001477+00:00",
+                      "context": {
+                        "id": "01J2GWD9P9YQ568K84TD68S7F1",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "for": null,
+                    "attribute": null,
+                    "description": "state of timer.timer2"
+                  }
+                }
+              }
+            ],
+            "action/0": [
+              {
+                "path": "action/0",
+                "timestamp": "2024-07-11T12:31:09.003113+00:00",
+                "changed_variables": {
+                  "context": {
+                    "id": "01J2GWD9P9VHZMAT8B8H8HSNA5",
+                    "parent_id": "01J2GWD9P9YQ568K84TD68S7F1",
+                    "user_id": null
+                  }
+                },
+                "result": {
+                  "params": {
+                    "domain": "browser_mod",
+                    "service": "navigate",
+                    "service_data": {
+                      "path": "/admin-lsi/default_view",
+                      "entity_id": [
+                        "binary_sensor.4d74cd6f_b5b2ba62",
+                        "binary_sensor.5c36c726_bccbda00"
+                      ]
+                    },
+                    "target": {
+                      "entity_id": [
+                        "binary_sensor.4d74cd6f_b5b2ba62",
+                        "binary_sensor.5c36c726_bccbda00"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ],
+            "action/1": [
+              {
+                "path": "action/1",
+                "timestamp": "2024-07-11T12:31:09.009063+00:00",
+                "result": {
+                  "params": {
+                    "domain": "timer",
+                    "service": "start",
+                    "service_data": {},
+                    "target": {
+                      "entity_id": [
+                        "timer.timer3"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "1720537162235",
+            "alias": "Aba2",
+            "description": "",
+            "trigger": [
+              {
+                "platform": "state",
+                "entity_id": [
+                  "timer.timer2"
+                ],
+                "from": "active",
+                "to": "idle"
+              }
+            ],
+            "condition": [],
+            "action": [
+              {
+                "service": "browser_mod.navigate",
+                "data": {
+                  "path": "/admin-lsi/default_view"
+                },
+                "target": {
+                  "entity_id": [
+                    "binary_sensor.4d74cd6f_b5b2ba62",
+                    "binary_sensor.5c36c726_bccbda00"
+                  ]
+                }
+              },
+              {
+                "service": "timer.start",
+                "metadata": {},
+                "data": {},
+                "target": {
+                  "entity_id": "timer.timer3"
+                }
+              }
+            ],
+            "mode": "single"
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01J2GWD9P9VHZMAT8B8H8HSNA5",
+            "parent_id": "01J2GWD9P9YQ568K84TD68S7F1",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "action/1",
+          "run_id": "6b6887fe604c26db4230a889bbf9e10f",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2024-07-11T12:31:09.001895+00:00",
+            "finish": "2024-07-11T12:31:09.011566+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1720537162235",
+          "trigger": "state of timer.timer2"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "action/1",
+          "run_id": "53e2c8bd508579bf23a20cdc5782edd3",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2024-07-11T12:31:59.001849+00:00",
+            "finish": "2024-07-11T12:31:59.010195+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1720537162235",
+          "trigger": "state of timer.timer2",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2024-07-11T12:31:59.001966+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.aba2",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1720537162235",
+                      "last_triggered": "2024-07-11T12:31:09.002150+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Aba 2"
+                    },
+                    "last_changed": "2024-07-10T20:18:20.105150+00:00",
+                    "last_reported": "2024-07-11T12:31:09.010971+00:00",
+                    "last_updated": "2024-07-11T12:31:09.010971+00:00",
+                    "context": {
+                      "id": "01J2GWD9P9VHZMAT8B8H8HSNA5",
+                      "parent_id": "01J2GWD9P9YQ568K84TD68S7F1",
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "state",
+                    "entity_id": "timer.timer2",
+                    "from_state": {
+                      "entity_id": "timer.timer2",
+                      "state": "active",
+                      "attributes": {
+                        "duration": "0:00:10",
+                        "editable": true,
+                        "finishes_at": "2024-07-11T12:31:59+00:00",
+                        "remaining": "0:00:10",
+                        "friendly_name": "timer2"
+                      },
+                      "last_changed": "2024-07-11T12:31:49.008132+00:00",
+                      "last_reported": "2024-07-11T12:31:49.008132+00:00",
+                      "last_updated": "2024-07-11T12:31:49.008132+00:00",
+                      "context": {
+                        "id": "01J2GWEGR9EAKYPJSZV5MVBQ24",
+                        "parent_id": "01J2GWEGR8TXY9A7XMZ557KW4P",
+                        "user_id": null
+                      }
+                    },
+                    "to_state": {
+                      "entity_id": "timer.timer2",
+                      "state": "idle",
+                      "attributes": {
+                        "duration": "0:00:10",
+                        "editable": true,
+                        "friendly_name": "timer2"
+                      },
+                      "last_changed": "2024-07-11T12:31:59.001448+00:00",
+                      "last_reported": "2024-07-11T12:31:59.001448+00:00",
+                      "last_updated": "2024-07-11T12:31:59.001448+00:00",
+                      "context": {
+                        "id": "01J2GWETGSMQB9Z6B7XE38TZRD",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "for": null,
+                    "attribute": null,
+                    "description": "state of timer.timer2"
+                  }
+                }
+              }
+            ],
+            "action/0": [
+              {
+                "path": "action/0",
+                "timestamp": "2024-07-11T12:31:59.002914+00:00",
+                "changed_variables": {
+                  "context": {
+                    "id": "01J2GWETGSY606AP5M9J0MP9VR",
+                    "parent_id": "01J2GWETGSMQB9Z6B7XE38TZRD",
+                    "user_id": null
+                  }
+                },
+                "result": {
+                  "params": {
+                    "domain": "browser_mod",
+                    "service": "navigate",
+                    "service_data": {
+                      "path": "/admin-lsi/default_view",
+                      "entity_id": [
+                        "binary_sensor.4d74cd6f_b5b2ba62",
+                        "binary_sensor.5c36c726_bccbda00"
+                      ]
+                    },
+                    "target": {
+                      "entity_id": [
+                        "binary_sensor.4d74cd6f_b5b2ba62",
+                        "binary_sensor.5c36c726_bccbda00"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ],
+            "action/1": [
+              {
+                "path": "action/1",
+                "timestamp": "2024-07-11T12:31:59.008266+00:00",
+                "result": {
+                  "params": {
+                    "domain": "timer",
+                    "service": "start",
+                    "service_data": {},
+                    "target": {
+                      "entity_id": [
+                        "timer.timer3"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "1720537162235",
+            "alias": "Aba2",
+            "description": "",
+            "trigger": [
+              {
+                "platform": "state",
+                "entity_id": [
+                  "timer.timer2"
+                ],
+                "from": "active",
+                "to": "idle"
+              }
+            ],
+            "condition": [],
+            "action": [
+              {
+                "service": "browser_mod.navigate",
+                "data": {
+                  "path": "/admin-lsi/default_view"
+                },
+                "target": {
+                  "entity_id": [
+                    "binary_sensor.4d74cd6f_b5b2ba62",
+                    "binary_sensor.5c36c726_bccbda00"
+                  ]
+                }
+              },
+              {
+                "service": "timer.start",
+                "metadata": {},
+                "data": {},
+                "target": {
+                  "entity_id": "timer.timer3"
+                }
+              }
+            ],
+            "mode": "single"
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01J2GWETGSY606AP5M9J0MP9VR",
+            "parent_id": "01J2GWETGSMQB9Z6B7XE38TZRD",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "action/1",
+          "run_id": "53e2c8bd508579bf23a20cdc5782edd3",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2024-07-11T12:31:59.001849+00:00",
+            "finish": "2024-07-11T12:31:59.010195+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1720537162235",
+          "trigger": "state of timer.timer2"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "action/1",
+          "run_id": "84b280f1f48409778d66b961cc08ddc0",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2024-07-11T12:32:49.001368+00:00",
+            "finish": "2024-07-11T12:32:49.009200+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1720537162235",
+          "trigger": "state of timer.timer2",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2024-07-11T12:32:49.001479+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.aba2",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1720537162235",
+                      "last_triggered": "2024-07-11T12:31:59.002098+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Aba 2"
+                    },
+                    "last_changed": "2024-07-10T20:18:20.105150+00:00",
+                    "last_reported": "2024-07-11T12:31:59.009732+00:00",
+                    "last_updated": "2024-07-11T12:31:59.009732+00:00",
+                    "context": {
+                      "id": "01J2GWETGSY606AP5M9J0MP9VR",
+                      "parent_id": "01J2GWETGSMQB9Z6B7XE38TZRD",
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "state",
+                    "entity_id": "timer.timer2",
+                    "from_state": {
+                      "entity_id": "timer.timer2",
+                      "state": "active",
+                      "attributes": {
+                        "duration": "0:00:10",
+                        "editable": true,
+                        "finishes_at": "2024-07-11T12:32:49+00:00",
+                        "remaining": "0:00:10",
+                        "friendly_name": "timer2"
+                      },
+                      "last_changed": "2024-07-11T12:32:39.009778+00:00",
+                      "last_reported": "2024-07-11T12:32:39.009778+00:00",
+                      "last_updated": "2024-07-11T12:32:39.009778+00:00",
+                      "context": {
+                        "id": "01J2GWG1JSA59TGPHHPXWS3MRJ",
+                        "parent_id": "01J2GWG1JSMVBH2KXJH307KN7A",
+                        "user_id": null
+                      }
+                    },
+                    "to_state": {
+                      "entity_id": "timer.timer2",
+                      "state": "idle",
+                      "attributes": {
+                        "duration": "0:00:10",
+                        "editable": true,
+                        "friendly_name": "timer2"
+                      },
+                      "last_changed": "2024-07-11T12:32:49.001107+00:00",
+                      "last_reported": "2024-07-11T12:32:49.001107+00:00",
+                      "last_updated": "2024-07-11T12:32:49.001107+00:00",
+                      "context": {
+                        "id": "01J2GWGBB9SB76A5D2RGXXWDJZ",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "for": null,
+                    "attribute": null,
+                    "description": "state of timer.timer2"
+                  }
+                }
+              }
+            ],
+            "action/0": [
+              {
+                "path": "action/0",
+                "timestamp": "2024-07-11T12:32:49.002183+00:00",
+                "changed_variables": {
+                  "context": {
+                    "id": "01J2GWGBB9RV1CDWRAPS2M9X00",
+                    "parent_id": "01J2GWGBB9SB76A5D2RGXXWDJZ",
+                    "user_id": null
+                  }
+                },
+                "result": {
+                  "params": {
+                    "domain": "browser_mod",
+                    "service": "navigate",
+                    "service_data": {
+                      "path": "/admin-lsi/default_view",
+                      "entity_id": [
+                        "binary_sensor.4d74cd6f_b5b2ba62",
+                        "binary_sensor.5c36c726_bccbda00"
+                      ]
+                    },
+                    "target": {
+                      "entity_id": [
+                        "binary_sensor.4d74cd6f_b5b2ba62",
+                        "binary_sensor.5c36c726_bccbda00"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ],
+            "action/1": [
+              {
+                "path": "action/1",
+                "timestamp": "2024-07-11T12:32:49.007256+00:00",
+                "result": {
+                  "params": {
+                    "domain": "timer",
+                    "service": "start",
+                    "service_data": {},
+                    "target": {
+                      "entity_id": [
+                        "timer.timer3"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "1720537162235",
+            "alias": "Aba2",
+            "description": "",
+            "trigger": [
+              {
+                "platform": "state",
+                "entity_id": [
+                  "timer.timer2"
+                ],
+                "from": "active",
+                "to": "idle"
+              }
+            ],
+            "condition": [],
+            "action": [
+              {
+                "service": "browser_mod.navigate",
+                "data": {
+                  "path": "/admin-lsi/default_view"
+                },
+                "target": {
+                  "entity_id": [
+                    "binary_sensor.4d74cd6f_b5b2ba62",
+                    "binary_sensor.5c36c726_bccbda00"
+                  ]
+                }
+              },
+              {
+                "service": "timer.start",
+                "metadata": {},
+                "data": {},
+                "target": {
+                  "entity_id": "timer.timer3"
+                }
+              }
+            ],
+            "mode": "single"
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01J2GWGBB9RV1CDWRAPS2M9X00",
+            "parent_id": "01J2GWGBB9SB76A5D2RGXXWDJZ",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "action/1",
+          "run_id": "84b280f1f48409778d66b961cc08ddc0",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2024-07-11T12:32:49.001368+00:00",
+            "finish": "2024-07-11T12:32:49.009200+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1720537162235",
+          "trigger": "state of timer.timer2"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "action/1",
+          "run_id": "81ec1517f80889bd55afa52ca7dc6bf7",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2024-07-11T12:33:39.001236+00:00",
+            "finish": "2024-07-11T12:33:39.009802+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1720537162235",
+          "trigger": "state of timer.timer2",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2024-07-11T12:33:39.001349+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.aba2",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1720537162235",
+                      "last_triggered": "2024-07-11T12:32:49.001639+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Aba 2"
+                    },
+                    "last_changed": "2024-07-10T20:18:20.105150+00:00",
+                    "last_reported": "2024-07-11T12:32:49.008730+00:00",
+                    "last_updated": "2024-07-11T12:32:49.008730+00:00",
+                    "context": {
+                      "id": "01J2GWGBB9RV1CDWRAPS2M9X00",
+                      "parent_id": "01J2GWGBB9SB76A5D2RGXXWDJZ",
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "state",
+                    "entity_id": "timer.timer2",
+                    "from_state": {
+                      "entity_id": "timer.timer2",
+                      "state": "active",
+                      "attributes": {
+                        "duration": "0:00:10",
+                        "editable": true,
+                        "finishes_at": "2024-07-11T12:33:39+00:00",
+                        "remaining": "0:00:10",
+                        "friendly_name": "timer2"
+                      },
+                      "last_changed": "2024-07-11T12:33:29.008960+00:00",
+                      "last_reported": "2024-07-11T12:33:29.008960+00:00",
+                      "last_updated": "2024-07-11T12:33:29.008960+00:00",
+                      "context": {
+                        "id": "01J2GWHJD94Y7J0VPXYW7ABTPY",
+                        "parent_id": "01J2GWHJD9GG8JNG3B52KR5ENW",
+                        "user_id": null
+                      }
+                    },
+                    "to_state": {
+                      "entity_id": "timer.timer2",
+                      "state": "idle",
+                      "attributes": {
+                        "duration": "0:00:10",
+                        "editable": true,
+                        "friendly_name": "timer2"
+                      },
+                      "last_changed": "2024-07-11T12:33:39.000975+00:00",
+                      "last_reported": "2024-07-11T12:33:39.000975+00:00",
+                      "last_updated": "2024-07-11T12:33:39.000975+00:00",
+                      "context": {
+                        "id": "01J2GWHW5RFT2XNBCZGEY5MX9J",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "for": null,
+                    "attribute": null,
+                    "description": "state of timer.timer2"
+                  }
+                }
+              }
+            ],
+            "action/0": [
+              {
+                "path": "action/0",
+                "timestamp": "2024-07-11T12:33:39.002033+00:00",
+                "changed_variables": {
+                  "context": {
+                    "id": "01J2GWHW5S1SV3TPXHRN01MY7C",
+                    "parent_id": "01J2GWHW5RFT2XNBCZGEY5MX9J",
+                    "user_id": null
+                  }
+                },
+                "result": {
+                  "params": {
+                    "domain": "browser_mod",
+                    "service": "navigate",
+                    "service_data": {
+                      "path": "/admin-lsi/default_view",
+                      "entity_id": [
+                        "binary_sensor.4d74cd6f_b5b2ba62",
+                        "binary_sensor.5c36c726_bccbda00"
+                      ]
+                    },
+                    "target": {
+                      "entity_id": [
+                        "binary_sensor.4d74cd6f_b5b2ba62",
+                        "binary_sensor.5c36c726_bccbda00"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ],
+            "action/1": [
+              {
+                "path": "action/1",
+                "timestamp": "2024-07-11T12:33:39.006274+00:00",
+                "result": {
+                  "params": {
+                    "domain": "timer",
+                    "service": "start",
+                    "service_data": {},
+                    "target": {
+                      "entity_id": [
+                        "timer.timer3"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "1720537162235",
+            "alias": "Aba2",
+            "description": "",
+            "trigger": [
+              {
+                "platform": "state",
+                "entity_id": [
+                  "timer.timer2"
+                ],
+                "from": "active",
+                "to": "idle"
+              }
+            ],
+            "condition": [],
+            "action": [
+              {
+                "service": "browser_mod.navigate",
+                "data": {
+                  "path": "/admin-lsi/default_view"
+                },
+                "target": {
+                  "entity_id": [
+                    "binary_sensor.4d74cd6f_b5b2ba62",
+                    "binary_sensor.5c36c726_bccbda00"
+                  ]
+                }
+              },
+              {
+                "service": "timer.start",
+                "metadata": {},
+                "data": {},
+                "target": {
+                  "entity_id": "timer.timer3"
+                }
+              }
+            ],
+            "mode": "single"
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01J2GWHW5S1SV3TPXHRN01MY7C",
+            "parent_id": "01J2GWHW5RFT2XNBCZGEY5MX9J",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "action/1",
+          "run_id": "81ec1517f80889bd55afa52ca7dc6bf7",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2024-07-11T12:33:39.001236+00:00",
+            "finish": "2024-07-11T12:33:39.009802+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1720537162235",
+          "trigger": "state of timer.timer2"
+        }
+      }
+    ],
+    "automation.1720537429849": [
+      {
+        "extended_dict": {
+          "last_step": "action/1",
+          "run_id": "a5521bf4cf81386b33df0d122b4a5d5e",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2024-07-11T12:30:29.001439+00:00",
+            "finish": "2024-07-11T12:30:29.008534+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1720537429849",
+          "trigger": "state of timer.timer3",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2024-07-11T12:30:29.001549+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.aba_3",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1720537429849",
+                      "last_triggered": "2024-07-11T12:29:39.002263+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Aba 3"
+                    },
+                    "last_changed": "2024-07-10T20:19:48.247764+00:00",
+                    "last_reported": "2024-07-11T12:29:39.009850+00:00",
+                    "last_updated": "2024-07-11T12:29:39.009850+00:00",
+                    "context": {
+                      "id": "01J2GWAHSSGAZGYSR1TCRHX3Z1",
+                      "parent_id": "01J2GWAHSS19CTATPSH4GMFG3Q",
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "state",
+                    "entity_id": "timer.timer3",
+                    "from_state": {
+                      "entity_id": "timer.timer3",
+                      "state": "active",
+                      "attributes": {
+                        "duration": "0:00:10",
+                        "editable": true,
+                        "finishes_at": "2024-07-11T12:30:29+00:00",
+                        "remaining": "0:00:10",
+                        "friendly_name": "timer3"
+                      },
+                      "last_changed": "2024-07-11T12:30:19.007946+00:00",
+                      "last_reported": "2024-07-11T12:30:19.007946+00:00",
+                      "last_updated": "2024-07-11T12:30:19.007946+00:00",
+                      "context": {
+                        "id": "01J2GWBRVR1JYN9YTD2YH5A7N5",
+                        "parent_id": "01J2GWBRVRJ8A1NK24CS6K3VKB",
+                        "user_id": null
+                      }
+                    },
+                    "to_state": {
+                      "entity_id": "timer.timer3",
+                      "state": "idle",
+                      "attributes": {
+                        "duration": "0:00:10",
+                        "editable": true,
+                        "friendly_name": "timer3"
+                      },
+                      "last_changed": "2024-07-11T12:30:29.001175+00:00",
+                      "last_reported": "2024-07-11T12:30:29.001175+00:00",
+                      "last_updated": "2024-07-11T12:30:29.001175+00:00",
+                      "context": {
+                        "id": "01J2GWC2M9FGGTMS42CDKB85WP",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "for": null,
+                    "attribute": null,
+                    "description": "state of timer.timer3"
+                  }
+                }
+              }
+            ],
+            "action/0": [
+              {
+                "path": "action/0",
+                "timestamp": "2024-07-11T12:30:29.002262+00:00",
+                "changed_variables": {
+                  "context": {
+                    "id": "01J2GWC2M9J0NSX1WDC5Z5FKT8",
+                    "parent_id": "01J2GWC2M9FGGTMS42CDKB85WP",
+                    "user_id": null
+                  }
+                },
+                "result": {
+                  "params": {
+                    "domain": "browser_mod",
+                    "service": "navigate",
+                    "service_data": {
+                      "path": "/admin-lsi/cameras",
+                      "entity_id": [
+                        "media_player.4d74cd6f_b5b2ba62",
+                        "binary_sensor.5c36c726_bccbda00"
+                      ]
+                    },
+                    "target": {
+                      "entity_id": [
+                        "media_player.4d74cd6f_b5b2ba62",
+                        "binary_sensor.5c36c726_bccbda00"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ],
+            "action/1": [
+              {
+                "path": "action/1",
+                "timestamp": "2024-07-11T12:30:29.006645+00:00",
+                "result": {
+                  "params": {
+                    "domain": "timer",
+                    "service": "start",
+                    "service_data": {},
+                    "target": {
+                      "entity_id": [
+                        "timer.timer4"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "1720537429849",
+            "alias": "Aba 3",
+            "description": "",
+            "trigger": [
+              {
+                "platform": "state",
+                "entity_id": [
+                  "timer.timer3"
+                ],
+                "from": "active",
+                "to": "idle"
+              }
+            ],
+            "condition": [],
+            "action": [
+              {
+                "service": "browser_mod.navigate",
+                "data": {
+                  "path": "/admin-lsi/cameras"
+                },
+                "target": {
+                  "entity_id": [
+                    "media_player.4d74cd6f_b5b2ba62",
+                    "binary_sensor.5c36c726_bccbda00"
+                  ]
+                }
+              },
+              {
+                "service": "timer.start",
+                "metadata": {},
+                "data": {},
+                "target": {
+                  "entity_id": "timer.timer4"
+                }
+              }
+            ],
+            "mode": "single"
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01J2GWC2M9J0NSX1WDC5Z5FKT8",
+            "parent_id": "01J2GWC2M9FGGTMS42CDKB85WP",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "action/1",
+          "run_id": "a5521bf4cf81386b33df0d122b4a5d5e",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2024-07-11T12:30:29.001439+00:00",
+            "finish": "2024-07-11T12:30:29.008534+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1720537429849",
+          "trigger": "state of timer.timer3"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "action/1",
+          "run_id": "fa8ad70d48b7a69ef5891d0f9a46f1c6",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2024-07-11T12:31:19.002099+00:00",
+            "finish": "2024-07-11T12:31:19.009613+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1720537429849",
+          "trigger": "state of timer.timer3",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2024-07-11T12:31:19.002214+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.aba_3",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1720537429849",
+                      "last_triggered": "2024-07-11T12:30:29.001708+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Aba 3"
+                    },
+                    "last_changed": "2024-07-10T20:19:48.247764+00:00",
+                    "last_reported": "2024-07-11T12:30:29.008071+00:00",
+                    "last_updated": "2024-07-11T12:30:29.008071+00:00",
+                    "context": {
+                      "id": "01J2GWC2M9J0NSX1WDC5Z5FKT8",
+                      "parent_id": "01J2GWC2M9FGGTMS42CDKB85WP",
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "state",
+                    "entity_id": "timer.timer3",
+                    "from_state": {
+                      "entity_id": "timer.timer3",
+                      "state": "active",
+                      "attributes": {
+                        "duration": "0:00:10",
+                        "editable": true,
+                        "finishes_at": "2024-07-11T12:31:19+00:00",
+                        "remaining": "0:00:10",
+                        "friendly_name": "timer3"
+                      },
+                      "last_changed": "2024-07-11T12:31:09.010105+00:00",
+                      "last_reported": "2024-07-11T12:31:09.010105+00:00",
+                      "last_updated": "2024-07-11T12:31:09.010105+00:00",
+                      "context": {
+                        "id": "01J2GWD9P9VHZMAT8B8H8HSNA5",
+                        "parent_id": "01J2GWD9P9YQ568K84TD68S7F1",
+                        "user_id": null
+                      }
+                    },
+                    "to_state": {
+                      "entity_id": "timer.timer3",
+                      "state": "idle",
+                      "attributes": {
+                        "duration": "0:00:10",
+                        "editable": true,
+                        "friendly_name": "timer3"
+                      },
+                      "last_changed": "2024-07-11T12:31:19.001842+00:00",
+                      "last_reported": "2024-07-11T12:31:19.001842+00:00",
+                      "last_updated": "2024-07-11T12:31:19.001842+00:00",
+                      "context": {
+                        "id": "01J2GWDKESX6VZVFV3XE86RES7",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "for": null,
+                    "attribute": null,
+                    "description": "state of timer.timer3"
+                  }
+                }
+              }
+            ],
+            "action/0": [
+              {
+                "path": "action/0",
+                "timestamp": "2024-07-11T12:31:19.002923+00:00",
+                "changed_variables": {
+                  "context": {
+                    "id": "01J2GWDKET30948EHDTM5C1114",
+                    "parent_id": "01J2GWDKESX6VZVFV3XE86RES7",
+                    "user_id": null
+                  }
+                },
+                "result": {
+                  "params": {
+                    "domain": "browser_mod",
+                    "service": "navigate",
+                    "service_data": {
+                      "path": "/admin-lsi/cameras",
+                      "entity_id": [
+                        "media_player.4d74cd6f_b5b2ba62",
+                        "binary_sensor.5c36c726_bccbda00"
+                      ]
+                    },
+                    "target": {
+                      "entity_id": [
+                        "media_player.4d74cd6f_b5b2ba62",
+                        "binary_sensor.5c36c726_bccbda00"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ],
+            "action/1": [
+              {
+                "path": "action/1",
+                "timestamp": "2024-07-11T12:31:19.007692+00:00",
+                "result": {
+                  "params": {
+                    "domain": "timer",
+                    "service": "start",
+                    "service_data": {},
+                    "target": {
+                      "entity_id": [
+                        "timer.timer4"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "1720537429849",
+            "alias": "Aba 3",
+            "description": "",
+            "trigger": [
+              {
+                "platform": "state",
+                "entity_id": [
+                  "timer.timer3"
+                ],
+                "from": "active",
+                "to": "idle"
+              }
+            ],
+            "condition": [],
+            "action": [
+              {
+                "service": "browser_mod.navigate",
+                "data": {
+                  "path": "/admin-lsi/cameras"
+                },
+                "target": {
+                  "entity_id": [
+                    "media_player.4d74cd6f_b5b2ba62",
+                    "binary_sensor.5c36c726_bccbda00"
+                  ]
+                }
+              },
+              {
+                "service": "timer.start",
+                "metadata": {},
+                "data": {},
+                "target": {
+                  "entity_id": "timer.timer4"
+                }
+              }
+            ],
+            "mode": "single"
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01J2GWDKET30948EHDTM5C1114",
+            "parent_id": "01J2GWDKESX6VZVFV3XE86RES7",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "action/1",
+          "run_id": "fa8ad70d48b7a69ef5891d0f9a46f1c6",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2024-07-11T12:31:19.002099+00:00",
+            "finish": "2024-07-11T12:31:19.009613+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1720537429849",
+          "trigger": "state of timer.timer3"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "action/1",
+          "run_id": "44a15c62d6d5b36c145d28107b561055",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2024-07-11T12:32:09.001846+00:00",
+            "finish": "2024-07-11T12:32:09.009817+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1720537429849",
+          "trigger": "state of timer.timer3",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2024-07-11T12:32:09.001964+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.aba_3",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1720537429849",
+                      "last_triggered": "2024-07-11T12:31:19.002347+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Aba 3"
+                    },
+                    "last_changed": "2024-07-10T20:19:48.247764+00:00",
+                    "last_reported": "2024-07-11T12:31:19.009114+00:00",
+                    "last_updated": "2024-07-11T12:31:19.009114+00:00",
+                    "context": {
+                      "id": "01J2GWDKET30948EHDTM5C1114",
+                      "parent_id": "01J2GWDKESX6VZVFV3XE86RES7",
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "state",
+                    "entity_id": "timer.timer3",
+                    "from_state": {
+                      "entity_id": "timer.timer3",
+                      "state": "active",
+                      "attributes": {
+                        "duration": "0:00:10",
+                        "editable": true,
+                        "finishes_at": "2024-07-11T12:32:09+00:00",
+                        "remaining": "0:00:10",
+                        "friendly_name": "timer3"
+                      },
+                      "last_changed": "2024-07-11T12:31:59.009081+00:00",
+                      "last_reported": "2024-07-11T12:31:59.009081+00:00",
+                      "last_updated": "2024-07-11T12:31:59.009081+00:00",
+                      "context": {
+                        "id": "01J2GWETGSY606AP5M9J0MP9VR",
+                        "parent_id": "01J2GWETGSMQB9Z6B7XE38TZRD",
+                        "user_id": null
+                      }
+                    },
+                    "to_state": {
+                      "entity_id": "timer.timer3",
+                      "state": "idle",
+                      "attributes": {
+                        "duration": "0:00:10",
+                        "editable": true,
+                        "friendly_name": "timer3"
+                      },
+                      "last_changed": "2024-07-11T12:32:09.001563+00:00",
+                      "last_reported": "2024-07-11T12:32:09.001563+00:00",
+                      "last_updated": "2024-07-11T12:32:09.001563+00:00",
+                      "context": {
+                        "id": "01J2GWF499EKE863CDDZ202MYK",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "for": null,
+                    "attribute": null,
+                    "description": "state of timer.timer3"
+                  }
+                }
+              }
+            ],
+            "action/0": [
+              {
+                "path": "action/0",
+                "timestamp": "2024-07-11T12:32:09.002643+00:00",
+                "changed_variables": {
+                  "context": {
+                    "id": "01J2GWF499YWE56E4Q45305GCG",
+                    "parent_id": "01J2GWF499EKE863CDDZ202MYK",
+                    "user_id": null
+                  }
+                },
+                "result": {
+                  "params": {
+                    "domain": "browser_mod",
+                    "service": "navigate",
+                    "service_data": {
+                      "path": "/admin-lsi/cameras",
+                      "entity_id": [
+                        "media_player.4d74cd6f_b5b2ba62",
+                        "binary_sensor.5c36c726_bccbda00"
+                      ]
+                    },
+                    "target": {
+                      "entity_id": [
+                        "media_player.4d74cd6f_b5b2ba62",
+                        "binary_sensor.5c36c726_bccbda00"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ],
+            "action/1": [
+              {
+                "path": "action/1",
+                "timestamp": "2024-07-11T12:32:09.007877+00:00",
+                "result": {
+                  "params": {
+                    "domain": "timer",
+                    "service": "start",
+                    "service_data": {},
+                    "target": {
+                      "entity_id": [
+                        "timer.timer4"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "1720537429849",
+            "alias": "Aba 3",
+            "description": "",
+            "trigger": [
+              {
+                "platform": "state",
+                "entity_id": [
+                  "timer.timer3"
+                ],
+                "from": "active",
+                "to": "idle"
+              }
+            ],
+            "condition": [],
+            "action": [
+              {
+                "service": "browser_mod.navigate",
+                "data": {
+                  "path": "/admin-lsi/cameras"
+                },
+                "target": {
+                  "entity_id": [
+                    "media_player.4d74cd6f_b5b2ba62",
+                    "binary_sensor.5c36c726_bccbda00"
+                  ]
+                }
+              },
+              {
+                "service": "timer.start",
+                "metadata": {},
+                "data": {},
+                "target": {
+                  "entity_id": "timer.timer4"
+                }
+              }
+            ],
+            "mode": "single"
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01J2GWF499YWE56E4Q45305GCG",
+            "parent_id": "01J2GWF499EKE863CDDZ202MYK",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "action/1",
+          "run_id": "44a15c62d6d5b36c145d28107b561055",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2024-07-11T12:32:09.001846+00:00",
+            "finish": "2024-07-11T12:32:09.009817+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1720537429849",
+          "trigger": "state of timer.timer3"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "action/1",
+          "run_id": "9af2425481f458352405b1abc1c86cff",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2024-07-11T12:32:59.001753+00:00",
+            "finish": "2024-07-11T12:32:59.009820+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1720537429849",
+          "trigger": "state of timer.timer3",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2024-07-11T12:32:59.001866+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.aba_3",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1720537429849",
+                      "last_triggered": "2024-07-11T12:32:09.002094+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Aba 3"
+                    },
+                    "last_changed": "2024-07-10T20:19:48.247764+00:00",
+                    "last_reported": "2024-07-11T12:32:09.009337+00:00",
+                    "last_updated": "2024-07-11T12:32:09.009337+00:00",
+                    "context": {
+                      "id": "01J2GWF499YWE56E4Q45305GCG",
+                      "parent_id": "01J2GWF499EKE863CDDZ202MYK",
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "state",
+                    "entity_id": "timer.timer3",
+                    "from_state": {
+                      "entity_id": "timer.timer3",
+                      "state": "active",
+                      "attributes": {
+                        "duration": "0:00:10",
+                        "editable": true,
+                        "finishes_at": "2024-07-11T12:32:59+00:00",
+                        "remaining": "0:00:10",
+                        "friendly_name": "timer3"
+                      },
+                      "last_changed": "2024-07-11T12:32:49.008068+00:00",
+                      "last_reported": "2024-07-11T12:32:49.008068+00:00",
+                      "last_updated": "2024-07-11T12:32:49.008068+00:00",
+                      "context": {
+                        "id": "01J2GWGBB9RV1CDWRAPS2M9X00",
+                        "parent_id": "01J2GWGBB9SB76A5D2RGXXWDJZ",
+                        "user_id": null
+                      }
+                    },
+                    "to_state": {
+                      "entity_id": "timer.timer3",
+                      "state": "idle",
+                      "attributes": {
+                        "duration": "0:00:10",
+                        "editable": true,
+                        "friendly_name": "timer3"
+                      },
+                      "last_changed": "2024-07-11T12:32:59.001462+00:00",
+                      "last_reported": "2024-07-11T12:32:59.001462+00:00",
+                      "last_updated": "2024-07-11T12:32:59.001462+00:00",
+                      "context": {
+                        "id": "01J2GWGN3S6361TZYHXAH4AAHT",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "for": null,
+                    "attribute": null,
+                    "description": "state of timer.timer3"
+                  }
+                }
+              }
+            ],
+            "action/0": [
+              {
+                "path": "action/0",
+                "timestamp": "2024-07-11T12:32:59.002546+00:00",
+                "changed_variables": {
+                  "context": {
+                    "id": "01J2GWGN3S2WRC29YQ8YPRDRMA",
+                    "parent_id": "01J2GWGN3S6361TZYHXAH4AAHT",
+                    "user_id": null
+                  }
+                },
+                "result": {
+                  "params": {
+                    "domain": "browser_mod",
+                    "service": "navigate",
+                    "service_data": {
+                      "path": "/admin-lsi/cameras",
+                      "entity_id": [
+                        "media_player.4d74cd6f_b5b2ba62",
+                        "binary_sensor.5c36c726_bccbda00"
+                      ]
+                    },
+                    "target": {
+                      "entity_id": [
+                        "media_player.4d74cd6f_b5b2ba62",
+                        "binary_sensor.5c36c726_bccbda00"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ],
+            "action/1": [
+              {
+                "path": "action/1",
+                "timestamp": "2024-07-11T12:32:59.007897+00:00",
+                "result": {
+                  "params": {
+                    "domain": "timer",
+                    "service": "start",
+                    "service_data": {},
+                    "target": {
+                      "entity_id": [
+                        "timer.timer4"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "1720537429849",
+            "alias": "Aba 3",
+            "description": "",
+            "trigger": [
+              {
+                "platform": "state",
+                "entity_id": [
+                  "timer.timer3"
+                ],
+                "from": "active",
+                "to": "idle"
+              }
+            ],
+            "condition": [],
+            "action": [
+              {
+                "service": "browser_mod.navigate",
+                "data": {
+                  "path": "/admin-lsi/cameras"
+                },
+                "target": {
+                  "entity_id": [
+                    "media_player.4d74cd6f_b5b2ba62",
+                    "binary_sensor.5c36c726_bccbda00"
+                  ]
+                }
+              },
+              {
+                "service": "timer.start",
+                "metadata": {},
+                "data": {},
+                "target": {
+                  "entity_id": "timer.timer4"
+                }
+              }
+            ],
+            "mode": "single"
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01J2GWGN3S2WRC29YQ8YPRDRMA",
+            "parent_id": "01J2GWGN3S6361TZYHXAH4AAHT",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "action/1",
+          "run_id": "9af2425481f458352405b1abc1c86cff",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2024-07-11T12:32:59.001753+00:00",
+            "finish": "2024-07-11T12:32:59.009820+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1720537429849",
+          "trigger": "state of timer.timer3"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "action/1",
+          "run_id": "0f2e2a5a8632d01ad8016befa056078d",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2024-07-11T12:33:49.001813+00:00",
+            "finish": "2024-07-11T12:33:49.011381+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1720537429849",
+          "trigger": "state of timer.timer3",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2024-07-11T12:33:49.001924+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.aba_3",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1720537429849",
+                      "last_triggered": "2024-07-11T12:32:59.001995+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Aba 3"
+                    },
+                    "last_changed": "2024-07-10T20:19:48.247764+00:00",
+                    "last_reported": "2024-07-11T12:32:59.009331+00:00",
+                    "last_updated": "2024-07-11T12:32:59.009331+00:00",
+                    "context": {
+                      "id": "01J2GWGN3S2WRC29YQ8YPRDRMA",
+                      "parent_id": "01J2GWGN3S6361TZYHXAH4AAHT",
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "state",
+                    "entity_id": "timer.timer3",
+                    "from_state": {
+                      "entity_id": "timer.timer3",
+                      "state": "active",
+                      "attributes": {
+                        "duration": "0:00:10",
+                        "editable": true,
+                        "finishes_at": "2024-07-11T12:33:49+00:00",
+                        "remaining": "0:00:10",
+                        "friendly_name": "timer3"
+                      },
+                      "last_changed": "2024-07-11T12:33:39.007079+00:00",
+                      "last_reported": "2024-07-11T12:33:39.007079+00:00",
+                      "last_updated": "2024-07-11T12:33:39.007079+00:00",
+                      "context": {
+                        "id": "01J2GWHW5S1SV3TPXHRN01MY7C",
+                        "parent_id": "01J2GWHW5RFT2XNBCZGEY5MX9J",
+                        "user_id": null
+                      }
+                    },
+                    "to_state": {
+                      "entity_id": "timer.timer3",
+                      "state": "idle",
+                      "attributes": {
+                        "duration": "0:00:10",
+                        "editable": true,
+                        "friendly_name": "timer3"
+                      },
+                      "last_changed": "2024-07-11T12:33:49.001523+00:00",
+                      "last_reported": "2024-07-11T12:33:49.001523+00:00",
+                      "last_updated": "2024-07-11T12:33:49.001523+00:00",
+                      "context": {
+                        "id": "01J2GWJ5Y9JQ8QBDJ6KF34D26Y",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "for": null,
+                    "attribute": null,
+                    "description": "state of timer.timer3"
+                  }
+                }
+              }
+            ],
+            "action/0": [
+              {
+                "path": "action/0",
+                "timestamp": "2024-07-11T12:33:49.002627+00:00",
+                "changed_variables": {
+                  "context": {
+                    "id": "01J2GWJ5Y9MACNT1RMREQRV4N5",
+                    "parent_id": "01J2GWJ5Y9JQ8QBDJ6KF34D26Y",
+                    "user_id": null
+                  }
+                },
+                "result": {
+                  "params": {
+                    "domain": "browser_mod",
+                    "service": "navigate",
+                    "service_data": {
+                      "path": "/admin-lsi/cameras",
+                      "entity_id": [
+                        "media_player.4d74cd6f_b5b2ba62",
+                        "binary_sensor.5c36c726_bccbda00"
+                      ]
+                    },
+                    "target": {
+                      "entity_id": [
+                        "media_player.4d74cd6f_b5b2ba62",
+                        "binary_sensor.5c36c726_bccbda00"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ],
+            "action/1": [
+              {
+                "path": "action/1",
+                "timestamp": "2024-07-11T12:33:49.007973+00:00",
+                "result": {
+                  "params": {
+                    "domain": "timer",
+                    "service": "start",
+                    "service_data": {},
+                    "target": {
+                      "entity_id": [
+                        "timer.timer4"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "1720537429849",
+            "alias": "Aba 3",
+            "description": "",
+            "trigger": [
+              {
+                "platform": "state",
+                "entity_id": [
+                  "timer.timer3"
+                ],
+                "from": "active",
+                "to": "idle"
+              }
+            ],
+            "condition": [],
+            "action": [
+              {
+                "service": "browser_mod.navigate",
+                "data": {
+                  "path": "/admin-lsi/cameras"
+                },
+                "target": {
+                  "entity_id": [
+                    "media_player.4d74cd6f_b5b2ba62",
+                    "binary_sensor.5c36c726_bccbda00"
+                  ]
+                }
+              },
+              {
+                "service": "timer.start",
+                "metadata": {},
+                "data": {},
+                "target": {
+                  "entity_id": "timer.timer4"
+                }
+              }
+            ],
+            "mode": "single"
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01J2GWJ5Y9MACNT1RMREQRV4N5",
+            "parent_id": "01J2GWJ5Y9JQ8QBDJ6KF34D26Y",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "action/1",
+          "run_id": "0f2e2a5a8632d01ad8016befa056078d",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2024-07-11T12:33:49.001813+00:00",
+            "finish": "2024-07-11T12:33:49.011381+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1720537429849",
+          "trigger": "state of timer.timer3"
+        }
+      }
+    ],
+    "automation.1720537934129": [
+      {
+        "extended_dict": {
+          "last_step": "action/1",
+          "run_id": "5f82e4977e9431d556d25781e0c152b6",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2024-07-11T12:30:39.002909+00:00",
+            "finish": "2024-07-11T12:30:39.010681+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1720537934129",
+          "trigger": "state of timer.timer4",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2024-07-11T12:30:39.003023+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.aba_4",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1720537934129",
+                      "last_triggered": "2024-07-11T12:29:49.001974+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Aba 4"
+                    },
+                    "last_changed": "2024-07-10T20:17:54.522762+00:00",
+                    "last_reported": "2024-07-11T12:29:49.009236+00:00",
+                    "last_updated": "2024-07-11T12:29:49.009236+00:00",
+                    "context": {
+                      "id": "01J2GWAVJ9JK8JVY0AHZEQM2WE",
+                      "parent_id": "01J2GWAVJ9SKMT2GZT4HKAGXJ3",
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "state",
+                    "entity_id": "timer.timer4",
+                    "from_state": {
+                      "entity_id": "timer.timer4",
+                      "state": "active",
+                      "attributes": {
+                        "duration": "0:00:10",
+                        "editable": true,
+                        "finishes_at": "2024-07-11T12:30:39+00:00",
+                        "remaining": "0:00:10",
+                        "friendly_name": "timer4"
+                      },
+                      "last_changed": "2024-07-11T12:30:29.007423+00:00",
+                      "last_reported": "2024-07-11T12:30:29.007423+00:00",
+                      "last_updated": "2024-07-11T12:30:29.007423+00:00",
+                      "context": {
+                        "id": "01J2GWC2M9J0NSX1WDC5Z5FKT8",
+                        "parent_id": "01J2GWC2M9FGGTMS42CDKB85WP",
+                        "user_id": null
+                      }
+                    },
+                    "to_state": {
+                      "entity_id": "timer.timer4",
+                      "state": "idle",
+                      "attributes": {
+                        "duration": "0:00:10",
+                        "editable": true,
+                        "friendly_name": "timer4"
+                      },
+                      "last_changed": "2024-07-11T12:30:39.002650+00:00",
+                      "last_reported": "2024-07-11T12:30:39.002650+00:00",
+                      "last_updated": "2024-07-11T12:30:39.002650+00:00",
+                      "context": {
+                        "id": "01J2GWCCCTFDP9W6KFCBE8XTDY",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "for": null,
+                    "attribute": null,
+                    "description": "state of timer.timer4"
+                  }
+                }
+              }
+            ],
+            "action/0": [
+              {
+                "path": "action/0",
+                "timestamp": "2024-07-11T12:30:39.003720+00:00",
+                "changed_variables": {
+                  "context": {
+                    "id": "01J2GWCCCT9J87HGR7MQY2CVWA",
+                    "parent_id": "01J2GWCCCTFDP9W6KFCBE8XTDY",
+                    "user_id": null
+                  }
+                },
+                "result": {
+                  "params": {
+                    "domain": "browser_mod",
+                    "service": "navigate",
+                    "service_data": {
+                      "path": "/admin-lsi/impressora-3d",
+                      "device_id": [
+                        "5c36c726-bccbda00"
+                      ],
+                      "entity_id": [
+                        "binary_sensor.4d74cd6f_b5b2ba62"
+                      ]
+                    },
+                    "target": {
+                      "device_id": [
+                        "5c36c726-bccbda00"
+                      ],
+                      "entity_id": [
+                        "binary_sensor.4d74cd6f_b5b2ba62"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ],
+            "action/1": [
+              {
+                "path": "action/1",
+                "timestamp": "2024-07-11T12:30:39.008772+00:00",
+                "result": {
+                  "params": {
+                    "domain": "timer",
+                    "service": "start",
+                    "service_data": {},
+                    "target": {
+                      "entity_id": [
+                        "timer.timer5"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "1720537934129",
+            "alias": "Aba 4",
+            "description": "",
+            "trigger": [
+              {
+                "platform": "state",
+                "entity_id": [
+                  "timer.timer4"
+                ],
+                "from": "active",
+                "to": "idle"
+              }
+            ],
+            "condition": [],
+            "action": [
+              {
+                "service": "browser_mod.navigate",
+                "data": {
+                  "path": "/admin-lsi/impressora-3d"
+                },
+                "target": {
+                  "device_id": "5c36c726-bccbda00",
+                  "entity_id": "binary_sensor.4d74cd6f_b5b2ba62"
+                }
+              },
+              {
+                "service": "timer.start",
+                "metadata": {},
+                "data": {},
+                "target": {
+                  "entity_id": "timer.timer5"
+                }
+              }
+            ],
+            "mode": "single"
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01J2GWCCCT9J87HGR7MQY2CVWA",
+            "parent_id": "01J2GWCCCTFDP9W6KFCBE8XTDY",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "action/1",
+          "run_id": "5f82e4977e9431d556d25781e0c152b6",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2024-07-11T12:30:39.002909+00:00",
+            "finish": "2024-07-11T12:30:39.010681+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1720537934129",
+          "trigger": "state of timer.timer4"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "action/1",
+          "run_id": "e36ce2fc8595f4a9f70c51fe459468e0",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2024-07-11T12:31:29.001380+00:00",
+            "finish": "2024-07-11T12:31:29.009247+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1720537934129",
+          "trigger": "state of timer.timer4",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2024-07-11T12:31:29.001501+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.aba_4",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1720537934129",
+                      "last_triggered": "2024-07-11T12:30:39.003152+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Aba 4"
+                    },
+                    "last_changed": "2024-07-10T20:17:54.522762+00:00",
+                    "last_reported": "2024-07-11T12:30:39.010201+00:00",
+                    "last_updated": "2024-07-11T12:30:39.010201+00:00",
+                    "context": {
+                      "id": "01J2GWCCCT9J87HGR7MQY2CVWA",
+                      "parent_id": "01J2GWCCCTFDP9W6KFCBE8XTDY",
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "state",
+                    "entity_id": "timer.timer4",
+                    "from_state": {
+                      "entity_id": "timer.timer4",
+                      "state": "active",
+                      "attributes": {
+                        "duration": "0:00:10",
+                        "editable": true,
+                        "finishes_at": "2024-07-11T12:31:29+00:00",
+                        "remaining": "0:00:10",
+                        "friendly_name": "timer4"
+                      },
+                      "last_changed": "2024-07-11T12:31:19.008475+00:00",
+                      "last_reported": "2024-07-11T12:31:19.008475+00:00",
+                      "last_updated": "2024-07-11T12:31:19.008475+00:00",
+                      "context": {
+                        "id": "01J2GWDKET30948EHDTM5C1114",
+                        "parent_id": "01J2GWDKESX6VZVFV3XE86RES7",
+                        "user_id": null
+                      }
+                    },
+                    "to_state": {
+                      "entity_id": "timer.timer4",
+                      "state": "idle",
+                      "attributes": {
+                        "duration": "0:00:10",
+                        "editable": true,
+                        "friendly_name": "timer4"
+                      },
+                      "last_changed": "2024-07-11T12:31:29.001117+00:00",
+                      "last_reported": "2024-07-11T12:31:29.001117+00:00",
+                      "last_updated": "2024-07-11T12:31:29.001117+00:00",
+                      "context": {
+                        "id": "01J2GWDX799XJ7YEE0YHRCE489",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "for": null,
+                    "attribute": null,
+                    "description": "state of timer.timer4"
+                  }
+                }
+              }
+            ],
+            "action/0": [
+              {
+                "path": "action/0",
+                "timestamp": "2024-07-11T12:31:29.002186+00:00",
+                "changed_variables": {
+                  "context": {
+                    "id": "01J2GWDX79061DWXRFQRA6GFBX",
+                    "parent_id": "01J2GWDX799XJ7YEE0YHRCE489",
+                    "user_id": null
+                  }
+                },
+                "result": {
+                  "params": {
+                    "domain": "browser_mod",
+                    "service": "navigate",
+                    "service_data": {
+                      "path": "/admin-lsi/impressora-3d",
+                      "device_id": [
+                        "5c36c726-bccbda00"
+                      ],
+                      "entity_id": [
+                        "binary_sensor.4d74cd6f_b5b2ba62"
+                      ]
+                    },
+                    "target": {
+                      "device_id": [
+                        "5c36c726-bccbda00"
+                      ],
+                      "entity_id": [
+                        "binary_sensor.4d74cd6f_b5b2ba62"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ],
+            "action/1": [
+              {
+                "path": "action/1",
+                "timestamp": "2024-07-11T12:31:29.007322+00:00",
+                "result": {
+                  "params": {
+                    "domain": "timer",
+                    "service": "start",
+                    "service_data": {},
+                    "target": {
+                      "entity_id": [
+                        "timer.timer5"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "1720537934129",
+            "alias": "Aba 4",
+            "description": "",
+            "trigger": [
+              {
+                "platform": "state",
+                "entity_id": [
+                  "timer.timer4"
+                ],
+                "from": "active",
+                "to": "idle"
+              }
+            ],
+            "condition": [],
+            "action": [
+              {
+                "service": "browser_mod.navigate",
+                "data": {
+                  "path": "/admin-lsi/impressora-3d"
+                },
+                "target": {
+                  "device_id": "5c36c726-bccbda00",
+                  "entity_id": "binary_sensor.4d74cd6f_b5b2ba62"
+                }
+              },
+              {
+                "service": "timer.start",
+                "metadata": {},
+                "data": {},
+                "target": {
+                  "entity_id": "timer.timer5"
+                }
+              }
+            ],
+            "mode": "single"
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01J2GWDX79061DWXRFQRA6GFBX",
+            "parent_id": "01J2GWDX799XJ7YEE0YHRCE489",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "action/1",
+          "run_id": "e36ce2fc8595f4a9f70c51fe459468e0",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2024-07-11T12:31:29.001380+00:00",
+            "finish": "2024-07-11T12:31:29.009247+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1720537934129",
+          "trigger": "state of timer.timer4"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "action/1",
+          "run_id": "3b8eafca3b37ae97e54e66b3f2e2e129",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2024-07-11T12:32:19.002074+00:00",
+            "finish": "2024-07-11T12:32:19.014498+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1720537934129",
+          "trigger": "state of timer.timer4",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2024-07-11T12:32:19.002184+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.aba_4",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1720537934129",
+                      "last_triggered": "2024-07-11T12:31:29.001663+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Aba 4"
+                    },
+                    "last_changed": "2024-07-10T20:17:54.522762+00:00",
+                    "last_reported": "2024-07-11T12:31:29.008785+00:00",
+                    "last_updated": "2024-07-11T12:31:29.008785+00:00",
+                    "context": {
+                      "id": "01J2GWDX79061DWXRFQRA6GFBX",
+                      "parent_id": "01J2GWDX799XJ7YEE0YHRCE489",
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "state",
+                    "entity_id": "timer.timer4",
+                    "from_state": {
+                      "entity_id": "timer.timer4",
+                      "state": "active",
+                      "attributes": {
+                        "duration": "0:00:10",
+                        "editable": true,
+                        "finishes_at": "2024-07-11T12:32:19+00:00",
+                        "remaining": "0:00:10",
+                        "friendly_name": "timer4"
+                      },
+                      "last_changed": "2024-07-11T12:32:09.008700+00:00",
+                      "last_reported": "2024-07-11T12:32:09.008700+00:00",
+                      "last_updated": "2024-07-11T12:32:09.008700+00:00",
+                      "context": {
+                        "id": "01J2GWF499YWE56E4Q45305GCG",
+                        "parent_id": "01J2GWF499EKE863CDDZ202MYK",
+                        "user_id": null
+                      }
+                    },
+                    "to_state": {
+                      "entity_id": "timer.timer4",
+                      "state": "idle",
+                      "attributes": {
+                        "duration": "0:00:10",
+                        "editable": true,
+                        "friendly_name": "timer4"
+                      },
+                      "last_changed": "2024-07-11T12:32:19.001811+00:00",
+                      "last_reported": "2024-07-11T12:32:19.001811+00:00",
+                      "last_updated": "2024-07-11T12:32:19.001811+00:00",
+                      "context": {
+                        "id": "01J2GWFE1S1S2978CH8S5GPVCH",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "for": null,
+                    "attribute": null,
+                    "description": "state of timer.timer4"
+                  }
+                }
+              }
+            ],
+            "action/0": [
+              {
+                "path": "action/0",
+                "timestamp": "2024-07-11T12:32:19.002887+00:00",
+                "changed_variables": {
+                  "context": {
+                    "id": "01J2GWFE1TM7VYZ9MQGFN4MB25",
+                    "parent_id": "01J2GWFE1S1S2978CH8S5GPVCH",
+                    "user_id": null
+                  }
+                },
+                "result": {
+                  "params": {
+                    "domain": "browser_mod",
+                    "service": "navigate",
+                    "service_data": {
+                      "path": "/admin-lsi/impressora-3d",
+                      "device_id": [
+                        "5c36c726-bccbda00"
+                      ],
+                      "entity_id": [
+                        "binary_sensor.4d74cd6f_b5b2ba62"
+                      ]
+                    },
+                    "target": {
+                      "device_id": [
+                        "5c36c726-bccbda00"
+                      ],
+                      "entity_id": [
+                        "binary_sensor.4d74cd6f_b5b2ba62"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ],
+            "action/1": [
+              {
+                "path": "action/1",
+                "timestamp": "2024-07-11T12:32:19.009997+00:00",
+                "result": {
+                  "params": {
+                    "domain": "timer",
+                    "service": "start",
+                    "service_data": {},
+                    "target": {
+                      "entity_id": [
+                        "timer.timer5"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "1720537934129",
+            "alias": "Aba 4",
+            "description": "",
+            "trigger": [
+              {
+                "platform": "state",
+                "entity_id": [
+                  "timer.timer4"
+                ],
+                "from": "active",
+                "to": "idle"
+              }
+            ],
+            "condition": [],
+            "action": [
+              {
+                "service": "browser_mod.navigate",
+                "data": {
+                  "path": "/admin-lsi/impressora-3d"
+                },
+                "target": {
+                  "device_id": "5c36c726-bccbda00",
+                  "entity_id": "binary_sensor.4d74cd6f_b5b2ba62"
+                }
+              },
+              {
+                "service": "timer.start",
+                "metadata": {},
+                "data": {},
+                "target": {
+                  "entity_id": "timer.timer5"
+                }
+              }
+            ],
+            "mode": "single"
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01J2GWFE1TM7VYZ9MQGFN4MB25",
+            "parent_id": "01J2GWFE1S1S2978CH8S5GPVCH",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "action/1",
+          "run_id": "3b8eafca3b37ae97e54e66b3f2e2e129",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2024-07-11T12:32:19.002074+00:00",
+            "finish": "2024-07-11T12:32:19.014498+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1720537934129",
+          "trigger": "state of timer.timer4"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "action/1",
+          "run_id": "a12bdbf3a687462e4050a4ab49576100",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2024-07-11T12:33:09.001800+00:00",
+            "finish": "2024-07-11T12:33:09.013403+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1720537934129",
+          "trigger": "state of timer.timer4",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2024-07-11T12:33:09.001915+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.aba_4",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1720537934129",
+                      "last_triggered": "2024-07-11T12:32:19.002316+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Aba 4"
+                    },
+                    "last_changed": "2024-07-10T20:17:54.522762+00:00",
+                    "last_reported": "2024-07-11T12:32:19.013925+00:00",
+                    "last_updated": "2024-07-11T12:32:19.013925+00:00",
+                    "context": {
+                      "id": "01J2GWFE1TM7VYZ9MQGFN4MB25",
+                      "parent_id": "01J2GWFE1S1S2978CH8S5GPVCH",
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "state",
+                    "entity_id": "timer.timer4",
+                    "from_state": {
+                      "entity_id": "timer.timer4",
+                      "state": "active",
+                      "attributes": {
+                        "duration": "0:00:10",
+                        "editable": true,
+                        "finishes_at": "2024-07-11T12:33:09+00:00",
+                        "remaining": "0:00:10",
+                        "friendly_name": "timer4"
+                      },
+                      "last_changed": "2024-07-11T12:32:59.008712+00:00",
+                      "last_reported": "2024-07-11T12:32:59.008712+00:00",
+                      "last_updated": "2024-07-11T12:32:59.008712+00:00",
+                      "context": {
+                        "id": "01J2GWGN3S2WRC29YQ8YPRDRMA",
+                        "parent_id": "01J2GWGN3S6361TZYHXAH4AAHT",
+                        "user_id": null
+                      }
+                    },
+                    "to_state": {
+                      "entity_id": "timer.timer4",
+                      "state": "idle",
+                      "attributes": {
+                        "duration": "0:00:10",
+                        "editable": true,
+                        "friendly_name": "timer4"
+                      },
+                      "last_changed": "2024-07-11T12:33:09.001411+00:00",
+                      "last_reported": "2024-07-11T12:33:09.001411+00:00",
+                      "last_updated": "2024-07-11T12:33:09.001411+00:00",
+                      "context": {
+                        "id": "01J2GWGYW9E1FBXS1M4QBASS5F",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "for": null,
+                    "attribute": null,
+                    "description": "state of timer.timer4"
+                  }
+                }
+              }
+            ],
+            "action/0": [
+              {
+                "path": "action/0",
+                "timestamp": "2024-07-11T12:33:09.002893+00:00",
+                "changed_variables": {
+                  "context": {
+                    "id": "01J2GWGYW9BPAGAQ81689GAJBG",
+                    "parent_id": "01J2GWGYW9E1FBXS1M4QBASS5F",
+                    "user_id": null
+                  }
+                },
+                "result": {
+                  "params": {
+                    "domain": "browser_mod",
+                    "service": "navigate",
+                    "service_data": {
+                      "path": "/admin-lsi/impressora-3d",
+                      "device_id": [
+                        "5c36c726-bccbda00"
+                      ],
+                      "entity_id": [
+                        "binary_sensor.4d74cd6f_b5b2ba62"
+                      ]
+                    },
+                    "target": {
+                      "device_id": [
+                        "5c36c726-bccbda00"
+                      ],
+                      "entity_id": [
+                        "binary_sensor.4d74cd6f_b5b2ba62"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ],
+            "action/1": [
+              {
+                "path": "action/1",
+                "timestamp": "2024-07-11T12:33:09.010561+00:00",
+                "result": {
+                  "params": {
+                    "domain": "timer",
+                    "service": "start",
+                    "service_data": {},
+                    "target": {
+                      "entity_id": [
+                        "timer.timer5"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "1720537934129",
+            "alias": "Aba 4",
+            "description": "",
+            "trigger": [
+              {
+                "platform": "state",
+                "entity_id": [
+                  "timer.timer4"
+                ],
+                "from": "active",
+                "to": "idle"
+              }
+            ],
+            "condition": [],
+            "action": [
+              {
+                "service": "browser_mod.navigate",
+                "data": {
+                  "path": "/admin-lsi/impressora-3d"
+                },
+                "target": {
+                  "device_id": "5c36c726-bccbda00",
+                  "entity_id": "binary_sensor.4d74cd6f_b5b2ba62"
+                }
+              },
+              {
+                "service": "timer.start",
+                "metadata": {},
+                "data": {},
+                "target": {
+                  "entity_id": "timer.timer5"
+                }
+              }
+            ],
+            "mode": "single"
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01J2GWGYW9BPAGAQ81689GAJBG",
+            "parent_id": "01J2GWGYW9E1FBXS1M4QBASS5F",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "action/1",
+          "run_id": "a12bdbf3a687462e4050a4ab49576100",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2024-07-11T12:33:09.001800+00:00",
+            "finish": "2024-07-11T12:33:09.013403+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1720537934129",
+          "trigger": "state of timer.timer4"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "action/1",
+          "run_id": "2a40152e8beb2d23674408bf3b9cdb42",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2024-07-11T12:33:59.001120+00:00",
+            "finish": "2024-07-11T12:33:59.009330+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1720537934129",
+          "trigger": "state of timer.timer4",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2024-07-11T12:33:59.001237+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.aba_4",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1720537934129",
+                      "last_triggered": "2024-07-11T12:33:09.002047+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Aba 4"
+                    },
+                    "last_changed": "2024-07-10T20:17:54.522762+00:00",
+                    "last_reported": "2024-07-11T12:33:09.012833+00:00",
+                    "last_updated": "2024-07-11T12:33:09.012833+00:00",
+                    "context": {
+                      "id": "01J2GWGYW9BPAGAQ81689GAJBG",
+                      "parent_id": "01J2GWGYW9E1FBXS1M4QBASS5F",
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "state",
+                    "entity_id": "timer.timer4",
+                    "from_state": {
+                      "entity_id": "timer.timer4",
+                      "state": "active",
+                      "attributes": {
+                        "duration": "0:00:10",
+                        "editable": true,
+                        "finishes_at": "2024-07-11T12:33:59+00:00",
+                        "remaining": "0:00:10",
+                        "friendly_name": "timer4"
+                      },
+                      "last_changed": "2024-07-11T12:33:49.008783+00:00",
+                      "last_reported": "2024-07-11T12:33:49.008783+00:00",
+                      "last_updated": "2024-07-11T12:33:49.008783+00:00",
+                      "context": {
+                        "id": "01J2GWJ5Y9MACNT1RMREQRV4N5",
+                        "parent_id": "01J2GWJ5Y9JQ8QBDJ6KF34D26Y",
+                        "user_id": null
+                      }
+                    },
+                    "to_state": {
+                      "entity_id": "timer.timer4",
+                      "state": "idle",
+                      "attributes": {
+                        "duration": "0:00:10",
+                        "editable": true,
+                        "friendly_name": "timer4"
+                      },
+                      "last_changed": "2024-07-11T12:33:59.000853+00:00",
+                      "last_reported": "2024-07-11T12:33:59.000853+00:00",
+                      "last_updated": "2024-07-11T12:33:59.000853+00:00",
+                      "context": {
+                        "id": "01J2GWJFPRKHAKA7QW91Q98FS3",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "for": null,
+                    "attribute": null,
+                    "description": "state of timer.timer4"
+                  }
+                }
+              }
+            ],
+            "action/0": [
+              {
+                "path": "action/0",
+                "timestamp": "2024-07-11T12:33:59.001966+00:00",
+                "changed_variables": {
+                  "context": {
+                    "id": "01J2GWJFPSF6HERK8XAA4JTBRD",
+                    "parent_id": "01J2GWJFPRKHAKA7QW91Q98FS3",
+                    "user_id": null
+                  }
+                },
+                "result": {
+                  "params": {
+                    "domain": "browser_mod",
+                    "service": "navigate",
+                    "service_data": {
+                      "path": "/admin-lsi/impressora-3d",
+                      "device_id": [
+                        "5c36c726-bccbda00"
+                      ],
+                      "entity_id": [
+                        "binary_sensor.4d74cd6f_b5b2ba62"
+                      ]
+                    },
+                    "target": {
+                      "device_id": [
+                        "5c36c726-bccbda00"
+                      ],
+                      "entity_id": [
+                        "binary_sensor.4d74cd6f_b5b2ba62"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ],
+            "action/1": [
+              {
+                "path": "action/1",
+                "timestamp": "2024-07-11T12:33:59.007309+00:00",
+                "result": {
+                  "params": {
+                    "domain": "timer",
+                    "service": "start",
+                    "service_data": {},
+                    "target": {
+                      "entity_id": [
+                        "timer.timer5"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "1720537934129",
+            "alias": "Aba 4",
+            "description": "",
+            "trigger": [
+              {
+                "platform": "state",
+                "entity_id": [
+                  "timer.timer4"
+                ],
+                "from": "active",
+                "to": "idle"
+              }
+            ],
+            "condition": [],
+            "action": [
+              {
+                "service": "browser_mod.navigate",
+                "data": {
+                  "path": "/admin-lsi/impressora-3d"
+                },
+                "target": {
+                  "device_id": "5c36c726-bccbda00",
+                  "entity_id": "binary_sensor.4d74cd6f_b5b2ba62"
+                }
+              },
+              {
+                "service": "timer.start",
+                "metadata": {},
+                "data": {},
+                "target": {
+                  "entity_id": "timer.timer5"
+                }
+              }
+            ],
+            "mode": "single"
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01J2GWJFPSF6HERK8XAA4JTBRD",
+            "parent_id": "01J2GWJFPRKHAKA7QW91Q98FS3",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "action/1",
+          "run_id": "2a40152e8beb2d23674408bf3b9cdb42",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2024-07-11T12:33:59.001120+00:00",
+            "finish": "2024-07-11T12:33:59.009330+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1720537934129",
+          "trigger": "state of timer.timer4"
+        }
+      }
+    ],
+    "automation.1720537995510": [
+      {
+        "extended_dict": {
+          "last_step": "action/1",
+          "run_id": "ce0d4607d1e52cd2247b9cab276e6489",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2024-07-11T12:30:49.002111+00:00",
+            "finish": "2024-07-11T12:30:49.010290+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1720537995510",
+          "trigger": "state of timer.timer5",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2024-07-11T12:30:49.002286+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.aba_5",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1720537995510",
+                      "last_triggered": "2024-07-11T12:29:59.001487+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Aba 5"
+                    },
+                    "last_changed": "2024-07-10T20:17:54.923764+00:00",
+                    "last_reported": "2024-07-11T12:29:59.010866+00:00",
+                    "last_updated": "2024-07-11T12:29:59.010866+00:00",
+                    "context": {
+                      "id": "01J2GWB5ASFCHS9NQPPE5DYZR0",
+                      "parent_id": "01J2GWB5AR461VKP6ZQCJQ936F",
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "state",
+                    "entity_id": "timer.timer5",
+                    "from_state": {
+                      "entity_id": "timer.timer5",
+                      "state": "active",
+                      "attributes": {
+                        "duration": "0:00:10",
+                        "editable": true,
+                        "finishes_at": "2024-07-11T12:30:49+00:00",
+                        "remaining": "0:00:10",
+                        "friendly_name": "timer5"
+                      },
+                      "last_changed": "2024-07-11T12:30:39.009554+00:00",
+                      "last_reported": "2024-07-11T12:30:39.009554+00:00",
+                      "last_updated": "2024-07-11T12:30:39.009554+00:00",
+                      "context": {
+                        "id": "01J2GWCCCT9J87HGR7MQY2CVWA",
+                        "parent_id": "01J2GWCCCTFDP9W6KFCBE8XTDY",
+                        "user_id": null
+                      }
+                    },
+                    "to_state": {
+                      "entity_id": "timer.timer5",
+                      "state": "idle",
+                      "attributes": {
+                        "duration": "0:00:10",
+                        "editable": true,
+                        "friendly_name": "timer5"
+                      },
+                      "last_changed": "2024-07-11T12:30:49.001846+00:00",
+                      "last_reported": "2024-07-11T12:30:49.001846+00:00",
+                      "last_updated": "2024-07-11T12:30:49.001846+00:00",
+                      "context": {
+                        "id": "01J2GWCP59PNDAWMNS5H3BRJBV",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "for": null,
+                    "attribute": null,
+                    "description": "state of timer.timer5"
+                  }
+                }
+              }
+            ],
+            "action/0": [
+              {
+                "path": "action/0",
+                "timestamp": "2024-07-11T12:30:49.003067+00:00",
+                "changed_variables": {
+                  "context": {
+                    "id": "01J2GWCP5AXYCJ17V5D3GXP5EN",
+                    "parent_id": "01J2GWCP59PNDAWMNS5H3BRJBV",
+                    "user_id": null
+                  }
+                },
+                "result": {
+                  "params": {
+                    "domain": "browser_mod",
+                    "service": "navigate",
+                    "service_data": {
+                      "path": "/admin-lsi/servidores",
+                      "device_id": [
+                        "5c36c726-bccbda00"
+                      ],
+                      "entity_id": [
+                        "binary_sensor.4d74cd6f_b5b2ba62"
+                      ]
+                    },
+                    "target": {
+                      "device_id": [
+                        "5c36c726-bccbda00"
+                      ],
+                      "entity_id": [
+                        "binary_sensor.4d74cd6f_b5b2ba62"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ],
+            "action/1": [
+              {
+                "path": "action/1",
+                "timestamp": "2024-07-11T12:30:49.008313+00:00",
+                "result": {
+                  "params": {
+                    "domain": "timer",
+                    "service": "start",
+                    "service_data": {},
+                    "target": {
+                      "entity_id": [
+                        "timer.timer1"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "1720537995510",
+            "alias": "Aba 5",
+            "description": "",
+            "trigger": [
+              {
+                "platform": "state",
+                "entity_id": [
+                  "timer.timer5"
+                ],
+                "from": "active",
+                "to": "idle"
+              }
+            ],
+            "condition": [],
+            "action": [
+              {
+                "service": "browser_mod.navigate",
+                "data": {
+                  "path": "/admin-lsi/servidores"
+                },
+                "target": {
+                  "device_id": "5c36c726-bccbda00",
+                  "entity_id": "binary_sensor.4d74cd6f_b5b2ba62"
+                }
+              },
+              {
+                "service": "timer.start",
+                "metadata": {},
+                "data": {},
+                "target": {
+                  "entity_id": "timer.timer1"
+                }
+              }
+            ],
+            "mode": "single"
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01J2GWCP5AXYCJ17V5D3GXP5EN",
+            "parent_id": "01J2GWCP59PNDAWMNS5H3BRJBV",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "action/1",
+          "run_id": "ce0d4607d1e52cd2247b9cab276e6489",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2024-07-11T12:30:49.002111+00:00",
+            "finish": "2024-07-11T12:30:49.010290+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1720537995510",
+          "trigger": "state of timer.timer5"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "action/1",
+          "run_id": "14cf44ee5c46a0d415ba483c05fbdcc1",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2024-07-11T12:31:39.001470+00:00",
+            "finish": "2024-07-11T12:31:39.006094+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1720537995510",
+          "trigger": "state of timer.timer5",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2024-07-11T12:31:39.001613+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.aba_5",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1720537995510",
+                      "last_triggered": "2024-07-11T12:30:49.002417+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Aba 5"
+                    },
+                    "last_changed": "2024-07-10T20:17:54.923764+00:00",
+                    "last_reported": "2024-07-11T12:30:49.009802+00:00",
+                    "last_updated": "2024-07-11T12:30:49.009802+00:00",
+                    "context": {
+                      "id": "01J2GWCP5AXYCJ17V5D3GXP5EN",
+                      "parent_id": "01J2GWCP59PNDAWMNS5H3BRJBV",
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "state",
+                    "entity_id": "timer.timer5",
+                    "from_state": {
+                      "entity_id": "timer.timer5",
+                      "state": "active",
+                      "attributes": {
+                        "duration": "0:00:10",
+                        "editable": true,
+                        "finishes_at": "2024-07-11T12:31:39+00:00",
+                        "remaining": "0:00:10",
+                        "friendly_name": "timer5"
+                      },
+                      "last_changed": "2024-07-11T12:31:29.008133+00:00",
+                      "last_reported": "2024-07-11T12:31:29.008133+00:00",
+                      "last_updated": "2024-07-11T12:31:29.008133+00:00",
+                      "context": {
+                        "id": "01J2GWDX79061DWXRFQRA6GFBX",
+                        "parent_id": "01J2GWDX799XJ7YEE0YHRCE489",
+                        "user_id": null
+                      }
+                    },
+                    "to_state": {
+                      "entity_id": "timer.timer5",
+                      "state": "idle",
+                      "attributes": {
+                        "duration": "0:00:10",
+                        "editable": true,
+                        "friendly_name": "timer5"
+                      },
+                      "last_changed": "2024-07-11T12:31:39.001209+00:00",
+                      "last_reported": "2024-07-11T12:31:39.001209+00:00",
+                      "last_updated": "2024-07-11T12:31:39.001209+00:00",
+                      "context": {
+                        "id": "01J2GWE6ZS3QA8B53SQD9WDSBD",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "for": null,
+                    "attribute": null,
+                    "description": "state of timer.timer5"
+                  }
+                }
+              }
+            ],
+            "action/0": [
+              {
+                "path": "action/0",
+                "timestamp": "2024-07-11T12:31:39.002272+00:00",
+                "changed_variables": {
+                  "context": {
+                    "id": "01J2GWE6ZSEKYRGG8NKJP779DR",
+                    "parent_id": "01J2GWE6ZS3QA8B53SQD9WDSBD",
+                    "user_id": null
+                  }
+                },
+                "result": {
+                  "params": {
+                    "domain": "browser_mod",
+                    "service": "navigate",
+                    "service_data": {
+                      "path": "/admin-lsi/servidores",
+                      "device_id": [
+                        "5c36c726-bccbda00"
+                      ],
+                      "entity_id": [
+                        "binary_sensor.4d74cd6f_b5b2ba62"
+                      ]
+                    },
+                    "target": {
+                      "device_id": [
+                        "5c36c726-bccbda00"
+                      ],
+                      "entity_id": [
+                        "binary_sensor.4d74cd6f_b5b2ba62"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ],
+            "action/1": [
+              {
+                "path": "action/1",
+                "timestamp": "2024-07-11T12:31:39.004201+00:00",
+                "result": {
+                  "params": {
+                    "domain": "timer",
+                    "service": "start",
+                    "service_data": {},
+                    "target": {
+                      "entity_id": [
+                        "timer.timer1"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "1720537995510",
+            "alias": "Aba 5",
+            "description": "",
+            "trigger": [
+              {
+                "platform": "state",
+                "entity_id": [
+                  "timer.timer5"
+                ],
+                "from": "active",
+                "to": "idle"
+              }
+            ],
+            "condition": [],
+            "action": [
+              {
+                "service": "browser_mod.navigate",
+                "data": {
+                  "path": "/admin-lsi/servidores"
+                },
+                "target": {
+                  "device_id": "5c36c726-bccbda00",
+                  "entity_id": "binary_sensor.4d74cd6f_b5b2ba62"
+                }
+              },
+              {
+                "service": "timer.start",
+                "metadata": {},
+                "data": {},
+                "target": {
+                  "entity_id": "timer.timer1"
+                }
+              }
+            ],
+            "mode": "single"
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01J2GWE6ZSEKYRGG8NKJP779DR",
+            "parent_id": "01J2GWE6ZS3QA8B53SQD9WDSBD",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "action/1",
+          "run_id": "14cf44ee5c46a0d415ba483c05fbdcc1",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2024-07-11T12:31:39.001470+00:00",
+            "finish": "2024-07-11T12:31:39.006094+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1720537995510",
+          "trigger": "state of timer.timer5"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "action/1",
+          "run_id": "5f1b20c51cbeeb24cb33fe0677b48ae3",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2024-07-11T12:32:29.002064+00:00",
+            "finish": "2024-07-11T12:32:29.009123+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1720537995510",
+          "trigger": "state of timer.timer5",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2024-07-11T12:32:29.002180+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.aba_5",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1720537995510",
+                      "last_triggered": "2024-07-11T12:31:39.001747+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Aba 5"
+                    },
+                    "last_changed": "2024-07-10T20:17:54.923764+00:00",
+                    "last_reported": "2024-07-11T12:31:39.005614+00:00",
+                    "last_updated": "2024-07-11T12:31:39.005614+00:00",
+                    "context": {
+                      "id": "01J2GWE6ZSEKYRGG8NKJP779DR",
+                      "parent_id": "01J2GWE6ZS3QA8B53SQD9WDSBD",
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "state",
+                    "entity_id": "timer.timer5",
+                    "from_state": {
+                      "entity_id": "timer.timer5",
+                      "state": "active",
+                      "attributes": {
+                        "duration": "0:00:10",
+                        "editable": true,
+                        "finishes_at": "2024-07-11T12:32:29+00:00",
+                        "remaining": "0:00:10",
+                        "friendly_name": "timer5"
+                      },
+                      "last_changed": "2024-07-11T12:32:19.012968+00:00",
+                      "last_reported": "2024-07-11T12:32:19.012968+00:00",
+                      "last_updated": "2024-07-11T12:32:19.012968+00:00",
+                      "context": {
+                        "id": "01J2GWFE1TM7VYZ9MQGFN4MB25",
+                        "parent_id": "01J2GWFE1S1S2978CH8S5GPVCH",
+                        "user_id": null
+                      }
+                    },
+                    "to_state": {
+                      "entity_id": "timer.timer5",
+                      "state": "idle",
+                      "attributes": {
+                        "duration": "0:00:10",
+                        "editable": true,
+                        "friendly_name": "timer5"
+                      },
+                      "last_changed": "2024-07-11T12:32:29.001802+00:00",
+                      "last_reported": "2024-07-11T12:32:29.001802+00:00",
+                      "last_updated": "2024-07-11T12:32:29.001802+00:00",
+                      "context": {
+                        "id": "01J2GWFQT905SZ6YQHAGEWY1A1",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "for": null,
+                    "attribute": null,
+                    "description": "state of timer.timer5"
+                  }
+                }
+              }
+            ],
+            "action/0": [
+              {
+                "path": "action/0",
+                "timestamp": "2024-07-11T12:32:29.002878+00:00",
+                "changed_variables": {
+                  "context": {
+                    "id": "01J2GWFQTAHWK88FFSBA8W1YEC",
+                    "parent_id": "01J2GWFQT905SZ6YQHAGEWY1A1",
+                    "user_id": null
+                  }
+                },
+                "result": {
+                  "params": {
+                    "domain": "browser_mod",
+                    "service": "navigate",
+                    "service_data": {
+                      "path": "/admin-lsi/servidores",
+                      "device_id": [
+                        "5c36c726-bccbda00"
+                      ],
+                      "entity_id": [
+                        "binary_sensor.4d74cd6f_b5b2ba62"
+                      ]
+                    },
+                    "target": {
+                      "device_id": [
+                        "5c36c726-bccbda00"
+                      ],
+                      "entity_id": [
+                        "binary_sensor.4d74cd6f_b5b2ba62"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ],
+            "action/1": [
+              {
+                "path": "action/1",
+                "timestamp": "2024-07-11T12:32:29.007207+00:00",
+                "result": {
+                  "params": {
+                    "domain": "timer",
+                    "service": "start",
+                    "service_data": {},
+                    "target": {
+                      "entity_id": [
+                        "timer.timer1"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "1720537995510",
+            "alias": "Aba 5",
+            "description": "",
+            "trigger": [
+              {
+                "platform": "state",
+                "entity_id": [
+                  "timer.timer5"
+                ],
+                "from": "active",
+                "to": "idle"
+              }
+            ],
+            "condition": [],
+            "action": [
+              {
+                "service": "browser_mod.navigate",
+                "data": {
+                  "path": "/admin-lsi/servidores"
+                },
+                "target": {
+                  "device_id": "5c36c726-bccbda00",
+                  "entity_id": "binary_sensor.4d74cd6f_b5b2ba62"
+                }
+              },
+              {
+                "service": "timer.start",
+                "metadata": {},
+                "data": {},
+                "target": {
+                  "entity_id": "timer.timer1"
+                }
+              }
+            ],
+            "mode": "single"
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01J2GWFQTAHWK88FFSBA8W1YEC",
+            "parent_id": "01J2GWFQT905SZ6YQHAGEWY1A1",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "action/1",
+          "run_id": "5f1b20c51cbeeb24cb33fe0677b48ae3",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2024-07-11T12:32:29.002064+00:00",
+            "finish": "2024-07-11T12:32:29.009123+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1720537995510",
+          "trigger": "state of timer.timer5"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "action/1",
+          "run_id": "05494df16a09303110b3e854f4a5733e",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2024-07-11T12:33:19.002559+00:00",
+            "finish": "2024-07-11T12:33:19.010876+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1720537995510",
+          "trigger": "state of timer.timer5",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2024-07-11T12:33:19.002699+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.aba_5",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1720537995510",
+                      "last_triggered": "2024-07-11T12:32:29.002312+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Aba 5"
+                    },
+                    "last_changed": "2024-07-10T20:17:54.923764+00:00",
+                    "last_reported": "2024-07-11T12:32:29.008646+00:00",
+                    "last_updated": "2024-07-11T12:32:29.008646+00:00",
+                    "context": {
+                      "id": "01J2GWFQTAHWK88FFSBA8W1YEC",
+                      "parent_id": "01J2GWFQT905SZ6YQHAGEWY1A1",
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "state",
+                    "entity_id": "timer.timer5",
+                    "from_state": {
+                      "entity_id": "timer.timer5",
+                      "state": "active",
+                      "attributes": {
+                        "duration": "0:00:10",
+                        "editable": true,
+                        "finishes_at": "2024-07-11T12:33:19+00:00",
+                        "remaining": "0:00:10",
+                        "friendly_name": "timer5"
+                      },
+                      "last_changed": "2024-07-11T12:33:09.011847+00:00",
+                      "last_reported": "2024-07-11T12:33:09.011847+00:00",
+                      "last_updated": "2024-07-11T12:33:09.011847+00:00",
+                      "context": {
+                        "id": "01J2GWGYW9BPAGAQ81689GAJBG",
+                        "parent_id": "01J2GWGYW9E1FBXS1M4QBASS5F",
+                        "user_id": null
+                      }
+                    },
+                    "to_state": {
+                      "entity_id": "timer.timer5",
+                      "state": "idle",
+                      "attributes": {
+                        "duration": "0:00:10",
+                        "editable": true,
+                        "friendly_name": "timer5"
+                      },
+                      "last_changed": "2024-07-11T12:33:19.002295+00:00",
+                      "last_reported": "2024-07-11T12:33:19.002295+00:00",
+                      "last_updated": "2024-07-11T12:33:19.002295+00:00",
+                      "context": {
+                        "id": "01J2GWH8MTN6TFG1KDA3P8AH0T",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "for": null,
+                    "attribute": null,
+                    "description": "state of timer.timer5"
+                  }
+                }
+              }
+            ],
+            "action/0": [
+              {
+                "path": "action/0",
+                "timestamp": "2024-07-11T12:33:19.003370+00:00",
+                "changed_variables": {
+                  "context": {
+                    "id": "01J2GWH8MTPCSCQ68ESVPQE3TF",
+                    "parent_id": "01J2GWH8MTN6TFG1KDA3P8AH0T",
+                    "user_id": null
+                  }
+                },
+                "result": {
+                  "params": {
+                    "domain": "browser_mod",
+                    "service": "navigate",
+                    "service_data": {
+                      "path": "/admin-lsi/servidores",
+                      "device_id": [
+                        "5c36c726-bccbda00"
+                      ],
+                      "entity_id": [
+                        "binary_sensor.4d74cd6f_b5b2ba62"
+                      ]
+                    },
+                    "target": {
+                      "device_id": [
+                        "5c36c726-bccbda00"
+                      ],
+                      "entity_id": [
+                        "binary_sensor.4d74cd6f_b5b2ba62"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ],
+            "action/1": [
+              {
+                "path": "action/1",
+                "timestamp": "2024-07-11T12:33:19.007699+00:00",
+                "result": {
+                  "params": {
+                    "domain": "timer",
+                    "service": "start",
+                    "service_data": {},
+                    "target": {
+                      "entity_id": [
+                        "timer.timer1"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "1720537995510",
+            "alias": "Aba 5",
+            "description": "",
+            "trigger": [
+              {
+                "platform": "state",
+                "entity_id": [
+                  "timer.timer5"
+                ],
+                "from": "active",
+                "to": "idle"
+              }
+            ],
+            "condition": [],
+            "action": [
+              {
+                "service": "browser_mod.navigate",
+                "data": {
+                  "path": "/admin-lsi/servidores"
+                },
+                "target": {
+                  "device_id": "5c36c726-bccbda00",
+                  "entity_id": "binary_sensor.4d74cd6f_b5b2ba62"
+                }
+              },
+              {
+                "service": "timer.start",
+                "metadata": {},
+                "data": {},
+                "target": {
+                  "entity_id": "timer.timer1"
+                }
+              }
+            ],
+            "mode": "single"
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01J2GWH8MTPCSCQ68ESVPQE3TF",
+            "parent_id": "01J2GWH8MTN6TFG1KDA3P8AH0T",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "action/1",
+          "run_id": "05494df16a09303110b3e854f4a5733e",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2024-07-11T12:33:19.002559+00:00",
+            "finish": "2024-07-11T12:33:19.010876+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1720537995510",
+          "trigger": "state of timer.timer5"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "action/1",
+          "run_id": "c5b0a6404e66cd3c40d70292608d5288",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2024-07-11T12:34:09.001366+00:00",
+            "finish": "2024-07-11T12:34:09.023954+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1720537995510",
+          "trigger": "state of timer.timer5",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2024-07-11T12:34:09.001481+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.aba_5",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1720537995510",
+                      "last_triggered": "2024-07-11T12:33:19.002832+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Aba 5"
+                    },
+                    "last_changed": "2024-07-10T20:17:54.923764+00:00",
+                    "last_reported": "2024-07-11T12:33:19.010382+00:00",
+                    "last_updated": "2024-07-11T12:33:19.010382+00:00",
+                    "context": {
+                      "id": "01J2GWH8MTPCSCQ68ESVPQE3TF",
+                      "parent_id": "01J2GWH8MTN6TFG1KDA3P8AH0T",
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "state",
+                    "entity_id": "timer.timer5",
+                    "from_state": {
+                      "entity_id": "timer.timer5",
+                      "state": "active",
+                      "attributes": {
+                        "duration": "0:00:10",
+                        "editable": true,
+                        "finishes_at": "2024-07-11T12:34:09+00:00",
+                        "remaining": "0:00:10",
+                        "friendly_name": "timer5"
+                      },
+                      "last_changed": "2024-07-11T12:33:59.008146+00:00",
+                      "last_reported": "2024-07-11T12:33:59.008146+00:00",
+                      "last_updated": "2024-07-11T12:33:59.008146+00:00",
+                      "context": {
+                        "id": "01J2GWJFPSF6HERK8XAA4JTBRD",
+                        "parent_id": "01J2GWJFPRKHAKA7QW91Q98FS3",
+                        "user_id": null
+                      }
+                    },
+                    "to_state": {
+                      "entity_id": "timer.timer5",
+                      "state": "idle",
+                      "attributes": {
+                        "duration": "0:00:10",
+                        "editable": true,
+                        "friendly_name": "timer5"
+                      },
+                      "last_changed": "2024-07-11T12:34:09.001121+00:00",
+                      "last_reported": "2024-07-11T12:34:09.001121+00:00",
+                      "last_updated": "2024-07-11T12:34:09.001121+00:00",
+                      "context": {
+                        "id": "01J2GWJSF921EPE281854YNN35",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "for": null,
+                    "attribute": null,
+                    "description": "state of timer.timer5"
+                  }
+                }
+              }
+            ],
+            "action/0": [
+              {
+                "path": "action/0",
+                "timestamp": "2024-07-11T12:34:09.002212+00:00",
+                "changed_variables": {
+                  "context": {
+                    "id": "01J2GWJSF921KJGHHFHG0999DP",
+                    "parent_id": "01J2GWJSF921EPE281854YNN35",
+                    "user_id": null
+                  }
+                },
+                "result": {
+                  "params": {
+                    "domain": "browser_mod",
+                    "service": "navigate",
+                    "service_data": {
+                      "path": "/admin-lsi/servidores",
+                      "device_id": [
+                        "5c36c726-bccbda00"
+                      ],
+                      "entity_id": [
+                        "binary_sensor.4d74cd6f_b5b2ba62"
+                      ]
+                    },
+                    "target": {
+                      "device_id": [
+                        "5c36c726-bccbda00"
+                      ],
+                      "entity_id": [
+                        "binary_sensor.4d74cd6f_b5b2ba62"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ],
+            "action/1": [
+              {
+                "path": "action/1",
+                "timestamp": "2024-07-11T12:34:09.011849+00:00",
+                "result": {
+                  "params": {
+                    "domain": "timer",
+                    "service": "start",
+                    "service_data": {},
+                    "target": {
+                      "entity_id": [
+                        "timer.timer1"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "1720537995510",
+            "alias": "Aba 5",
+            "description": "",
+            "trigger": [
+              {
+                "platform": "state",
+                "entity_id": [
+                  "timer.timer5"
+                ],
+                "from": "active",
+                "to": "idle"
+              }
+            ],
+            "condition": [],
+            "action": [
+              {
+                "service": "browser_mod.navigate",
+                "data": {
+                  "path": "/admin-lsi/servidores"
+                },
+                "target": {
+                  "device_id": "5c36c726-bccbda00",
+                  "entity_id": "binary_sensor.4d74cd6f_b5b2ba62"
+                }
+              },
+              {
+                "service": "timer.start",
+                "metadata": {},
+                "data": {},
+                "target": {
+                  "entity_id": "timer.timer1"
+                }
+              }
+            ],
+            "mode": "single"
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01J2GWJSF921KJGHHFHG0999DP",
+            "parent_id": "01J2GWJSF921EPE281854YNN35",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "action/1",
+          "run_id": "c5b0a6404e66cd3c40d70292608d5288",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2024-07-11T12:34:09.001366+00:00",
+            "finish": "2024-07-11T12:34:09.023954+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1720537995510",
+          "trigger": "state of timer.timer5"
+        }
+      }
+    ],
+    "automation.1720420174754": [
+      {
+        "extended_dict": {
+          "last_step": "action/0",
+          "run_id": "764cf38ac261dbd3830fc6a2b9460436",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2024-07-08T14:14:21.195735+00:00",
+            "finish": "2024-07-08T14:14:21.199023+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1720420174754",
+          "trigger": "Home Assistant starting",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2024-07-08T14:14:21.195838+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.automacao",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1720420174754",
+                      "last_triggered": "2024-07-08T14:02:11.036494+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Automa\u00e7\u00e3o"
+                    },
+                    "last_changed": "2024-07-08T14:14:06.406199+00:00",
+                    "last_reported": "2024-07-08T14:14:06.406199+00:00",
+                    "last_updated": "2024-07-08T14:14:06.406199+00:00",
+                    "context": {
+                      "id": "01J29B3NA6C9DD7PYHPBPJZ43S",
+                      "parent_id": null,
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "homeassistant",
+                    "event": "start",
+                    "description": "Home Assistant starting"
+                  }
+                }
+              }
+            ],
+            "action/0": [
+              {
+                "path": "action/0",
+                "timestamp": "2024-07-08T14:14:21.196421+00:00",
+                "changed_variables": {
+                  "context": {
+                    "id": "01J29B43RBB7JFPAZ4405G1G5T",
+                    "parent_id": null,
+                    "user_id": null
+                  }
+                },
+                "result": {
+                  "params": {
+                    "domain": "timer",
+                    "service": "start",
+                    "service_data": {},
+                    "target": {
+                      "entity_id": [
+                        "timer.timer1"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "1720420174754",
+            "alias": "Automa\u00e7\u00e3o",
+            "description": "",
+            "trigger": [
+              {
+                "platform": "homeassistant",
+                "event": "start"
+              }
+            ],
+            "condition": [],
+            "action": [
+              {
+                "service": "timer.start",
+                "metadata": {},
+                "data": {},
+                "target": {
+                  "entity_id": "timer.timer1"
+                }
+              }
+            ],
+            "mode": "single"
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01J29B43RBB7JFPAZ4405G1G5T",
+            "parent_id": null,
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "action/0",
+          "run_id": "764cf38ac261dbd3830fc6a2b9460436",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2024-07-08T14:14:21.195735+00:00",
+            "finish": "2024-07-08T14:14:21.199023+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1720420174754",
+          "trigger": "Home Assistant starting"
+        }
+      }
+    ]
+  }
+}

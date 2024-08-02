@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "minor_version": 2,
+  "key": "assist_pipeline.pipelines",
+  "data": {
+    "items": [
+      {
+        "conversation_engine": "conversation.home_assistant",
+        "conversation_language": "en",
+        "id": "01h6cavv5cn01xesp3sfvxm1kw",
+        "language": "en",
+        "name": "Home Assistant",
+        "stt_engine": null,
+        "stt_language": null,
+        "tts_engine": null,
+        "tts_language": null,
+        "tts_voice": null,
+        "wake_word_entity": null,
+        "wake_word_id": null
+      },
+      {
+        "conversation_engine": "conversation.home_assistant",
+        "conversation_language": "pt-br",
+        "id": "01hawn088ck7jaz059q6cxqqmz",
+        "language": "pt-BR",
+        "name": "Home Assistant Cloud",
+        "stt_engine": "stt.home_assistant_cloud",
+        "stt_language": "pt-BR",
+        "tts_engine": "tts.home_assistant_cloud",
+        "tts_language": "pt-BR",
+        "tts_voice": "FranciscaNeural",
+        "wake_word_entity": null,
+        "wake_word_id": null
+      }
+    ],
+    "preferred_item": "01hawn088ck7jaz059q6cxqqmz"
+  }
+}
