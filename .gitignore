@@ -1,0 +1,5 @@
+secrets.yaml
+sensores/config.py
+sensores/nohup.out
+.storage
+.cloud

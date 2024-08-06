@@ -1,0 +1,6 @@
+- platform: generic_thermostat
+  name: Ar-condicionado Lab
+  target_sensor: sensor.actual_temperature
+  heater: switch.ar_lab
+  ac_mode: True
+  initial_hvac_mode: "off"

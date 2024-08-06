@@ -1,0 +1,124 @@
+- id: '1720448680333'
+  alias: Aba 1
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - timer.timer1
+    from: active
+    to: idle
+  condition: []
+  action:
+  - service: browser_mod.navigate
+    data:
+      path: /admin-lsi/geral
+    target:
+      device_id: aad445f80417e6a293b7c11c50f34e4b
+  - service: timer.start
+    metadata: {}
+    data: {}
+    target:
+      entity_id: timer.timer2
+  mode: single
+- id: '1720537162235'
+  alias: Aba2
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - timer.timer2
+    from: active
+    to: idle
+  condition: []
+  action:
+  - service: browser_mod.navigate
+    data:
+      path: /admin-lsi/default_view
+    target:
+      device_id: aad445f80417e6a293b7c11c50f34e4b
+  - service: timer.start
+    metadata: {}
+    data: {}
+    target:
+      entity_id: timer.timer3
+  mode: single
+- id: '1720537429849'
+  alias: Aba 3
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - timer.timer3
+    from: active
+    to: idle
+  condition: []
+  action:
+  - service: browser_mod.navigate
+    data:
+      path: /admin-lsi/cameras
+    target:
+      device_id: aad445f80417e6a293b7c11c50f34e4b
+  - service: timer.start
+    metadata: {}
+    data: {}
+    target:
+      entity_id: timer.timer4
+  mode: single
+- id: '1720537934129'
+  alias: Aba 4
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - timer.timer4
+    from: active
+    to: idle
+  condition: []
+  action:
+  - service: browser_mod.navigate
+    data:
+      path: /admin-lsi/impressora-3d
+    target:
+      device_id: aad445f80417e6a293b7c11c50f34e4b
+  - service: timer.start
+    metadata: {}
+    data: {}
+    target:
+      entity_id: timer.timer5
+  mode: single
+- id: '1720537995510'
+  alias: Aba 5
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - timer.timer5
+    from: active
+    to: idle
+  condition: []
+  action:
+  - service: browser_mod.navigate
+    data:
+      path: /admin-lsi/servidores
+    target:
+      device_id: aad445f80417e6a293b7c11c50f34e4b
+  - service: timer.start
+    metadata: {}
+    data: {}
+    target:
+      entity_id: timer.timer1
+  mode: single
+- id: '1720538476928'
+  alias: Automação Timer1
+  description: ''
+  trigger:
+  - platform: homeassistant
+    event: start
+  condition: []
+  action:
+  - service: timer.start
+    metadata: {}
+    data: {}
+    target:
+      entity_id: timer.timer1
+  mode: single

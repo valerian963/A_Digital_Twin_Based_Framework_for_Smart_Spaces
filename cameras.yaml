@@ -1,0 +1,20 @@
+- platform: ffmpeg
+  name: CAM 1
+  input: !secret camera1
+
+- platform: ffmpeg
+  name: CAM 2
+  input: !secret camera2
+
+- platform: ffmpeg
+  name: CAM 3
+  input: !secret camera3
+
+- platform: ffmpeg
+  name: CAM 4
+  input: !secret camera4
+  extra_arguments: -q:v 2 -vf fps=10,scale=640:-1 -f mjpeg
+
+- platform: mjpeg
+  name: CAM Octoprint
+  mjpeg_url: http://octopi.local/webcam/?action=stream
